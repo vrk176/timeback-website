@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #7c6ef0;
+  --color-brand-light: #a78bfa;
+  --color-brand-dark: #5b4cc4;
+  --color-secondary: #5daee2;
+  --color-secondary-light: #7ec8f0;
+  --color-success: #6bcb77;
+  --color-warning: #ffb347;
+  --color-danger: #ff6b6b;
+  --color-teal: #2dd4bf;
+  --color-page-bg: #f8f7fc;
+  --color-card-bg: #ffffff;
+  --color-text-primary: #1c1c1e;
+  --color-text-secondary: #6b7280;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-page-bg);
+  color: var(--color-text-primary);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #7c6ef0 0%, #5daee2 50%, #2dd4bf 100%);
+}
+
+.gradient-card-purple {
+  background: linear-gradient(135deg, #7c6ef0, #a78bfa);
+}
+
+.gradient-card-blue {
+  background: linear-gradient(135deg, #5daee2, #7ec8f0);
+}
+
+.gradient-card-teal {
+  background: linear-gradient(135deg, #2dd4bf, #6ee7b7);
+}
+
+.gradient-card-warning {
+  background: linear-gradient(135deg, #ffb347, #ffd700);
+}
+
+.gradient-card-danger {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+}
+
+.gradient-card-indigo {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+/* Prose typography for legal pages */
+.prose {
+  line-height: 1.8;
+}
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+.prose h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+.prose p {
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+}
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.prose li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+.prose th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-brand);
+  color: white;
+  font-weight: 600;
+}
+.prose th:first-child {
+  border-radius: 0.5rem 0 0 0;
+}
+.prose th:last-child {
+  border-radius: 0 0.5rem 0 0;
+}
+.prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: var(--color-text-secondary);
+}
+.prose a {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose a:hover {
+  color: var(--color-brand-dark);
+}
+.prose hr {
+  margin: 2rem 0;
+  border-color: #e5e7eb;
+}
+.prose strong {
+  color: var(--color-text-primary);
+}

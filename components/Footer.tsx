@@ -1,4 +1,14 @@
-export default function Footer() {
+import type { Dictionary } from "@/lib/dictionaries/en";
+import type { Locale } from "@/lib/i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
+
+export default function Footer({
+  dict,
+  locale,
+}: {
+  dict: Dictionary["footer"];
+  locale: Locale;
+}) {
   return (
     <footer className="py-12 px-6 border-t border-gray-100">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -9,21 +19,22 @@ export default function Footer() {
 
         <div className="flex items-center gap-8 text-sm text-text-secondary">
           <a href="#features" className="hover:text-brand transition-colors">
-            Features
+            {dict.features}
           </a>
-          <a href="/privacy-policy" className="hover:text-brand transition-colors">
-            Privacy Policy
+          <a href={`/${locale}/privacy-policy`} className="hover:text-brand transition-colors">
+            {dict.privacy}
           </a>
-          <a href="/terms-of-use" className="hover:text-brand transition-colors">
-            Terms of Use
+          <a href={`/${locale}/terms-of-use`} className="hover:text-brand transition-colors">
+            {dict.terms}
           </a>
           <a href="mailto:connect@hominexis.com" className="hover:text-brand transition-colors">
-            Contact
+            {dict.contact}
           </a>
+          <LanguageSwitcher currentLocale={locale} label={dict.language} />
         </div>
 
         <p className="text-sm text-text-secondary">
-          &copy; {new Date().getFullYear()} Hominexis. All rights reserved.
+          &copy; {new Date().getFullYear()} Hominexis. {dict.rights}
         </p>
       </div>
     </footer>

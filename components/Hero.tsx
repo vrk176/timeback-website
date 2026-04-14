@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Dictionary } from "@/lib/dictionaries/en";
 
-export default function Hero() {
+export default function Hero({ dict }: { dict: Dictionary["hero"] }) {
   return (
     <section className="relative min-h-screen overflow-hidden gradient-hero flex items-center">
       {/* Floating decorative shapes */}
@@ -11,7 +12,6 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float-slow" />
         <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-white/5 rounded-full blur-2xl animate-float" />
 
-        {/* Small floating dots */}
         <motion.div
           className="absolute top-32 right-20 w-4 h-4 bg-warning rounded-full"
           animate={{ y: [-10, 10, -10] }}
@@ -30,7 +30,6 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 flex flex-col lg:flex-row items-center gap-16">
-        {/* Left text content */}
         <div className="flex-1 text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -40,7 +39,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
               <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
               <span className="text-white/90 text-sm font-medium">
-                Coming Soon to App Store
+                {dict.badge}
               </span>
             </div>
           </motion.div>
@@ -51,9 +50,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Take Back
+            {dict.titleLine1}
             <br />
-            <span className="text-white/80">Your Time</span>
+            <span className="text-white/80">{dict.titleLine2}</span>
           </motion.h1>
 
           <motion.p
@@ -62,8 +61,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Build healthier screen habits with powerful, privacy-first tools.
-            Free. No account needed. No ads. Ever.
+            {dict.subtitle}
           </motion.p>
 
           <motion.div
@@ -76,18 +74,17 @@ export default function Hero() {
               href="#features"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand font-bold rounded-full text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
-              Explore Features
+              {dict.exploreFeatures}
             </a>
             <a
               href="#cta"
               className="inline-flex items-center justify-center px-8 py-4 bg-white/15 backdrop-blur-sm text-white font-semibold rounded-full text-lg border border-white/30 hover:bg-white/25 transition-all duration-300"
             >
-              Coming Soon
+              {dict.comingSoon}
             </a>
           </motion.div>
         </div>
 
-        {/* Right phone mockup - real screenshot */}
         <motion.div
           className="flex-1 flex justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -98,14 +95,12 @@ export default function Hero() {
             <div className="w-[320px] md:w-[380px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/20 ring-1 ring-white/20">
               <img
                 src="/screenshots/hero.jpg"
-                alt="TimeBack App - Take back control of your screen time"
+                alt="TimeBack App"
                 className="w-full h-auto block"
               />
-              {/* Bottom gradient fade to blend with hero background */}
               <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#3dbdb5] via-[#3dbdb5]/60 to-transparent" />
             </div>
 
-            {/* Floating badge */}
             <motion.div
               className="absolute -right-4 md:-right-8 top-24 bg-white rounded-2xl px-4 py-3 shadow-lg"
               animate={{ y: [-5, 5, -5] }}
@@ -118,13 +113,12 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-text-primary">100% Private</div>
-                  <div className="text-[10px] text-text-secondary">On-device only</div>
+                  <div className="text-xs font-bold text-text-primary">{dict.badgePrivateTitle}</div>
+                  <div className="text-[10px] text-text-secondary">{dict.badgePrivateSub}</div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Floating badge left */}
             <motion.div
               className="absolute -left-4 md:-left-8 bottom-32 bg-white rounded-2xl px-4 py-3 shadow-lg"
               animate={{ y: [5, -5, 5] }}
@@ -137,8 +131,8 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-text-primary">Smart Breaks</div>
-                  <div className="text-[10px] text-text-secondary">Protect your eyes</div>
+                  <div className="text-xs font-bold text-text-primary">{dict.badgeBreaksTitle}</div>
+                  <div className="text-[10px] text-text-secondary">{dict.badgeBreaksSub}</div>
                 </div>
               </div>
             </motion.div>
@@ -146,7 +140,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

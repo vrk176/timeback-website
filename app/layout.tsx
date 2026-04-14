@@ -1,20 +1,4 @@
-import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "TimeBack — Take Back Control of Your Screen Time",
-  description:
-    "TimeBack helps you build healthier screen habits with powerful, privacy-first tools. Daily limits, forced breaks, schedules, location zones, and more. Free and 100% private.",
-  keywords: [
-    "screen time",
-    "app blocker",
-    "digital wellbeing",
-    "focus",
-    "productivity",
-    "iOS",
-    "privacy",
-  ],
-};
 
 export default function RootLayout({
   children,
@@ -22,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html>
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

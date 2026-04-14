@@ -1,13 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Dictionary } from "@/lib/dictionaries/en";
 
-const steps = [
+const stepConfig = [
   {
     number: "01",
-    title: "Set Your Rules",
-    description:
-      "Choose which apps to limit and configure daily limits, schedules, or location-based blocking. It takes less than a minute.",
     color: "from-brand to-brand-light",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -17,9 +15,6 @@ const steps = [
   },
   {
     number: "02",
-    title: "Stay Focused",
-    description:
-      "TimeBack works quietly in the background. When you hit a limit, a customizable block screen appears — gently nudging you to take a break.",
     color: "from-secondary to-secondary-light",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -30,9 +25,6 @@ const steps = [
   },
   {
     number: "03",
-    title: "Build Better Habits",
-    description:
-      "Over time, you'll naturally reach for your phone less. TimeBack helps you reclaim hours for the things that truly matter.",
     color: "from-teal to-success",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -42,7 +34,7 @@ const steps = [
   },
 ];
 
-export default function HowItWorks() {
+export default function HowItWorks({ dict }: { dict: Dictionary["howItWorks"] }) {
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-page-bg to-white">
       <div className="max-w-5xl mx-auto">
@@ -54,24 +46,23 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
         >
           <span className="inline-block text-brand font-semibold text-sm uppercase tracking-wider mb-3">
-            How It Works
+            {dict.eyebrow}
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-text-primary">
-            Simple as{" "}
+            {dict.titlePart1}{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-teal">
-              1-2-3
+              {dict.titleHighlight}
             </span>
           </h2>
         </motion.div>
 
         <div className="relative">
-          {/* Connecting line */}
           <div className="hidden md:block absolute top-24 left-1/2 -translate-x-1/2 w-[70%] h-0.5 bg-gradient-to-r from-brand via-secondary to-teal opacity-20" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {steps.map((step, index) => (
+            {dict.steps.map((step, index) => (
               <motion.div
-                key={step.number}
+                key={stepConfig[index].number}
                 className="text-center relative"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -79,12 +70,12 @@ export default function HowItWorks() {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
                 <div
-                  className={`w-20 h-20 mx-auto mb-6 rounded-3xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}
+                  className={`w-20 h-20 mx-auto mb-6 rounded-3xl bg-gradient-to-br ${stepConfig[index].color} flex items-center justify-center shadow-lg`}
                 >
-                  {step.icon}
+                  {stepConfig[index].icon}
                 </div>
                 <div className="text-5xl font-black text-brand/10 mb-2">
-                  {step.number}
+                  {stepConfig[index].number}
                 </div>
                 <h3 className="text-xl font-bold text-text-primary mb-3">
                   {step.title}

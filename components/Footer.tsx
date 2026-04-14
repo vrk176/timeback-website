@@ -1,6 +1,5 @@
 import type { Dictionary } from "@/lib/dictionaries/en";
 import type { Locale } from "@/lib/i18n";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer({
   dict,
@@ -30,7 +29,6 @@ export default function Footer({
           <a href="mailto:connect@hominexis.com" className="hover:text-brand transition-colors">
             {dict.contact}
           </a>
-          <LanguageSwitcher currentLocale={locale} label={dict.language} />
         </div>
 
         <p className="text-sm text-text-secondary">

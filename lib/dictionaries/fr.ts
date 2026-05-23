@@ -217,10 +217,20 @@ const fr: Dictionary = {
           heading: "Services de localisation (CoreLocation)",
           items: [
             "Utilisée uniquement pour la fonction de géofencing",
-            "Les données de localisation sont traitées localement pour déterminer si vous êtes à l'intérieur d'une zone configurée",
-            "Les coordonnées de localisation sont stockées uniquement dans vos configurations de règles de zone sur l'appareil",
-            "Aucune donnée de localisation n'est transmise à un serveur",
+            "L'emplacement actuel de votre appareil est traité localement pour déterminer si vous êtes à l'intérieur d'une zone configurée — TimeBack ne le télécharge pas (TimeBack n'a pas de serveurs)",
+            "Les coordonnées de zone que vous configurez sont stockées uniquement dans vos configurations de règles sur l'appareil",
             "Vous pouvez désactiver l'accès à la localisation à tout moment dans les Réglages système",
+          ],
+        },
+        // TODO: native review — translated from EN reference
+        mapKit: {
+          heading: "Cartes (MapKit)",
+          items: [
+            "Utilisé pour afficher la carte et vous aider à trouver un lieu lors de la création d'une zone — recherche d'adresse, lieux à proximité et géocodage inverse",
+            "Lorsque vous tapez dans la zone de recherche d'adresse, votre texte de requête et la région approximative de la carte sont envoyés à Apple Maps pour renvoyer des suggestions",
+            "Lorsque vous déposez une épingle ou recherchez des lieux à proximité (écoles, bibliothèques), les coordonnées sont envoyées à Apple Maps pour renvoyer des adresses ou des points d'intérêt",
+            "Ces requêtes de carte sont gérées par Apple selon la politique de confidentialité d'Apple — TimeBack ne les stocke, n'enregistre, ni ne les relaie, et aucune donnée de carte n'est envoyée à TimeBack",
+            "Si vous n'ouvrez pas la carte de création de zone, aucune requête de carte n'est effectuée",
           ],
         },
         biometric: {
@@ -258,7 +268,7 @@ const fr: Dictionary = {
         body: "TimeBack n'intègre aucun service d'analyse, de publicité ou de traçage tiers. La seule communication externe se fait avec les serveurs d'Apple pour :",
         items: [
           "Vérification des transactions d'achat intégré (StoreKit)",
-          "Chargement des tuiles de carte (MapKit, pour la fonction de géofencing)",
+          "Cartes et géocodage (MapKit, lors de la création d'une zone) — chargement de tuiles, recherche d'adresse, recherche de lieux à proximité et géocodage inverse (gérés par Apple, voir la politique de confidentialité d'Apple)",
         ],
       },
       rights: {

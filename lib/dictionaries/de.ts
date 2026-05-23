@@ -214,10 +214,20 @@ const de: Dictionary = {
           heading: "Ortungsdienste (CoreLocation)",
           items: [
             "Wird nur für die Geofence-Funktion verwendet",
-            "Standortdaten werden lokal verarbeitet, um festzustellen, ob du dich in einer konfigurierten Zone befindest",
-            "Standortkoordinaten werden nur in deinen Zonenregel-Konfigurationen auf dem Gerät gespeichert",
-            "Es werden keine Standortdaten an Server übertragen",
+            "Der aktuelle Standort deines Geräts wird lokal verarbeitet, um festzustellen, ob du dich in einer konfigurierten Zone befindest — TimeBack lädt ihn nicht hoch (TimeBack hat keine Server)",
+            "Die von dir konfigurierten Zonenkoordinaten werden nur in deinen Regelkonfigurationen auf dem Gerät gespeichert",
             "Du kannst den Standortzugriff jederzeit in den Systemeinstellungen deaktivieren",
+          ],
+        },
+        // TODO: native review — translated from EN reference
+        mapKit: {
+          heading: "Karten (MapKit)",
+          items: [
+            "Wird verwendet, um die Karte anzuzeigen und dir bei der Suche nach einem Ort beim Erstellen einer Zone zu helfen — Adresssuche, Orte in der Nähe und Reverse Geocoding",
+            "Wenn du in das Adresssuchfeld tippst, werden dein Suchtext und die ungefähre Kartenregion an Apple Maps gesendet, um Vorschläge zurückzugeben",
+            "Wenn du eine Stecknadel setzt oder Orte in der Nähe (Schulen, Bibliotheken) suchst, werden die Koordinaten an Apple Maps gesendet, um Adressen oder Points of Interest zurückzugeben",
+            "Diese Kartenanfragen werden von Apple gemäß Apples Datenschutzrichtlinie verarbeitet — TimeBack speichert, protokolliert oder leitet sie nicht weiter, und es werden keine Kartendaten an TimeBack gesendet",
+            "Wenn du die Zonenerstellungskarte nicht öffnest, werden keine Kartenanfragen gestellt",
           ],
         },
         biometric: {
@@ -255,7 +265,7 @@ const de: Dictionary = {
         body: "TimeBack integriert keine Drittanbieter-Analyse-, Werbe- oder Tracking-Dienste. Die einzige externe Kommunikation erfolgt mit Apples Servern für:",
         items: [
           "In-App-Kauf-Transaktionsverifizierung (StoreKit)",
-          "Kartenkachel-Laden (MapKit, für die Geofence-Funktion)",
+          "Karten und Geocoding (MapKit, beim Erstellen einer Zone) — Kachel-Laden, Adresssuche, Suche nach Orten in der Nähe und Reverse Geocoding (von Apple verarbeitet, siehe Apples Datenschutzrichtlinie)",
         ],
       },
       rights: {

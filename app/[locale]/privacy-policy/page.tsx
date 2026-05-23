@@ -110,6 +110,13 @@ export default function PrivacyPolicy({
             ))}
           </ul>
 
+          <h3>{s.appleFrameworks.mapKit.heading}</h3>
+          <ul>
+            {s.appleFrameworks.mapKit.items.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+
           <h3>{s.appleFrameworks.biometric.heading}</h3>
           <ul>
             {s.appleFrameworks.biometric.items.map((item, i) => (

@@ -215,10 +215,19 @@ const en = {
           heading: "Location Services (CoreLocation)",
           items: [
             "Used only for the Geofence feature",
-            "Location data is processed locally to determine if you are inside a configured zone",
-            "Location coordinates are stored only in your zone rule configurations on-device",
-            "No location data is transmitted to any server",
+            "Your device's current location is processed locally to determine if you are inside a configured zone — TimeBack does not upload it (TimeBack has no servers)",
+            "Zone coordinates you configure are stored only in your rule configurations on-device",
             "You can disable location access at any time in system Settings",
+          ],
+        },
+        mapKit: {
+          heading: "Maps (MapKit)",
+          items: [
+            "Used to display the map and help you find a place when creating a zone — address search, nearby places, and reverse geocoding",
+            "When you type in the address search box, your query text and approximate map region are sent to Apple Maps to return suggestions",
+            "When you drop a pin or look up nearby places (schools, libraries), the coordinates are sent to Apple Maps to return addresses or points of interest",
+            "These map requests are handled by Apple under Apple's privacy policy — TimeBack does not store, log, or relay them, and no map data is sent to TimeBack",
+            "If you do not open the zone-creation map, no map requests are made",
           ],
         },
         biometric: {
@@ -256,7 +265,7 @@ const en = {
         body: "TimeBack does not integrate any third-party analytics, advertising, or tracking services. The only external communication is with Apple's servers for:",
         items: [
           "In-App Purchase transaction verification (StoreKit)",
-          "Map tile loading (MapKit, for the Geofence feature)",
+          "Maps and geocoding (MapKit, when you create a zone) — tile loading, address search, nearby-place search, and reverse geocoding (handled by Apple, see Apple's privacy policy)",
         ],
       },
       rights: {

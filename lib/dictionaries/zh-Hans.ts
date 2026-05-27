@@ -4,16 +4,17 @@ const zhHans: Dictionary = {
   meta: {
     title: "TimeBack — 夺回你的屏幕时间",
     description:
-      "TimeBack 帮你用强大的隐私优先工具建立更健康的手机使用习惯。每日限额、强制休息、定时计划、位置区域等功能,免费使用,100% 私密。",
+      "TimeBack 是一款隐私优先的 iOS 屏幕使用时间工具,支持每日限额、间歇休息、定时计划、场景区域、监护人密码和自定义屏蔽页。免费、无需账号、无广告。",
   },
   hero: {
-    badge: "即将登陆 App Store",
+    badge: "已在 App Store 上架",
     titleLine1: "把时间,",
     titleLine2: "还给自己。",
     subtitle:
-      "用强大的隐私优先工具建立更健康的屏幕使用习惯。完全免费。无需账号。永无广告。",
+      "用 Apple 屏幕使用时间能力设置限额、休息、时间表和场景区域。无需账号、无广告,数据留在你的 iPhone 上。",
     exploreFeatures: "探索功能",
-    comingSoon: "敬请期待",
+    comingSoon: "在 App Store 下载",
+    trustNote: "免费 • 私密 • 无需账号",
     badgePrivateTitle: "100% 私密",
     badgePrivateSub: "仅存储于设备",
     badgeBreaksTitle: "智能休息",
@@ -21,37 +22,37 @@ const zhHans: Dictionary = {
   },
   features: {
     eyebrow: "功能",
-    titlePart1: "你所需的一切,助你",
-    titleHighlight: "保持专注",
-    subtitle: "强大的工具在后台默默运行,助你养成更好的屏幕使用习惯,毫不打扰。",
+    titlePart1: "为真实生活场景设计的",
+    titleHighlight: "屏幕管理",
+    subtitle: "上课、工作、睡前、在办公室或图书馆,TimeBack 用规则和场景帮你少一点分心,不用交出个人数据。",
     items: [
       {
         title: "每日限额",
         description:
-          "为任何应用或类别设置使用时长。时间用完时自动屏蔽 — 无需意志力。",
+          "给应用、类别或网站设定每天可用时长,也可以按星期分别设置,工作日和周末不必一刀切。",
       },
       {
-        title: "强制休息",
+        title: "间歇休息",
         description:
-          "持续使用后强制休息,保护你的专注力和眼睛。休息结束后自动恢复。",
+          "连续使用一段时间后,自动帮你停一下。短暂休息结束后可自动恢复,更适合长期坚持。",
       },
       {
         title: "定时计划",
         description:
-          "在工作、学习或睡眠时段屏蔽干扰应用。支持跨夜时段设置。",
+          "睡前、上课、工作时段自动收起干扰应用,跨夜时间段也能正常处理。",
       },
       {
-        title: "位置区域",
-        description: "当你进入学校或办公室等特定区域时自动屏蔽应用。",
+        title: "场景区域",
+        description: "到学校、办公室、图书馆等地点自动进入专注状态;离开后自动恢复。",
       },
       {
         title: "自定义屏蔽页",
-        description: "用你自己的图标、文字和解锁方式个性化屏蔽页面。",
+        description: "为限额、休息、时间表和区域分别设置屏蔽页文案、图标和解锁等待时间。",
       },
       {
-        title: "监护人模式",
+        title: "监护人密码",
         description:
-          "由家长或督促伙伴持有的独立密码。防止规则被绕过。",
+          "由家长、伴侣或自律搭子保管独立密码,降低临时改规则的冲动。",
       },
     ],
   },
@@ -59,28 +60,28 @@ const zhHans: Dictionary = {
     eyebrow: "应用预览",
     titlePart1: "看看它",
     titleHighlight: "如何运作",
-    subtitle: "精美直观的界面,默默守护你的专注力,绝不碍事。",
-    labels: ["欢迎", "每日限额", "定时计划", "位置区域", "屏蔽页面", "监护人模式"],
+    subtitle: "围绕规则、时间表、地点区域、屏蔽页和监护人密码设计,界面轻量,不打扰。",
+    labels: ["欢迎", "每日限额", "定时计划", "场景区域", "屏蔽页面", "监护人密码"],
   },
   howItWorks: {
     eyebrow: "工作原理",
-    titlePart1: "简单如",
-    titleHighlight: "1-2-3",
+    titlePart1: "设好规则,",
+    titleHighlight: "让它帮你坚持",
     steps: [
       {
-        title: "设定你的规则",
+        title: "先定好边界",
         description:
-          "选择要限制的应用,配置每日限额、定时计划或位置区域屏蔽。不到一分钟搞定。",
+          "选择应用、类别或网站,再设置每日限额、间歇休息、时间表或地点区域。",
       },
       {
-        title: "保持专注",
+        title: "交给系统执行",
         description:
-          "TimeBack 在后台默默运行。达到限额时,可自定义的屏蔽页面会出现 — 温柔地提醒你休息一下。",
+          "TimeBack 基于 Apple 官方 Screen Time 框架运行。规则触发时,自定义屏蔽页会在合适的时候出现。",
       },
       {
-        title: "养成更好习惯",
+        title: "把习惯留下来",
         description:
-          "随着时间推移,你会自然而然地减少拿起手机的次数。TimeBack 帮你夺回时间,投入真正重要的事情。",
+          "用一点恰到好处的阻力、可选临时解锁和监护人密码,让少刷一会儿变得更容易。",
       },
     ],
   },
@@ -93,7 +94,7 @@ const zhHans: Dictionary = {
     items: [
       {
         title: "仅存储于设备",
-        description: "你的所有数据都保存在 iPhone 上。没有任何数据离开你的设备。",
+        description: "规则、设置、屏蔽页文字和密码哈希都保存在你的 iPhone 上。",
       },
       {
         title: "无需账号",
@@ -101,18 +102,18 @@ const zhHans: Dictionary = {
       },
       {
         title: "零追踪",
-        description: "无分析、无遥测、无数据收集。我们看不到你的数据。",
+        description: "无分析、无遥测、无广告,也不集成第三方追踪 SDK。",
       },
       {
         title: "Apple 官方 API",
-        description: "基于 Apple 的 Screen Time API 打造。安全、沙盒隔离、可靠。",
+        description: "应用选择使用 Apple 的私密 Screen Time token,TimeBack 看不到应用内容或浏览历史。",
       },
     ],
   },
   cta: {
-    title: "敬请期待",
-    subtitle: "TimeBack 即将登陆 App Store — 完全免费。敬请关注。",
-    badge: "即将在 App Store 上架",
+    title: "立即下载 TimeBack",
+    subtitle: "TimeBack 已在 App Store 上架 — 完全免费。",
+    badge: "在 App Store 下载",
   },
   footer: {
     features: "功能",
@@ -262,7 +263,7 @@ const zhHans: Dictionary = {
           "TimeBack 是一款 iOS 屏幕使用时间管理应用,通过以下方式帮助用户管理应用使用:",
         items: [
           "每日使用时间限额",
-          "强制休息间隔",
+          "间歇休息机制",
           "基于时间的屏蔽计划",
           "基于位置(地理围栏)的屏蔽",
           "可自定义的屏蔽页面",

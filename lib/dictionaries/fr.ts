@@ -4,16 +4,17 @@ const fr: Dictionary = {
   meta: {
     title: "TimeBack — Reprenez le contrôle de votre temps d'écran",
     description:
-      "TimeBack vous aide à développer des habitudes d'écran plus saines grâce à des outils puissants axés sur la confidentialité. Limites quotidiennes, pauses forcées, horaires, zones géographiques et plus encore. Gratuit et 100 % privé.",
+      "TimeBack est une app iOS privée pour mieux gérer le temps d'écran: limites quotidiennes, pauses, horaires, blocage par lieu, code gardien et écrans de blocage personnalisés. Gratuit, sans compte, sans publicité.",
   },
   hero: {
-    badge: "Bientôt sur l'App Store",
+    badge: "Disponible maintenant sur l'App Store",
     titleLine1: "Reprenez",
     titleLine2: "votre temps",
     subtitle:
-      "Développez des habitudes d'écran plus saines avec des outils puissants axés sur la confidentialité. Gratuit. Sans compte. Sans publicité. Jamais.",
+      "Définissez limites, pauses, horaires et lieux de concentration avec les outils Screen Time d'Apple. Sans compte, sans pub, sans données qui quittent votre iPhone.",
     exploreFeatures: "Explorer les fonctionnalités",
-    comingSoon: "Bientôt disponible",
+    comingSoon: "Télécharger sur l'App Store",
+    trustNote: "Gratuit • Privé • Aucun compte requis",
     badgePrivateTitle: "100 % Privé",
     badgePrivateSub: "Sur l'appareil uniquement",
     badgeBreaksTitle: "Pauses intelligentes",
@@ -21,40 +22,40 @@ const fr: Dictionary = {
   },
   features: {
     eyebrow: "Fonctionnalités",
-    titlePart1: "Tout ce dont vous avez besoin pour",
-    titleHighlight: "rester concentré",
+    titlePart1: "Pensé pour les",
+    titleHighlight: "vraies habitudes",
     subtitle:
-      "Des outils puissants qui fonctionnent discrètement en arrière-plan, vous aidant à développer de meilleures habitudes d'écran sans vous gêner.",
+      "Des règles, horaires, lieux et écrans de blocage qui réduisent les distractions sans vous demander de confier vos données.",
     items: [
       {
         title: "Limites quotidiennes",
         description:
-          "Définissez des limites d'utilisation pour n'importe quelle application ou catégorie. Blocage automatique lorsque le temps est écoulé — pas besoin de volonté.",
+          "Fixez un budget quotidien pour des apps, catégories ou sites web. Les jours de semaine et le week-end peuvent avoir leurs propres limites.",
       },
       {
         title: "Mode pause",
         description:
-          "Forcez des pauses après une utilisation continue pour protéger votre concentration et vos yeux. Reprise automatique.",
+          "Après une session prolongée, TimeBack peut bloquer les apps choisies le temps d'une courte pause, puis reprendre automatiquement.",
       },
       {
         title: "Horaires",
         description:
-          "Bloquez les applications distrayantes pendant les heures de travail, d'étude ou de sommeil. Prend en charge les horaires nocturnes.",
+          "Créez des plages calmes pour le travail, les études, le sommeil ou la famille, y compris les horaires qui passent minuit.",
       },
       {
-        title: "Zones géographiques",
+        title: "Lieux de concentration",
         description:
-          "Bloquez automatiquement les applications lorsque vous entrez dans une zone spécifique comme l'école ou le bureau.",
+          "À l'école, au bureau, à la bibliothèque ou à la maison, les apps se bloquent à l'arrivée et se libèrent au départ.",
       },
       {
         title: "Écran de blocage personnalisé",
         description:
-          "Personnalisez l'écran de blocage avec votre propre icône, message et méthode de déverrouillage.",
+          "Adaptez le titre, le message, l'icône et le délai de déverrouillage pour les limites, pauses, horaires et lieux.",
       },
       {
-        title: "Mode gardien",
+        title: "Code gardien",
         description:
-          "Un code d'accès séparé détenu par un parent ou un partenaire de responsabilité. Empêche les règles d'être contournées.",
+          "Un proche de confiance garde un code séparé pour rendre les changements impulsifs plus difficiles.",
       },
     ],
   },
@@ -63,35 +64,35 @@ const fr: Dictionary = {
     titlePart1: "Voyez-la en",
     titleHighlight: "action",
     subtitle:
-      "Une interface belle et intuitive conçue pour rester discrète tout en vous gardant sur la bonne voie.",
+      "Une interface iPhone calme pour gérer règles, horaires, lieux, écrans de blocage et protection gardien.",
     labels: [
       "Bienvenue",
       "Limites quotidiennes",
       "Horaires",
-      "Zones géographiques",
+      "Lieux",
       "Écran de blocage",
-      "Mode gardien",
+      "Code gardien",
     ],
   },
   howItWorks: {
     eyebrow: "Comment ça marche",
-    titlePart1: "Simple comme",
-    titleHighlight: "1-2-3",
+    titlePart1: "Posez vos règles,",
+    titleHighlight: "gardez le rythme",
     steps: [
       {
-        title: "Définissez vos règles",
+        title: "Choisissez vos garde-fous",
         description:
-          "Choisissez les applications à limiter et configurez des limites quotidiennes, des horaires ou des blocages par localisation. Cela prend moins d'une minute.",
+          "Sélectionnez apps, catégories ou sites web, puis ajoutez limites quotidiennes, pauses, horaires ou lieux selon votre routine.",
       },
       {
-        title: "Restez concentré",
+        title: "Apple applique le blocage",
         description:
-          "TimeBack fonctionne discrètement en arrière-plan. Lorsque vous atteignez une limite, un écran de blocage personnalisable apparaît — vous incitant doucement à faire une pause.",
+          "TimeBack utilise les frameworks Screen Time officiels d'Apple. Quand une règle s'applique, votre écran de blocage personnalisé apparaît.",
       },
       {
-        title: "Développez de meilleures habitudes",
+        title: "Installez l'habitude",
         description:
-          "Au fil du temps, vous prendrez naturellement moins votre téléphone. TimeBack vous aide à récupérer des heures pour ce qui compte vraiment.",
+          "Une friction légère, des déverrouillages temporaires optionnels et le code gardien aident les bonnes habitudes à tenir.",
       },
     ],
   },
@@ -105,7 +106,7 @@ const fr: Dictionary = {
       {
         title: "Sur l'appareil uniquement",
         description:
-          "Toutes vos données restent sur votre iPhone. Rien ne quitte votre appareil.",
+          "Règles, réglages, textes de blocage et empreintes de codes restent sur votre iPhone.",
       },
       {
         title: "Aucun compte requis",
@@ -115,20 +116,20 @@ const fr: Dictionary = {
       {
         title: "Zéro traçage",
         description:
-          "Pas d'analyses, pas de télémétrie, pas de collecte de données. Nous ne pouvons pas voir vos données.",
+          "Pas d'analyses, pas de télémétrie, pas de publicité, pas de SDK tiers de suivi.",
       },
       {
         title: "API officielle Apple",
         description:
-          "Construit avec l'API Screen Time d'Apple. Sécurisé, en sandbox et fiable.",
+          "Les sélections d'apps passent par les jetons privés Screen Time d'Apple. TimeBack ne lit ni contenu d'apps ni historique web.",
       },
     ],
   },
   cta: {
-    title: "Bientôt disponible",
+    title: "Téléchargez TimeBack aujourd'hui",
     subtitle:
-      "TimeBack arrive bientôt sur l'App Store — entièrement gratuit. Restez à l'écoute.",
-    badge: "Bientôt disponible sur l'App Store",
+      "TimeBack est maintenant disponible sur l'App Store — entièrement gratuit.",
+    badge: "Télécharger sur l'App Store",
   },
   footer: {
     features: "Fonctionnalités",

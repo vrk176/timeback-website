@@ -2,16 +2,17 @@ const en = {
   meta: {
     title: "TimeBack — Take Back Control of Your Screen Time",
     description:
-      "TimeBack helps you build healthier screen habits with powerful, privacy-first tools. Daily limits, forced breaks, schedules, location zones, and more. Free and 100% private.",
+      "TimeBack is a private iOS Screen Time companion for daily limits, break mode, schedules, location-based blocking, Guardian passcode, and custom shield screens. Free, no account, no ads.",
   },
   hero: {
-    badge: "Coming Soon to App Store",
+    badge: "Now Available on the App Store",
     titleLine1: "Take Back",
     titleLine2: "Your Time",
     subtitle:
-      "Build healthier screen habits with powerful, privacy-first tools. Free. No account needed. No ads. Ever.",
+      "Set limits, breaks, schedules, and focus zones with Apple's Screen Time tools. No account, no ads, and no data leaving your iPhone.",
     exploreFeatures: "Explore Features",
-    comingSoon: "Coming Soon",
+    comingSoon: "Download on the App Store",
+    trustNote: "Free • Private • No account needed",
     badgePrivateTitle: "100% Private",
     badgePrivateSub: "On-device only",
     badgeBreaksTitle: "Smart Breaks",
@@ -19,40 +20,40 @@ const en = {
   },
   features: {
     eyebrow: "Features",
-    titlePart1: "Everything you need to",
-    titleHighlight: "stay focused",
+    titlePart1: "Built for real-life",
+    titleHighlight: "screen habits",
     subtitle:
-      "Powerful tools that work quietly in the background, helping you build better screen habits without getting in the way.",
+      "Rules, schedules, zones, and custom shield screens help reduce distractions without handing over your data.",
     items: [
       {
         title: "Daily Limits",
         description:
-          "Set usage limits for any app or category. Auto-blocks when time is up — no willpower needed.",
+          "Set a daily budget for apps, categories, or websites. Use weekday-specific limits when weekdays and weekends need different rules.",
       },
       {
         title: "Break Mode",
         description:
-          "Force breaks after continuous use to protect your focus and eyes. Auto-resumes when ready.",
+          "After a stretch of continuous use, TimeBack can block selected apps for a short reset and resume automatically.",
       },
       {
         title: "Schedules",
         description:
-          "Block distracting apps during work, study, or sleep hours. Supports overnight schedules.",
+          "Create quiet hours for work, study, sleep, or family time, including overnight schedules like 10 PM-8 AM.",
       },
       {
         title: "Location Zones",
         description:
-          "Automatically block apps when you enter a specific area like school or office.",
+          "Use zones for school, office, library, or home routines. Apps are blocked when you enter and released when you leave.",
       },
       {
         title: "Custom Block Screen",
         description:
-          "Personalize the blocking screen with your own icon, message, and unlock method.",
+          "Customize the shield for limits, breaks, schedules, and zones with your own title, message, icon, and unlock delay.",
       },
       {
         title: "Guardian Mode",
         description:
-          "A separate passcode held by a parent or accountability partner. Prevents rules from being bypassed.",
+          "Let a parent, partner, or accountability buddy hold a separate passcode so rule changes are harder to bypass.",
       },
     ],
   },
@@ -61,7 +62,7 @@ const en = {
     titlePart1: "See it in",
     titleHighlight: "action",
     subtitle:
-      "Beautiful, intuitive interface designed to stay out of your way while keeping you on track.",
+      "A calm iPhone-first interface for rules, schedules, zones, shield screens, and Guardian protection.",
     labels: [
       "Welcome",
       "Daily Limits",
@@ -73,23 +74,23 @@ const en = {
   },
   howItWorks: {
     eyebrow: "How It Works",
-    titlePart1: "Simple as",
-    titleHighlight: "1-2-3",
+    titlePart1: "Set it once,",
+    titleHighlight: "let it help",
     steps: [
       {
-        title: "Set Your Rules",
+        title: "Choose Your Guardrails",
         description:
-          "Choose which apps to limit and configure daily limits, schedules, or location-based blocking. It takes less than a minute.",
+          "Pick apps, categories, or websites, then choose the daily limits, break mode, schedules, or zones that fit your routine.",
       },
       {
-        title: "Stay Focused",
+        title: "Let iOS Do the Blocking",
         description:
-          "TimeBack works quietly in the background. When you hit a limit, a customizable block screen appears — gently nudging you to take a break.",
+          "TimeBack uses Apple's official Screen Time frameworks. When a rule applies, your custom shield appears at the right moment.",
       },
       {
-        title: "Build Better Habits",
+        title: "Keep the Habit",
         description:
-          "Over time, you'll naturally reach for your phone less. TimeBack helps you reclaim hours for the things that truly matter.",
+          "Use gentle friction, optional unlock windows, and Guardian protection to make better screen habits easier to keep.",
       },
     ],
   },
@@ -103,7 +104,7 @@ const en = {
       {
         title: "On-Device Only",
         description:
-          "All your data stays on your iPhone. Nothing leaves your device.",
+          "Rules, settings, shield text, and passcode hashes stay on your iPhone.",
       },
       {
         title: "No Account Required",
@@ -113,20 +114,20 @@ const en = {
       {
         title: "Zero Tracking",
         description:
-          "No analytics, no telemetry, no data collection. We can't see your data.",
+          "No analytics, no telemetry, no ads, and no third-party tracking SDKs.",
       },
       {
         title: "Apple Official API",
         description:
-          "Built with Apple's Screen Time API. Secure, sandboxed, and reliable.",
+          "App selections use Apple's private Screen Time tokens. TimeBack cannot read app content or browsing history.",
       },
     ],
   },
   cta: {
-    title: "Coming Soon",
+    title: "Download TimeBack Today",
     subtitle:
-      "TimeBack is coming soon to the App Store — completely free. Stay tuned.",
-    badge: "Available on App Store Soon",
+      "TimeBack is now available on the App Store — completely free.",
+    badge: "Download on the App Store",
   },
   footer: {
     features: "Features",
@@ -297,7 +298,7 @@ const en = {
           "TimeBack is a screen time management application for iOS that helps users manage their app usage through:",
         items: [
           "Daily usage time limits",
-          "Forced break intervals",
+          "Break mode intervals",
           "Time-based blocking schedules",
           "Location-based (geofence) blocking",
           "Customizable blocking screens",

@@ -16,7 +16,7 @@ export default function Footer({
           <span className="text-lg font-bold text-text-primary">TimeBack</span>
         </div>
 
-        <div className="flex items-center gap-8 text-sm text-text-secondary">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center text-sm text-text-secondary">
           <a href="#features" className="hover:text-brand transition-colors">
             {dict.features}
           </a>
@@ -31,7 +31,7 @@ export default function Footer({
           </a>
         </div>
 
-        <p className="text-sm text-text-secondary">
+        <p className="text-center text-sm text-text-secondary">
           &copy; {new Date().getFullYear()} Hominexis. {dict.rights}
         </p>
       </div>

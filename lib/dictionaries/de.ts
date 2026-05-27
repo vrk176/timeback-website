@@ -4,16 +4,17 @@ const de: Dictionary = {
   meta: {
     title: "TimeBack — Gewinne deine Bildschirmzeit zurück",
     description:
-      "TimeBack hilft dir, mit leistungsstarken, datenschutzorientierten Werkzeugen gesündere Bildschirmgewohnheiten zu entwickeln. Tageslimits, erzwungene Pausen, Zeitpläne, Standortzonen und mehr. Kostenlos und 100 % privat.",
+      "TimeBack ist eine datenschutzfreundliche iOS-App für Bildschirmzeit: Tageslimits, Pausenmodus, Zeitpläne, ortsbasierte Sperren, Guardian-Passcode und eigene Sperrbildschirme. Kostenlos, ohne Konto, ohne Werbung.",
   },
   hero: {
-    badge: "Bald im App Store",
+    badge: "Jetzt im App Store verfügbar",
     titleLine1: "Gewinne",
     titleLine2: "deine Zeit zurück",
     subtitle:
-      "Entwickle mit leistungsstarken, datenschutzorientierten Werkzeugen gesündere Bildschirmgewohnheiten. Kostenlos. Kein Konto nötig. Keine Werbung. Niemals.",
+      "Setze Limits, Pausen, Zeitpläne und Fokusorte mit Apples Screen-Time-Technik. Ohne Konto, ohne Werbung, ohne Datenabfluss von deinem iPhone.",
     exploreFeatures: "Funktionen entdecken",
-    comingSoon: "Demnächst",
+    comingSoon: "Im App Store laden",
+    trustNote: "Kostenlos • Privat • Kein Konto nötig",
     badgePrivateTitle: "100 % Privat",
     badgePrivateSub: "Nur auf dem Gerät",
     badgeBreaksTitle: "Smarte Pausen",
@@ -21,40 +22,40 @@ const de: Dictionary = {
   },
   features: {
     eyebrow: "Funktionen",
-    titlePart1: "Alles, was du brauchst, um",
-    titleHighlight: "fokussiert zu bleiben",
+    titlePart1: "Für echte",
+    titleHighlight: "Alltagsroutinen",
     subtitle:
-      "Leistungsstarke Werkzeuge, die leise im Hintergrund laufen und dir helfen, bessere Bildschirmgewohnheiten zu entwickeln, ohne dabei zu stören.",
+      "Regeln, Zeitpläne, Orte und eigene Sperrbildschirme helfen dir, Ablenkung zu reduzieren, ohne deine Daten aus der Hand zu geben.",
     items: [
       {
         title: "Tageslimits",
         description:
-          "Lege Nutzungslimits für jede App oder Kategorie fest. Automatische Sperrung bei Zeitablauf – keine Willenskraft nötig.",
+          "Lege Tagesbudgets für Apps, Kategorien oder Websites fest. Wochentage und Wochenenden können eigene Limits haben.",
       },
       {
         title: "Pausenmodus",
         description:
-          "Erzwinge Pausen nach kontinuierlicher Nutzung, um deinen Fokus und deine Augen zu schützen. Wird automatisch fortgesetzt.",
+          "Nach längerer Nutzung kann TimeBack ausgewählte Apps kurz sperren und danach automatisch wieder freigeben.",
       },
       {
         title: "Zeitpläne",
         description:
-          "Blockiere ablenkende Apps während der Arbeits-, Lern- oder Schlafzeiten. Unterstützt nächtliche Zeitpläne.",
+          "Richte ruhige Zeiten für Arbeit, Lernen, Schlaf oder Familie ein, auch über Mitternacht hinweg.",
       },
       {
-        title: "Standortzonen",
+        title: "Fokusorte",
         description:
-          "Blockiere Apps automatisch, wenn du einen bestimmten Bereich wie Schule oder Büro betrittst.",
+          "In Schule, Büro, Bibliothek oder zuhause können Apps automatisch gesperrt und beim Verlassen wieder freigegeben werden.",
       },
       {
         title: "Eigener Sperrbildschirm",
         description:
-          "Personalisiere den Sperrbildschirm mit deinem eigenen Symbol, deiner Nachricht und deiner Entsperrmethode.",
+          "Passe Titel, Nachricht, Symbol und Entsperr-Wartezeit für Limits, Pausen, Zeitpläne und Orte an.",
       },
       {
-        title: "Guardian-Modus",
+        title: "Guardian-Passcode",
         description:
-          "Ein separater Passcode, der von einem Elternteil oder einer vertrauenswürdigen Person gehalten wird. Verhindert, dass Regeln umgangen werden.",
+          "Eine Vertrauensperson verwahrt einen separaten Passcode, damit spontane Regeländerungen schwerer werden.",
       },
     ],
   },
@@ -63,35 +64,35 @@ const de: Dictionary = {
     titlePart1: "Sieh es in",
     titleHighlight: "Aktion",
     subtitle:
-      "Schöne, intuitive Oberfläche, die dir nicht im Weg steht und dich auf Kurs hält.",
+      "Eine ruhige iPhone-Oberfläche für Regeln, Zeitpläne, Fokusorte, Sperrbildschirme und Guardian-Schutz.",
     labels: [
       "Willkommen",
       "Tageslimits",
       "Zeitpläne",
-      "Standortzonen",
+      "Fokusorte",
       "Sperrbildschirm",
-      "Guardian-Modus",
+      "Guardian-Passcode",
     ],
   },
   howItWorks: {
     eyebrow: "So funktioniert's",
-    titlePart1: "Einfach wie",
-    titleHighlight: "1-2-3",
+    titlePart1: "Einmal festlegen,",
+    titleHighlight: "leichter dranbleiben",
     steps: [
       {
-        title: "Regeln festlegen",
+        title: "Grenzen definieren",
         description:
-          "Wähle aus, welche Apps eingeschränkt werden sollen, und konfiguriere Tageslimits, Zeitpläne oder standortbasierte Sperren. Es dauert weniger als eine Minute.",
+          "Wähle Apps, Kategorien oder Websites aus und kombiniere Tageslimits, Pausen, Zeitpläne oder ortsbasierte Regeln.",
       },
       {
-        title: "Fokussiert bleiben",
+        title: "Apple übernimmt die Sperre",
         description:
-          "TimeBack arbeitet leise im Hintergrund. Wenn du ein Limit erreichst, erscheint ein anpassbarer Sperrbildschirm, der dich sanft zu einer Pause ermutigt.",
+          "TimeBack nutzt Apples offizielle Screen-Time-Frameworks. Wenn eine Regel greift, erscheint dein eigener Sperrbildschirm.",
       },
       {
-        title: "Bessere Gewohnheiten aufbauen",
+        title: "Zur Routine machen",
         description:
-          "Mit der Zeit greifst du auf natürliche Weise seltener zu deinem Telefon. TimeBack hilft dir, Stunden für die wirklich wichtigen Dinge zurückzugewinnen.",
+          "Sanfte Hürden, optionale Kurzfreigaben und Guardian-Schutz machen es leichter, bessere Gewohnheiten beizubehalten.",
       },
     ],
   },
@@ -105,7 +106,7 @@ const de: Dictionary = {
       {
         title: "Nur auf dem Gerät",
         description:
-          "Alle deine Daten bleiben auf deinem iPhone. Nichts verlässt dein Gerät.",
+          "Regeln, Einstellungen, Sperrbildschirmtexte und Passcode-Hashes bleiben auf deinem iPhone.",
       },
       {
         title: "Kein Konto erforderlich",
@@ -115,20 +116,20 @@ const de: Dictionary = {
       {
         title: "Null Tracking",
         description:
-          "Keine Analysen, keine Telemetrie, keine Datenerhebung. Wir können deine Daten nicht sehen.",
+          "Keine Analytics, keine Telemetrie, keine Werbung und keine Drittanbieter-Tracking-SDKs.",
       },
       {
         title: "Offizielle Apple-API",
         description:
-          "Gebaut mit Apples Screen Time API. Sicher, sandboxed und zuverlässig.",
+          "App-Auswahlen laufen über Apples private Screen-Time-Tokens. TimeBack kann App-Inhalte oder Browserverlauf nicht lesen.",
       },
     ],
   },
   cta: {
-    title: "Demnächst verfügbar",
+    title: "TimeBack jetzt herunterladen",
     subtitle:
-      "TimeBack kommt bald in den App Store – komplett kostenlos. Bleib dran.",
-    badge: "Bald im App Store verfügbar",
+      "TimeBack ist jetzt im App Store verfügbar – komplett kostenlos.",
+    badge: "Im App Store laden",
   },
   footer: {
     features: "Funktionen",

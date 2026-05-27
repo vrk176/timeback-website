@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import AppStorePill from "@/components/AppStorePill";
+import { APP_STORE_URL } from "@/lib/appStore";
 import type { Dictionary } from "@/lib/dictionaries/en";
 
 export default function Hero({ dict }: { dict: Dictionary["hero"] }) {
@@ -65,23 +67,31 @@ export default function Hero({ dict }: { dict: Dictionary["hero"] }) {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            className="flex flex-col items-center lg:items-start gap-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <a
-              href="#features"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand font-bold rounded-full text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              {dict.exploreFeatures}
-            </a>
-            <a
-              href="#cta"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white/15 backdrop-blur-sm text-white font-semibold rounded-full text-lg border border-white/30 hover:bg-white/25 transition-all duration-300"
-            >
-              {dict.comingSoon}
-            </a>
+            <div className="flex flex-col md:flex-row items-center gap-4 justify-center lg:justify-start">
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={dict.comingSoon}
+                className="inline-flex hover:scale-105 transition-transform duration-300"
+              >
+                <AppStorePill tone="solid" className="ring-1 ring-white/50" />
+              </a>
+              <a
+                href="#features"
+                className="inline-flex shrink-0 items-center justify-center whitespace-nowrap px-7 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full text-lg border border-white/25 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+              >
+                {dict.exploreFeatures}
+              </a>
+            </div>
+            <p className="text-sm md:text-base font-medium text-white/75">
+              {dict.trustNote}
+            </p>
           </motion.div>
         </div>
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isValidLocale, locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
+import { createSeoMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -15,10 +16,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
   const dict = getDictionary(params.locale);
-  return {
+  return createSeoMetadata({
+    locale: params.locale,
+    path: "/privacy-policy",
     title: `${dict.privacyPolicyPage.title} — TimeBack`,
     description: dict.meta.description,
-  };
+  });
 }
 
 export default function PrivacyPolicy({

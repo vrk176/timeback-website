@@ -10,10 +10,7 @@ import {
   jsonLd,
   siteConfig,
 } from "@/lib/seo";
-import { faqLocales, getFaq, hasFaq } from "@/lib/faq";
-import FaqRedirect from "@/components/FaqRedirect";
-
-const REDIRECT_TARGET = "/en/faq";
+import { getFaq } from "@/lib/faq";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -26,15 +23,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
   const locale = params.locale as Locale;
-
-  if (!hasFaq(locale)) {
-    return {
-      title: "FAQ — TimeBack",
-      robots: { index: false, follow: false },
-      alternates: { canonical: absoluteUrl(REDIRECT_TARGET) },
-    };
-  }
-
   const dict = getDictionary(locale);
   const faq = getFaq(locale);
   return createSeoMetadata({
@@ -42,7 +30,6 @@ export async function generateMetadata({
     path: "/faq",
     title: `${faq.title} — TimeBack`,
     description: dict.meta.description,
-    availableLocales: faqLocales,
   });
 }
 
@@ -53,11 +40,6 @@ export default function FaqPage({
 }) {
   if (!isValidLocale(params.locale)) notFound();
   const locale = params.locale as Locale;
-
-  if (!hasFaq(locale)) {
-    return <FaqRedirect target={REDIRECT_TARGET} />;
-  }
-
   const dict = getDictionary(locale);
   const faq = getFaq(locale);
 

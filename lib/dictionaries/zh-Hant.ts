@@ -69,19 +69,19 @@ const zhHant: Dictionary = {
     titleHighlight: "讓它幫你維持",
     steps: [
       {
-        title: "先定好界線",
+        title: "先設好你的規則",
         description:
           "選擇 App、類別或網站,再設定每日限額、間歇休息、時間表或地點區域。",
       },
       {
         title: "交給系統執行",
         description:
-          "TimeBack 基於 Apple 官方 Screen Time 框架運作。規則觸發時,自訂封鎖頁會在合適的時候出現。",
+          "TimeBack 基於 Apple 官方 Screen Time 框架運作。規則觸發時,自訂封鎖頁會在適當的時機出現。",
       },
       {
-        title: "把習慣留下來",
+        title: "讓習慣留下來",
         description:
-          "用一點恰到好處的阻力、可選臨時解鎖和監護人密碼,讓少滑一會兒變得更容易。",
+          "用一點剛剛好的阻力、可選的臨時解鎖和監護人密碼,讓你少滑一下手機,變得更輕鬆。",
       },
     ],
   },
@@ -119,6 +119,7 @@ const zhHant: Dictionary = {
     features: "功能",
     privacy: "隱私政策",
     terms: "使用條款",
+    faq: "常見問題",
     contact: "聯絡我們",
     rights: "保留所有權利。",
     language: "語言",

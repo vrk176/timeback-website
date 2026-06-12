@@ -2,23 +2,23 @@ import type { Dictionary } from "./en";
 
 const de: Dictionary = {
   meta: {
-    title: "TimeBack — Gewinne deine Bildschirmzeit zurück",
+    title: "TimeBack — Hol dir deine Bildschirmzeit zurück",
     description:
       "TimeBack ist eine datenschutzfreundliche iOS-App für Bildschirmzeit: Tageslimits, Pausenmodus, Zeitpläne, ortsbasierte Sperren, Guardian-Passcode und eigene Sperrbildschirme. Kostenlos, ohne Konto, ohne Werbung.",
   },
   hero: {
     badge: "Jetzt im App Store verfügbar",
-    titleLine1: "Gewinne",
+    titleLine1: "Hol dir",
     titleLine2: "deine Zeit zurück",
     subtitle:
-      "Setze Limits, Pausen, Zeitpläne und Fokusorte mit Apples Screen-Time-Technik. Ohne Konto, ohne Werbung, ohne Datenabfluss von deinem iPhone.",
+      "Setze Limits, Pausen, Zeitpläne und Fokusorte mit Apples Screen-Time-Technik. Ohne Konto, ohne Werbung — deine Daten verlassen das iPhone nicht.",
     exploreFeatures: "Funktionen entdecken",
     comingSoon: "Im App Store laden",
     trustNote: "Kostenlos • Privat • Kein Konto nötig",
     badgePrivateTitle: "100 % Privat",
     badgePrivateSub: "Nur auf dem Gerät",
     badgeBreaksTitle: "Smarte Pausen",
-    badgeBreaksSub: "Schütze deine Augen",
+    badgeBreaksSub: "Gut für die Augen",
   },
   features: {
     eyebrow: "Funktionen",
@@ -80,9 +80,9 @@ const de: Dictionary = {
     titleHighlight: "leichter dranbleiben",
     steps: [
       {
-        title: "Grenzen definieren",
+        title: "Deine Regeln festlegen",
         description:
-          "Wähle Apps, Kategorien oder Websites aus und kombiniere Tageslimits, Pausen, Zeitpläne oder ortsbasierte Regeln.",
+          "Wähle Apps, Kategorien oder Websites aus und kombiniere Tageslimits, Pausen, Zeitpläne oder ortsbasierte Regeln nach deinem Alltag.",
       },
       {
         title: "Apple übernimmt die Sperre",
@@ -135,6 +135,7 @@ const de: Dictionary = {
     features: "Funktionen",
     privacy: "Datenschutz",
     terms: "Nutzungsbedingungen",
+    faq: "Häufige Fragen",
     contact: "Kontakt",
     rights: "Alle Rechte vorbehalten.",
     language: "Sprache",

@@ -11,14 +11,14 @@ const ja: Dictionary = {
     titleLine1: "時間を、",
     titleLine2: "自分に取り戻そう。",
     subtitle:
-      "Apple のスクリーンタイム機能を使って、制限・休憩・時間帯・場所に応じたブロックを設定。アカウント不要、広告なし、データは iPhone 内に。",
+      "Apple のスクリーンタイム機能を使って、制限・休憩・スケジュール・場所ごとのブロックを設定。アカウント不要、広告なし、データは iPhone のなかだけ。",
     exploreFeatures: "機能を見る",
     comingSoon: "App Store でダウンロード",
-    trustNote: "無料 • プライベート • アカウント不要",
+    trustNote: "無料 • プライバシー重視 • アカウント不要",
     badgePrivateTitle: "100% プライベート",
-    badgePrivateSub: "デバイス内のみ",
+    badgePrivateSub: "端末のなかで完結",
     badgeBreaksTitle: "スマート休憩",
-    badgeBreaksSub: "目を守ります",
+    badgeBreaksSub: "目にもやさしく",
   },
   features: {
     eyebrow: "機能",
@@ -43,9 +43,9 @@ const ja: Dictionary = {
           "勉強、仕事、睡眠、家族の時間などに合わせてブロック。22時から翌朝8時のような日をまたぐ設定にも対応します。",
       },
       {
-        title: "場所ゾーン",
+        title: "ロケーションゾーン",
         description:
-          "学校、職場、図書館などに入ると集中モードに。離れると自動で元に戻ります。",
+          "学校、職場、図書館に入ると自動で集中モードに切り替わり、離れると元に戻ります。",
       },
       {
         title: "カスタムブロック画面",
@@ -62,27 +62,27 @@ const ja: Dictionary = {
   showcase: {
     eyebrow: "アプリプレビュー",
     titlePart1: "実際の",
-    titleHighlight: "動作",
+    titleHighlight: "画面で見る",
     subtitle:
-      "ルール、スケジュール、場所ゾーン、ブロック画面、ガーディアン設定を、落ち着いた iPhone らしい画面で管理できます。",
+      "ルール、スケジュール、ロケーションゾーン、ブロック画面、ガーディアン設定。iPhone らしい落ち着いた画面で、ぜんぶ管理できます。",
     labels: [
       "ようこそ",
       "1日の使用制限",
       "スケジュール",
-      "場所ゾーン",
+      "ロケーションゾーン",
       "ブロック画面",
       "ガーディアンモード",
     ],
   },
   howItWorks: {
     eyebrow: "使い方",
-    titlePart1: "一度決めたら、",
-    titleHighlight: "続けやすく",
+    titlePart1: "一度決めれば、",
+    titleHighlight: "あとはおまかせ",
     steps: [
       {
-        title: "自分の境界線を決める",
+        title: "マイルールを決める",
         description:
-          "アプリ、カテゴリ、Webサイトを選び、1日の制限、休憩、時間帯、場所に合わせたルールを設定します。",
+          "アプリ、カテゴリ、Web サイトを選んで、1日の制限、休憩、スケジュール、場所に合わせたルールを組み合わせます。",
       },
       {
         title: "Apple の仕組みでブロック",
@@ -135,6 +135,7 @@ const ja: Dictionary = {
     features: "機能",
     privacy: "プライバシーポリシー",
     terms: "利用規約",
+    faq: "よくある質問",
     contact: "お問い合わせ",
     rights: "All rights reserved.",
     language: "言語",

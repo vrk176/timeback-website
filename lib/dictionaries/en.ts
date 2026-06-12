@@ -133,6 +133,7 @@ const en = {
     features: "Features",
     privacy: "Privacy Policy",
     terms: "Terms of Use",
+    faq: "FAQ",
     contact: "Contact",
     rights: "All rights reserved.",
     language: "Language",

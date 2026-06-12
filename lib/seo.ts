@@ -119,28 +119,40 @@ export function getLocalePath(locale: Locale, path = "") {
   return `/${locale}${suffix}`;
 }
 
-export function getLanguageAlternates(path = "") {
+export function getLanguageAlternates(
+  path = "",
+  availableLocales: readonly Locale[] = locales,
+) {
+  const fallback = availableLocales.includes(defaultLocale)
+    ? defaultLocale
+    : availableLocales[0];
   const languages: Record<string, string> = {
-    "x-default": getLocalePath(defaultLocale, path),
+    "x-default": getLocalePath(fallback, path),
   };
 
-  for (const locale of locales) {
+  for (const locale of availableLocales) {
     languages[localeSeo[locale].htmlLang] = getLocalePath(locale, path);
   }
 
   return languages;
 }
 
-export function getAbsoluteLanguageAlternates(path = "") {
+export function getAbsoluteLanguageAlternates(
+  path = "",
+  availableLocales: readonly Locale[] = locales,
+) {
+  const fallback = availableLocales.includes(defaultLocale)
+    ? defaultLocale
+    : availableLocales[0];
   const languages: Record<string, string> = {};
 
-  for (const locale of locales) {
+  for (const locale of availableLocales) {
     languages[localeSeo[locale].htmlLang] = absoluteUrl(
       getLocalePath(locale, path),
     );
   }
 
-  languages["x-default"] = absoluteUrl(getLocalePath(defaultLocale, path));
+  languages["x-default"] = absoluteUrl(getLocalePath(fallback, path));
   return languages;
 }
 
@@ -150,12 +162,14 @@ export function createSeoMetadata({
   title,
   description,
   noIndex = false,
+  availableLocales,
 }: {
   locale: Locale;
   path?: string;
   title: string;
   description: string;
   noIndex?: boolean;
+  availableLocales?: readonly Locale[];
 }): Metadata {
   const canonical = getLocalePath(locale, path);
 
@@ -165,7 +179,7 @@ export function createSeoMetadata({
     keywords: localeSeo[locale].keywords,
     alternates: {
       canonical,
-      languages: getLanguageAlternates(path),
+      languages: getLanguageAlternates(path, availableLocales),
     },
     openGraph: {
       title,
@@ -174,7 +188,7 @@ export function createSeoMetadata({
       siteName: siteConfig.name,
       type: "website",
       locale: localeSeo[locale].ogLocale,
-      alternateLocale: locales
+      alternateLocale: (availableLocales ?? locales)
         .filter((item) => item !== locale)
         .map((item) => localeSeo[item].ogLocale),
       images: [

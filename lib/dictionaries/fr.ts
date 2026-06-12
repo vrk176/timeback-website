@@ -99,7 +99,7 @@ const fr: Dictionary = {
   privacy: {
     eyebrow: "Confidentialité d'abord",
     titlePart1: "100 % Privé.",
-    titleHighlight: "Zéro donnée téléchargée.",
+    titleHighlight: "Aucune donnée envoyée.",
     ever: "Jamais.",
     trustBadge: "Gratuit. Sans publicité. Sans SDK tiers. Sans compromis.",
     items: [
@@ -135,6 +135,7 @@ const fr: Dictionary = {
     features: "Fonctionnalités",
     privacy: "Politique de confidentialité",
     terms: "Conditions d'utilisation",
+    faq: "FAQ",
     contact: "Contact",
     rights: "Tous droits réservés.",
     language: "Langue",

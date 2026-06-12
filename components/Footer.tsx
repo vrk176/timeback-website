@@ -26,6 +26,9 @@ export default function Footer({
           <a href={`/${locale}/terms-of-use`} className="hover:text-brand transition-colors">
             {dict.terms}
           </a>
+          <a href={`/${locale}/faq`} className="hover:text-brand transition-colors">
+            {dict.faq}
+          </a>
           <a href="mailto:connect@hominexis.com" className="hover:text-brand transition-colors">
             {dict.contact}
           </a>

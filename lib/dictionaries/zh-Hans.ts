@@ -119,6 +119,7 @@ const zhHans: Dictionary = {
     features: "功能",
     privacy: "隐私政策",
     terms: "使用条款",
+    faq: "常见问题",
     contact: "联系我们",
     rights: "保留所有权利。",
     language: "语言",

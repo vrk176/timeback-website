@@ -8,17 +8,17 @@ const ko: Dictionary = {
   },
   hero: {
     badge: "App Store에서 지금 이용 가능",
-    titleLine1: "시간을,",
-    titleLine2: "나에게 돌려주세요.",
+    titleLine1: "내 시간,",
+    titleLine2: "다시 내 것으로.",
     subtitle:
-      "Apple Screen Time 기능으로 제한, 휴식, 일정, 집중 구역을 설정하세요. 계정도 광고도 없고, 데이터는 iPhone 안에 머뭅니다.",
+      "Apple Screen Time 기능으로 제한, 휴식, 일정, 집중 구역을 설정하세요. 계정도 광고도 없이, 데이터는 iPhone 안에만 머뭅니다.",
     exploreFeatures: "기능 살펴보기",
     comingSoon: "App Store에서 다운로드",
-    trustNote: "무료 • 비공개 • 계정 불필요",
+    trustNote: "무료 • 개인정보 보호 • 계정 불필요",
     badgePrivateTitle: "100% 비공개",
-    badgePrivateSub: "기기에만 저장",
+    badgePrivateSub: "기기 안에만",
     badgeBreaksTitle: "스마트 휴식",
-    badgeBreaksSub: "눈을 보호합니다",
+    badgeBreaksSub: "눈도 편안하게",
   },
   features: {
     eyebrow: "기능",
@@ -61,10 +61,10 @@ const ko: Dictionary = {
   },
   showcase: {
     eyebrow: "앱 미리보기",
-    titlePart1: "실제",
-    titleHighlight: "작동 모습",
+    titlePart1: "직접",
+    titleHighlight: "살펴보기",
     subtitle:
-      "규칙, 일정, 집중 구역, 차단 화면, 보호자 설정을 차분한 iPhone 인터페이스에서 관리하세요.",
+      "규칙, 일정, 집중 구역, 차단 화면, 보호자 설정까지 — iPhone 답게 깔끔한 화면 하나에서 정리됩니다.",
     labels: [
       "환영합니다",
       "일일 제한",
@@ -80,9 +80,9 @@ const ko: Dictionary = {
     titleHighlight: "지키기 쉬워요",
     steps: [
       {
-        title: "나만의 경계 정하기",
+        title: "나만의 기준 정하기",
         description:
-          "앱, 카테고리, 웹사이트를 고르고 일일 제한, 휴식, 일정, 위치에 맞는 규칙을 설정하세요.",
+          "앱, 카테고리, 웹사이트를 고르고, 하루 사용 시간·휴식·일정·위치 규칙을 내 일상에 맞게 조합하세요.",
       },
       {
         title: "Apple 시스템으로 차단",
@@ -135,6 +135,7 @@ const ko: Dictionary = {
     features: "기능",
     privacy: "개인정보 처리방침",
     terms: "이용약관",
+    faq: "자주 묻는 질문",
     contact: "문의하기",
     rights: "모든 권리 보유.",
     language: "언어",

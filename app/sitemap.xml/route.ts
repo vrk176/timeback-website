@@ -1,16 +1,25 @@
-import { locales } from "@/lib/i18n";
+import { locales, type Locale } from "@/lib/i18n";
 import {
   absoluteUrl,
   getAbsoluteLanguageAlternates,
   getLocalePath,
 } from "@/lib/seo";
+import { faqLocales } from "@/lib/faq";
 
 export const dynamic = "force-static";
 
-const routes = [
+type Route = {
+  path: string;
+  priority: number;
+  changeFrequency: string;
+  locales?: readonly Locale[];
+};
+
+const routes: Route[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
   { path: "/privacy-policy", priority: 0.4, changeFrequency: "monthly" },
   { path: "/terms-of-use", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/faq", priority: 0.6, changeFrequency: "monthly", locales: faqLocales },
 ];
 
 function escapeXml(value: string) {
@@ -54,17 +63,18 @@ ${alternateLinks}
 
 export function GET() {
   const lastModified = new Date().toISOString();
-  const urls = routes.flatMap((route) =>
-    locales.map((locale) =>
+  const urls = routes.flatMap((route) => {
+    const routeLocales = route.locales ?? locales;
+    return routeLocales.map((locale) =>
       urlEntry({
         loc: absoluteUrl(getLocalePath(locale, route.path)),
-        alternates: getAbsoluteLanguageAlternates(route.path),
+        alternates: getAbsoluteLanguageAlternates(route.path, routeLocales),
         lastModified,
         changeFrequency: route.changeFrequency,
         priority: route.priority,
       }),
-    ),
-  );
+    );
+  });
 
   return new Response(
     `<?xml version="1.0" encoding="UTF-8"?>

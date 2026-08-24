@@ -384,6 +384,59 @@ const fr: FaqContent = {
   },
 };
 
+const es: FaqContent = {
+  title: "Preguntas frecuentes",
+  intro:
+    "Las dudas que más nos llegan — cómo se comporta el bloqueo en realidad, por qué hacen falta ciertos toques y qué pasa con tus datos.",
+  entries: [
+    {
+      q: "¿Por qué el bloqueo tarda a veces unos segundos?",
+      a: "Cuando activas una regla, TimeBack registra el bloqueo en iOS al instante. Pero la pantalla de bloqueo que ves sobre la app la dibuja el propio iOS — y iOS puede tardar unos segundos (a veces algo más) en actualizarla, sobre todo justo después de varios cambios seguidos. Si la pantalla aún no ha aparecido, el bloqueo ya está puesto. Dale un momento; activar y desactivar la regla una y otra vez puede hacer que iOS tarde aún más.",
+    },
+    {
+      q: "¿Por qué tengo que tocar Continuar cuando termina un descanso?",
+      a: "Al terminar el descanso, la app vuelve a bloquearse y TimeBack espera a que toques Continuar en lugar de desbloquear en silencio en segundo plano. En parte es una norma de la plataforma — la pantalla que muestra el bloqueo no puede completar un desbloqueo por su cuenta. Y en parte es intencionado: ese pequeño toque es el momento de decidir si de verdad quieres volver a entrar.",
+    },
+    {
+      q: "¿Qué diferencia hay entre los Límites diarios y los Horarios?",
+      a: "Un Límite diario es un cupo de tiempo: la app sigue disponible hasta que gastas los minutos que le has asignado hoy, y entonces se bloquea. Un Horario es una franja: las apps que cubre quedan bloqueadas durante las horas que fijes (por ejemplo, de 22:00 a 08:00), por poco que las hayas usado. Funcionan de forma independiente, y una misma app puede estar cubierta por ambos.",
+    },
+    {
+      q: "¿Qué reviso si una regla no funciona?",
+      a: "1) Abre TimeBack una vez — las reglas se sincronizan con el sistema cada vez que la app pasa a primer plano. 2) Comprueba que el permiso de Tiempo de uso sigue concedido (Configuración de iOS → Tiempo de uso). 3) Abre la regla y confirma que está activada y que sigue teniendo apps seleccionadas. 4) En los Horarios, revisa la franja horaria y los días de repetición. 5) ¿Sigue sin funcionar? Escríbenos desde Configuración → Soporte: el mensaje ya viene con la versión de tu app, así te ayudamos más rápido.",
+    },
+    {
+      q: "¿TimeBack envía mis datos de uso?",
+      a: "No. Tus datos de uso se quedan en tu dispositivo. TimeBack no tiene cuentas ni analíticas. Además, el framework de Tiempo de uso de Apple está hecho de forma que TimeBack solo maneja referencias anónimas a las apps — nunca una lista legible de lo que usas.",
+    },
+    {
+      q: "¿Por qué necesita TimeBack el permiso de Tiempo de uso?",
+      a: "El permiso de Tiempo de uso (Family Controls, de Apple) es el único mecanismo que ofrece iOS para que una app pueda limitar a otra. Todo lo que hace TimeBack — pantallas de bloqueo, conteo de minutos, horarios — se apoya en él. Sin el permiso no se puede bloquear nada, y si lo retiras más adelante, todas las reglas se detienen hasta que vuelvas a concederlo.",
+    },
+    {
+      q: "¿Por qué no puedo eliminar ninguna app tras activar Impedir la eliminación de apps?",
+      a: "Así funciona ese ajuste de iOS: el framework de Tiempo de uso de Apple ofrece una única restricción de “eliminar apps” para todo el dispositivo, no una por app. Cuando activas Impedir la eliminación de apps, iOS impide que se elimine cualquier app del dispositivo — TimeBack incluida, que es justo el objetivo — y no hay forma de que TimeBack se proteja solo a sí misma. El diálogo de confirmación lo dice antes de aplicar nada, y puedes desactivar el ajuste cuando quieras (si has configurado un código del guardián, te lo pedirá primero).",
+    },
+    {
+      q: "¿Por qué a veces un Límite diario bloquea unos minutos antes de tiempo?",
+      a: "TimeBack le pide a iOS que dispare el límite exactamente en los minutos que has fijado. Sin embargo, iOS mantiene dos contadores internos distintos del uso de las apps: el que dispara los eventos de límite y el que hay detrás de la cifra de uso que ves en la app (la misma que muestra Tiempo de uso del sistema). En nuestras mediciones, los dos pueden discrepar en varios minutos el mismo día, y el contador de eventos va por delante — así que el bloqueo puede aparecer cuando la cifra aún indica unos minutos disponibles. Esto ocurre dentro de iOS y afecta también a los límites de Tiempo de uso de la propia Apple; TimeBack no puede leer esa cifra en el momento de aplicar el bloqueo para corregirla.\n\nSi un bloqueo te parece prematuro, abre TimeBack y usa “Desbloquear una vez” en la tarjeta de la regla (o desactiva la regla) — el control sigue siendo tuyo. La pantalla de bloqueo, en cambio, se mantiene firme: su botón OK cierra la app sin levantar el bloqueo, para que un toque reflejo no eche por tierra tu límite. Todo se reinicia a medianoche.",
+    },
+    {
+      q: "¿Por qué no puedo fijar un período de bloqueo de menos de 15 minutos?",
+      a: "Es un límite de iOS, no una decisión de TimeBack: el sistema se niega a supervisar una franja de bloqueo de menos de 15 minutos y rechaza el horario de plano. Antes TimeBack te dejaba guardarlo igualmente — y luego se quedaba en tu lista con aspecto de estar activo sin bloquear nada. Ahora el botón Guardar permanece desactivado hasta que la franja sea lo bastante larga, y te explica por qué.\n\nUn detalle que conviene saber: una franja que cruza la medianoche cuenta como dos períodos separados — el tramo anterior a medianoche y el posterior — y cada uno necesita sus 15 minutos. Por eso 23:50–08:00 no se guarda (apenas diez minutos caen antes de medianoche), mientras que 23:00–08:00 sí se guarda.\n\nSi lo que quieres es un bloqueo corto y puntual, usa “Bloquear ahora” en la tarjeta de la regla: se bloquea al instante y sigue bloqueado hasta que tú lo levantes, sin duración mínima.",
+    },
+    {
+      q: "¿Por qué algunos sitios web no muestran cifras de uso en una regla de sitios web?",
+      a: "La cifra de uso de la tarjeta de una regla viene de los datos de Tiempo de uso de Apple, y los sitios web están incluidos — incluso la navegación en otros dispositivos con la misma cuenta de Apple si tienes activado compartir entre dispositivos (Safari en tu Mac, por ejemplo). La inmensa mayoría de los sitios aparecen como cabe esperar.\n\nEn nuestras pruebas, sin embargo, hay unos pocos sitios que el sistema atribuye de forma persistente a la app correspondiente y que ya no generan datos a nivel de sitio web en ningún dispositivo. El caso confirmado es youtube.com: su tiempo de navegación se cuenta como uso de la app de YouTube — incluso tras quitar la app web de YouTube en el Mac y desinstalar la app de YouTube en el iPhone. Esto pasa dentro de la capa de atribución de datos de Apple, y TimeBack no puede leer datos que nunca llegan a existir.\n\nLo importante: el bloqueo no se ve afectado. El tiempo en esos sitios sigue contando para el límite de la regla y el bloqueo llega puntual — lo único que no puede reflejar esa parte es la cifra de la tarjeta. Si una regla de sitios web se bloquea mostrando una cifra minúscula, esta suele ser la razón (o el uso se produjo en otro dispositivo).",
+    },
+  ],
+  contact: {
+    heading: "¿No has encontrado tu respuesta?",
+    body: "Escríbenos — leemos todos los mensajes.",
+    emailLabel: "Correo:",
+  },
+};
+
 const faqByLocale: Record<Locale, FaqContent> = {
   en,
   "zh-Hans": zhHans,
@@ -392,6 +445,7 @@ const faqByLocale: Record<Locale, FaqContent> = {
   ko,
   de,
   fr,
+  es,
 };
 
 export function getFaq(locale: Locale): FaqContent {

@@ -6,6 +6,7 @@ import ja from "./ja";
 import ko from "./ko";
 import de from "./de";
 import fr from "./fr";
+import es from "./es";
 
 const dictionaries: Record<Locale, Dictionary> = {
   en,
@@ -15,6 +16,7 @@ const dictionaries: Record<Locale, Dictionary> = {
   ko,
   de,
   fr,
+  es,
 };
 
 export function getDictionary(locale: Locale): Dictionary {

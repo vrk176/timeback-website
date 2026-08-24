@@ -6,6 +6,7 @@ export const locales = [
   "ko",
   "de",
   "fr",
+  "es",
 ] as const;
 
 export type Locale = (typeof locales)[number];
@@ -20,6 +21,7 @@ export const localeNames: Record<Locale, string> = {
   ko: "한국어",
   de: "Deutsch",
   fr: "Français",
+  es: "Español",
 };
 
 export function isValidLocale(value: string): value is Locale {

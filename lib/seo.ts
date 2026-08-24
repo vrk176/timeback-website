@@ -108,6 +108,18 @@ export const localeSeo: Record<
       "controle parental",
     ],
   },
+  es: {
+    htmlLang: "es",
+    ogLocale: "es_ES",
+    keywords: [
+      "tiempo de uso",
+      "bloqueador de apps iOS",
+      "bienestar digital",
+      "app de concentración",
+      "límites de apps",
+      "control parental",
+    ],
+  },
 };
 
 export function absoluteUrl(path = "/") {

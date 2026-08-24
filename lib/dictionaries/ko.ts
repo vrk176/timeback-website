@@ -57,6 +57,16 @@ const ko: Dictionary = {
         description:
           "부모님이나 신뢰하는 사람이 별도 암호를 보관해 즉흥적으로 규칙을 바꾸기 어렵게 합니다.",
       },
+      {
+        title: "주간 리뷰",
+        description:
+          "매주 일요일, 이번 주 되찾은 시간을 조용히 정리해 드립니다. 눈에 보이는 진전이 계속할 힘이 됩니다.",
+      },
+      {
+        title: "앱 삭제 방지",
+        description:
+          "「차단 앱을 지워버리면 그만」이라는 충동을 막습니다. iOS 제한상 활성화 중에는 기기의 모든 앱을 삭제할 수 없으며, 켜기 전에 명확히 안내합니다.",
+      },
     ],
   },
   showcase: {
@@ -142,7 +152,7 @@ const ko: Dictionary = {
   },
   legal: {
     backToHome: "홈으로 돌아가기",
-    lastUpdated: "최종 업데이트: 2026년 3월 30일",
+    lastUpdated: "최종 업데이트: 2026년 8월 24일",
   },
   privacyPolicyPage: {
     title: "개인정보 처리방침",
@@ -297,6 +307,8 @@ const ko: Dictionary = {
           "시간 기반 차단 일정",
           "위치 기반 (지오펜스) 차단",
           "맞춤형 차단 화면",
+          "주간 사용 리뷰",
+          "선택적 앱 삭제 방지 (기기 전체)",
         ],
         outro:
           "본 앱은 이러한 기능을 제공하기 위해 Apple의 Screen Time API(FamilyControls, ManagedSettings, DeviceActivity)를 사용합니다.",
@@ -322,7 +334,7 @@ const ko: Dictionary = {
         device: {
           heading: "3.3 기기 요구사항",
           items: [
-            "본 앱은 iOS 16.0 이상이 필요합니다",
+            "본 앱은 iOS 26.2 이상이 필요합니다",
             "Screen Time API 기능은 \"스크린 타임\" 권한 부여가 필요합니다",
             "지오펜스 기능은 \"항상 허용\" 위치 권한이 필요합니다",
             "일부 기능은 생체 하드웨어(Face ID / Touch ID)가 필요합니다",

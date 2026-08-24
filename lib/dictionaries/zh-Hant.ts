@@ -54,6 +54,16 @@ const zhHant: Dictionary = {
         description:
           "由家長、伴侶或信任的人保管獨立密碼,降低臨時更改規則的衝動。",
       },
+      {
+        title: "每週回顧",
+        description:
+          "每週日一份安靜的小結,看看這週你奪回了多少時間,進步看得見。",
+      },
+      {
+        title: "防止刪除 App",
+        description:
+          "堵住「刪了封鎖器就自由了」的衝動。受 iOS 限制,開啟期間裝置上所有 App 均無法刪除,開啟前會明確告知。",
+      },
     ],
   },
   showcase: {
@@ -126,7 +136,7 @@ const zhHant: Dictionary = {
   },
   legal: {
     backToHome: "返回首頁",
-    lastUpdated: "最後更新:2026 年 3 月 30 日",
+    lastUpdated: "最後更新:2026 年 8 月 24 日",
   },
   privacyPolicyPage: {
     title: "隱私政策",
@@ -268,6 +278,8 @@ const zhHant: Dictionary = {
           "基於時間的封鎖計劃",
           "基於位置(地理圍欄)的封鎖",
           "可自訂的封鎖頁面",
+          "每週使用回顧",
+          "可選的防止刪除 App 保護(裝置級)",
         ],
         outro:
           "本應用程式使用 Apple 的 Screen Time API(FamilyControls、ManagedSettings、DeviceActivity)來提供這些功能。",
@@ -293,7 +305,7 @@ const zhHant: Dictionary = {
         device: {
           heading: "3.3 裝置需求",
           items: [
-            "本應用程式需要 iOS 16.0 或更高版本",
+            "本應用程式需要 iOS 26.2 或更高版本",
             "螢幕使用時間 API 功能需要授予「螢幕使用時間」權限",
             "地理圍欄功能需要「永遠允許」位置權限",
             "部分功能需要生物硬體(Face ID / Touch ID)",

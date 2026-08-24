@@ -55,6 +55,16 @@ const en = {
         description:
           "Let a parent, partner, or accountability buddy hold a separate passcode so rule changes are harder to bypass.",
       },
+      {
+        title: "Weekly Review",
+        description:
+          "Every Sunday, a quiet summary of how much time you took back this week — progress you can actually see.",
+      },
+      {
+        title: "Prevent App Deletion",
+        description:
+          "Optional protection against impulsively deleting your blocker. While enabled, iOS blocks deletion of all apps on the device — stated clearly before you turn it on.",
+      },
     ],
   },
   showcase: {
@@ -140,7 +150,7 @@ const en = {
   },
   legal: {
     backToHome: "Back to Home",
-    lastUpdated: "Last updated: March 30, 2026",
+    lastUpdated: "Last updated: August 24, 2026",
   },
   privacyPolicyPage: {
     title: "Privacy Policy",
@@ -303,6 +313,8 @@ const en = {
           "Time-based blocking schedules",
           "Location-based (geofence) blocking",
           "Customizable blocking screens",
+          "Weekly usage review",
+          "Optional device-wide app-deletion protection",
         ],
         outro:
           "The App uses Apple's Screen Time API (FamilyControls, ManagedSettings, DeviceActivity) to provide these features.",
@@ -328,7 +340,7 @@ const en = {
         device: {
           heading: "3.3 Device Requirements",
           items: [
-            "The App requires iOS 16.0 or later",
+            "The App requires iOS 26.2 or later",
             'Screen Time API features require the "Screen Time" permission to be granted',
             'Geofence features require "Always Allow" location permission',
             "Some features require biometric hardware (Face ID / Touch ID)",

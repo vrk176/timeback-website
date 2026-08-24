@@ -57,6 +57,16 @@ const de: Dictionary = {
         description:
           "Eine Vertrauensperson verwahrt einen separaten Passcode, damit spontane Regeländerungen schwerer werden.",
       },
+      {
+        title: "Wochenrückblick",
+        description:
+          "Jeden Sonntag eine ruhige Bilanz der Zeit, die du dir diese Woche zurückgeholt hast — Fortschritt, den man sieht.",
+      },
+      {
+        title: "App-Löschung verhindern",
+        description:
+          "Optionaler Schutz davor, den Blocker impulsiv zu löschen. Systembedingt sind dann alle Apps auf dem Gerät geschützt — das wird vor dem Aktivieren klar gesagt.",
+      },
     ],
   },
   showcase: {
@@ -142,7 +152,7 @@ const de: Dictionary = {
   },
   legal: {
     backToHome: "Zurück zur Startseite",
-    lastUpdated: "Zuletzt aktualisiert: 30. März 2026",
+    lastUpdated: "Zuletzt aktualisiert: 24. August 2026",
   },
   privacyPolicyPage: {
     title: "Datenschutzerklärung",
@@ -303,6 +313,8 @@ const de: Dictionary = {
           "Zeitbasierte Sperrzeitpläne",
           "Standortbasierte (Geofence) Sperren",
           "Anpassbare Sperrbildschirme",
+          "Wöchentlicher Nutzungsrückblick",
+          "Optionaler Schutz vor App-Löschung (gerätweit)",
         ],
         outro:
           "Die App verwendet Apples Screen Time API (FamilyControls, ManagedSettings, DeviceActivity), um diese Funktionen bereitzustellen.",
@@ -328,7 +340,7 @@ const de: Dictionary = {
         device: {
           heading: "3.3 Geräteanforderungen",
           items: [
-            "Die App erfordert iOS 16.0 oder höher",
+            "Die App erfordert iOS 26.2 oder höher",
             'Screen Time API-Funktionen erfordern die Erteilung der "Bildschirmzeit"-Berechtigung',
             'Geofence-Funktionen erfordern die "Immer erlauben"-Standortberechtigung',
             "Einige Funktionen erfordern biometrische Hardware (Face ID / Touch ID)",

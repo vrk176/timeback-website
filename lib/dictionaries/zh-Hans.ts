@@ -54,6 +54,16 @@ const zhHans: Dictionary = {
         description:
           "由家长、伴侣或自律搭子保管独立密码,降低临时改规则的冲动。",
       },
+      {
+        title: "每周回顾",
+        description:
+          "每周日一份安静的小结,看看这周你夺回了多少时间,进步看得见。",
+      },
+      {
+        title: "防止删除 App",
+        description:
+          "堵住「删了拦截器就自由了」的冲动。受 iOS 限制,开启期间设备上所有 App 均不可删除,开启前会明确告知。",
+      },
     ],
   },
   showcase: {
@@ -126,7 +136,7 @@ const zhHans: Dictionary = {
   },
   legal: {
     backToHome: "返回首页",
-    lastUpdated: "最后更新:2026 年 3 月 30 日",
+    lastUpdated: "最后更新:2026 年 8 月 24 日",
   },
   privacyPolicyPage: {
     title: "隐私政策",
@@ -268,6 +278,8 @@ const zhHans: Dictionary = {
           "基于时间的屏蔽计划",
           "基于位置(地理围栏)的屏蔽",
           "可自定义的屏蔽页面",
+          "每周使用回顾",
+          "可选的防止删除 App 保护(设备级)",
         ],
         outro:
           "本应用使用 Apple 的 Screen Time API(FamilyControls、ManagedSettings、DeviceActivity)来提供这些功能。",
@@ -293,7 +305,7 @@ const zhHans: Dictionary = {
         device: {
           heading: "3.3 设备要求",
           items: [
-            "本应用需要 iOS 16.0 或更高版本",
+            "本应用需要 iOS 26.2 或更高版本",
             "屏幕使用时间 API 功能需要授予“屏幕使用时间”权限",
             "地理围栏功能需要“始终允许”位置权限",
             "部分功能需要生物硬件(Face ID / Touch ID)",

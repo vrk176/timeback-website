@@ -57,6 +57,16 @@ const ja: Dictionary = {
         description:
           "家族や信頼できる相手が別のパスコードを管理。衝動的なルール変更をしにくくします。",
       },
+      {
+        title: "週間レビュー",
+        description:
+          "毎週日曜、今週取り戻した時間を静かに振り返り。続ける力になる、目に見える進歩です。",
+      },
+      {
+        title: "アプリの削除を防止",
+        description:
+          "「ブロッカーごと消せばいい」という衝動に歯止め。iOSの仕様上、有効中は端末のすべてのアプリが削除できなくなります(有効化の前に明示します)。",
+      },
     ],
   },
   showcase: {
@@ -142,7 +152,7 @@ const ja: Dictionary = {
   },
   legal: {
     backToHome: "ホームに戻る",
-    lastUpdated: "最終更新:2026 年 3 月 30 日",
+    lastUpdated: "最終更新:2026 年 8 月 24 日",
   },
   privacyPolicyPage: {
     title: "プライバシーポリシー",
@@ -300,6 +310,8 @@ const ja: Dictionary = {
           "時間ベースのブロックスケジュール",
           "位置ベース(ジオフェンス)のブロック",
           "カスタマイズ可能なブロック画面",
+          "週間の使用レビュー",
+          "任意のアプリ削除防止(デバイス全体)",
         ],
         outro:
           "本アプリは Apple の Screen Time API(FamilyControls、ManagedSettings、DeviceActivity)を使用してこれらの機能を提供します。",
@@ -325,7 +337,7 @@ const ja: Dictionary = {
         device: {
           heading: "3.3 デバイス要件",
           items: [
-            "本アプリは iOS 16.0 以降が必要です",
+            "本アプリは iOS 26.2 以降が必要です",
             "Screen Time API 機能には「スクリーンタイム」権限の付与が必要です",
             "ジオフェンス機能には「常に許可」の位置情報権限が必要です",
             "一部の機能には生体ハードウェア(Face ID / Touch ID)が必要です",

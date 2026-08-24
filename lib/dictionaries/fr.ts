@@ -57,6 +57,16 @@ const fr: Dictionary = {
         description:
           "Un proche de confiance garde un code séparé pour rendre les changements impulsifs plus difficiles.",
       },
+      {
+        title: "Bilan hebdomadaire",
+        description:
+          "Chaque dimanche, un résumé discret du temps que vous avez repris cette semaine — des progrès visibles.",
+      },
+      {
+        title: "Empêcher la suppression d'apps",
+        description:
+          "Protection facultative contre la suppression impulsive du bloqueur. Limite d'iOS : toutes les apps de l'appareil deviennent non supprimables tant que c'est activé — indiqué clairement avant l'activation.",
+      },
     ],
   },
   showcase: {
@@ -142,7 +152,7 @@ const fr: Dictionary = {
   },
   legal: {
     backToHome: "Retour à l'accueil",
-    lastUpdated: "Dernière mise à jour : 30 mars 2026",
+    lastUpdated: "Dernière mise à jour : 24 août 2026",
   },
   privacyPolicyPage: {
     title: "Politique de confidentialité",
@@ -306,6 +316,8 @@ const fr: Dictionary = {
           "Horaires de blocage basés sur le temps",
           "Blocage basé sur la localisation (géofencing)",
           "Écrans de blocage personnalisables",
+          "Bilan hebdomadaire d'utilisation",
+          "Protection facultative contre la suppression d'apps (à l'échelle de l'appareil)",
         ],
         outro:
           "L'App utilise l'API Screen Time d'Apple (FamilyControls, ManagedSettings, DeviceActivity) pour fournir ces fonctionnalités.",
@@ -331,7 +343,7 @@ const fr: Dictionary = {
         device: {
           heading: "3.3 Exigences de l'appareil",
           items: [
-            "L'App nécessite iOS 16.0 ou une version ultérieure",
+            "L'App nécessite iOS 26.2 ou une version ultérieure",
             "Les fonctionnalités de l'API Screen Time nécessitent que la permission « Temps d'écran » soit accordée",
             "Les fonctionnalités de géofencing nécessitent la permission de localisation « Toujours autoriser »",
             "Certaines fonctionnalités nécessitent du matériel biométrique (Face ID / Touch ID)",

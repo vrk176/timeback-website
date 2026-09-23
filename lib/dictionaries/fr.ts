@@ -7,11 +7,11 @@ const fr: Dictionary = {
       "TimeBack est une app iOS privée pour mieux gérer le temps d'écran: limites quotidiennes, pauses, horaires, blocage par lieu, code gardien et écrans de blocage personnalisés. Gratuit, sans compte, sans publicité.",
   },
   hero: {
-    badge: "Disponible maintenant sur l'App Store",
-    titleLine1: "Reprenez",
-    titleLine2: "votre temps",
+    badge: "Disponible sur iPhone et iPad",
+    titleLine1: "Moins d’écran",
+    titleLine2: "Plus de vie",
     subtitle:
-      "Définissez limites, pauses, horaires et lieux de concentration avec les outils Screen Time d'Apple. Sans compte, sans pub, sans données qui quittent votre iPhone.",
+      "Définissez limites, pauses, horaires et lieux de concentration avec les outils Screen Time d'Apple. Sans compte, sans pub, sans données qui quittent votre appareil.",
     exploreFeatures: "Explorer les fonctionnalités",
     comingSoon: "Télécharger sur l'App Store",
     trustNote: "Gratuit • Privé • Aucun compte requis",
@@ -19,6 +19,8 @@ const fr: Dictionary = {
     badgePrivateSub: "Sur l'appareil uniquement",
     badgeBreaksTitle: "Pauses intelligentes",
     badgeBreaksSub: "Protégez vos yeux",
+    screenshotAlt: "Écran Règles de TimeBack : utilisation du jour, limite quotidienne et mode pause",
+    mascotAlt: "Le gardien sablier de TimeBack, avec bouclier et clé, assis sur un nuage",
   },
   features: {
     eyebrow: "Fonctionnalités",
@@ -53,14 +55,14 @@ const fr: Dictionary = {
           "Adaptez le titre, le message, l'icône et le délai de déverrouillage pour les limites, pauses, horaires et lieux.",
       },
       {
-        title: "Code gardien",
+        title: "Verrouillage et code gardien",
         description:
-          "Un proche de confiance garde un code séparé pour rendre les changements impulsifs plus difficiles.",
+          "Verrouillez TimeBack avec Face ID, Touch ID ou Optic ID. Un proche de confiance peut garder un code gardien séparé, et le délai s'allonge après chaque erreur de saisie.",
       },
       {
         title: "Bilan hebdomadaire",
         description:
-          "Chaque dimanche, un résumé discret du temps que vous avez repris cette semaine — des progrès visibles.",
+          "Chaque dimanche : un graphique de sept jours face à votre limite quotidienne, votre meilleur jour, les jours sous la limite et la comparaison avec la semaine précédente — partageable en image.",
       },
       {
         title: "Empêcher la suppression d'apps",
@@ -73,15 +75,86 @@ const fr: Dictionary = {
     eyebrow: "Aperçu de l'app",
     titlePart1: "Voyez-la en",
     titleHighlight: "action",
-    subtitle:
-      "Une interface iPhone calme pour gérer règles, horaires, lieux, écrans de blocage et protection gardien.",
-    labels: [
-      "Bienvenue",
-      "Limites quotidiennes",
-      "Horaires",
-      "Lieux",
-      "Écran de blocage",
-      "Code gardien",
+    subtitle: "Une interface iPhone calme pour gérer règles, horaires, lieux, écrans de blocage et protection gardien.",
+    newBadge: "Nouveau dans la 1.3",
+    swipeHint: "Balayez pour voir la suite",
+    items: [
+      {
+        tag: "Bilan hebdomadaire",
+        line1: "Du temps gagné",
+        line2: "Progrès visibles",
+        subtitle: "Voyez le temps récupéré, semaine après semaine.",
+        detail: "Chaque journée face à votre limite quotidienne, votre meilleur jour, les jours sous la limite et la semaine précédente — partageable en image.",
+        alt: "Bilan hebdomadaire de TimeBack avec un graphique de sept jours face à la limite quotidienne",
+      },
+      {
+        tag: "Horaires",
+        line1: "Place au calme",
+        line2: "Sans y penser",
+        subtitle: "Bloquez les distractions selon votre planning.",
+        detail: "Choisissez les jours et les heures, même à cheval sur minuit — par exemple de 22 h 30 à 7 h pour dormir.",
+        alt: "Horaire de sommeil TimeBack de 22 h 30 à 7 h",
+      },
+      {
+        tag: "Zone de focus",
+        line1: "Nouveau lieu",
+        line2: "Esprit plus clair",
+        subtitle: "Vos apps se bloquent dès votre arrivée dans la zone.",
+        detail: "Placez un lieu sur la carte et réglez le rayon. Les apps se mettent en pause tant que vous y êtes, puis reviennent quand vous partez.",
+        alt: "Zone TimeBack sur une carte avec son rayon de blocage",
+      },
+      {
+        tag: "Limite atteinte",
+        line1: "Temps écoulé",
+        line2: "Place à la pause",
+        subtitle: "Les apps s’arrêtent quand votre limite est atteinte.",
+        detail: "Quand la limite quotidienne d'une règle est épuisée, ses apps restent bloquées jusqu'à la fin de la journée. Remise à zéro à minuit.",
+        alt: "Règle TimeBack dont la limite quotidienne est atteinte",
+      },
+      {
+        tag: "Soutien partagé",
+        line1: "Bonnes habitudes",
+        line2: "Avec soutien",
+        subtitle: "Une personne de confiance peut protéger vos règles.",
+        detail: "Le verrouillage de l'app fonctionne avec Face ID, Touch ID ou Optic ID. Confiez le code gardien à un proche — le délai s'allonge après chaque erreur.",
+        alt: "Réglages du code de TimeBack avec Face ID, code et code gardien",
+      },
+      {
+        tag: "À votre image",
+        line1: "Votre rappel",
+        line2: "Votre style",
+        subtitle: "Donnez à votre écran de blocage votre propre style.",
+        detail: "Choisissez l'icône, le titre, le message et les boutons de votre écran de blocage.",
+        alt: "Réglages de l'écran de blocage de TimeBack avec aperçu",
+      },
+    ],
+  },
+  ipad: {
+    eyebrow: "Nouveau dans la 1.3",
+    titleLine1: "Maintenant sur iPad",
+    titleLine2: "Retrouvez du temps",
+    subtitle: "Deux colonnes sur iPad : règles, horaires et lieux à gauche, le détail de chacun à droite, réglages côte à côte. Les petits iPad restent sur une seule colonne.",
+    requirement: "Nécessite iOS ou iPadOS 26.2 ou version ultérieure.",
+    tabsLabel: "TimeBack sur iPad",
+    tabs: [
+      {
+        label: "Règles",
+        title: "Fixez vos limites",
+        subtitle: "Choisissez le temps par application",
+        alt: "TimeBack sur iPad : la liste des règles à côté du détail de la règle choisie",
+      },
+      {
+        label: "Horaires",
+        title: "Bloquez à heures fixes",
+        subtitle: "Libérez du temps pour l’essentiel",
+        alt: "TimeBack sur iPad : la liste des horaires à côté de leur détail",
+      },
+      {
+        label: "Zones",
+        title: "Bloquez par lieu",
+        subtitle: "Les distractions s’arrêtent dans cette zone",
+        alt: "TimeBack sur iPad : la liste des zones à côté de la carte du lieu choisi",
+      },
     ],
   },
   howItWorks: {
@@ -116,7 +189,7 @@ const fr: Dictionary = {
       {
         title: "Sur l'appareil uniquement",
         description:
-          "Règles, réglages, textes de blocage et empreintes de codes restent sur votre iPhone.",
+          "Règles, réglages et textes de blocage restent sur votre appareil, et les codes sont conservés dans le trousseau.",
       },
       {
         title: "Aucun compte requis",
@@ -138,7 +211,7 @@ const fr: Dictionary = {
   cta: {
     title: "Téléchargez TimeBack aujourd'hui",
     subtitle:
-      "TimeBack est maintenant disponible sur l'App Store — entièrement gratuit.",
+      "Gratuit sur l'App Store, pour iPhone et iPad.",
     badge: "Télécharger sur l'App Store",
   },
   footer: {
@@ -147,6 +220,7 @@ const fr: Dictionary = {
     terms: "Conditions d'utilisation",
     faq: "FAQ",
     contact: "Contact",
+    discord: "Rejoindre Discord",
     rights: "Tous droits réservés.",
     language: "Langue",
   },

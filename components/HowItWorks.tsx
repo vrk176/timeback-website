@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import type { Dictionary } from "@/lib/dictionaries/en";
+import { titleGap } from "@/lib/text";
 
 const stepConfig = [
   {
     number: "01",
-    color: "from-brand to-brand-light",
+    color: "gradient-card-violet",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
@@ -15,7 +16,7 @@ const stepConfig = [
   },
   {
     number: "02",
-    color: "from-secondary to-secondary-light",
+    color: "gradient-card-midnight",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
@@ -25,7 +26,7 @@ const stepConfig = [
   },
   {
     number: "03",
-    color: "from-teal to-success",
+    color: "gradient-card-lavender",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
@@ -36,7 +37,7 @@ const stepConfig = [
 
 export default function HowItWorks({ dict }: { dict: Dictionary["howItWorks"] }) {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-page-bg to-white">
+    <section className="py-24 px-6 bg-gradient-to-b from-page-bg via-pearl-2/60 to-page-bg">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-20"
@@ -48,16 +49,14 @@ export default function HowItWorks({ dict }: { dict: Dictionary["howItWorks"] })
           <span className="inline-block text-brand font-semibold text-sm uppercase tracking-wider mb-3">
             {dict.eyebrow}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-text-primary">
-            {dict.titlePart1}{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-teal">
-              {dict.titleHighlight}
-            </span>
+          <h2 className="text-4xl md:text-5xl font-black text-ink">
+            {dict.titlePart1}{titleGap(dict.titlePart1)}
+            <span className="text-brand">{dict.titleHighlight}</span>
           </h2>
         </motion.div>
 
         <div className="relative">
-          <div className="hidden md:block absolute top-24 left-1/2 -translate-x-1/2 w-[70%] h-0.5 bg-gradient-to-r from-brand via-secondary to-teal opacity-20" />
+          <div className="hidden md:block absolute top-24 left-1/2 -translate-x-1/2 w-[70%] h-0.5 bg-gradient-to-r from-violet via-violet-soft to-violet opacity-25" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {dict.steps.map((step, index) => (
@@ -70,14 +69,14 @@ export default function HowItWorks({ dict }: { dict: Dictionary["howItWorks"] })
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
                 <div
-                  className={`w-20 h-20 mx-auto mb-6 rounded-3xl bg-gradient-to-br ${stepConfig[index].color} flex items-center justify-center shadow-lg`}
+                  className={`w-20 h-20 mx-auto mb-6 rounded-3xl ${stepConfig[index].color} flex items-center justify-center shadow-lg shadow-violet/25`}
                 >
                   {stepConfig[index].icon}
                 </div>
-                <div className="text-5xl font-black text-brand/10 mb-2">
+                <div className="text-5xl font-black text-brand/15 mb-2">
                   {stepConfig[index].number}
                 </div>
-                <h3 className="text-xl font-bold text-text-primary mb-3">
+                <h3 className="text-xl font-bold text-ink mb-3">
                   {step.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed">

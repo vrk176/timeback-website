@@ -7,11 +7,11 @@ const zhHant: Dictionary = {
       "TimeBack 是一款隱私優先的 iOS 螢幕使用時間工具,支援每日限額、間歇休息、定時計劃、場景區域、監護人密碼和自訂封鎖頁。免費、無需帳號、無廣告。",
   },
   hero: {
-    badge: "已在 App Store 上架",
-    titleLine1: "把時間,",
-    titleLine2: "還給自己。",
+    badge: "現已支援 iPhone 和 iPad",
+    titleLine1: "把時間",
+    titleLine2: "還給生活",
     subtitle:
-      "用 Apple 螢幕使用時間能力設定限額、休息、時間表和場景區域。無需帳號、無廣告,資料留在你的 iPhone 上。",
+      "用 Apple 螢幕使用時間能力設定限額、休息、時間表和場景區域。無需帳號、無廣告,資料留在你的裝置上。",
     exploreFeatures: "探索功能",
     comingSoon: "在 App Store 下載",
     trustNote: "免費 • 私密 • 無需帳號",
@@ -19,6 +19,8 @@ const zhHant: Dictionary = {
     badgePrivateSub: "僅儲存於裝置",
     badgeBreaksTitle: "智能休息",
     badgeBreaksSub: "保護你的眼睛",
+    screenshotAlt: "TimeBack 規則頁面:今日用量、每日限額與休息模式",
+    mascotAlt: "TimeBack 的沙漏守護者,坐在雲朵上,手持盾牌和鑰匙",
   },
   features: {
     eyebrow: "功能",
@@ -50,14 +52,14 @@ const zhHant: Dictionary = {
         description: "為限額、休息、時間表和區域分別設定封鎖頁文案、圖示和解鎖等待時間。",
       },
       {
-        title: "監護人密碼",
+        title: "App 鎖與守護者密碼",
         description:
-          "由家長、伴侶或信任的人保管獨立密碼,降低臨時更改規則的衝動。",
+          "用 Face ID、Touch ID 或 Optic ID 鎖住 TimeBack;家長、伴侶或信任的人可以保管獨立的守護者密碼,輸錯後冷卻時間逐次變長。",
       },
       {
         title: "每週回顧",
         description:
-          "每週日一份安靜的小結,看看這週你奪回了多少時間,進步看得見。",
+          "每週日一份回顧:七日圖表按每日限額畫出每一天,還有表現最好的一天、守住限額的天數和與上週的比較,可以做成圖片分享。",
       },
       {
         title: "防止刪除 App",
@@ -71,7 +73,86 @@ const zhHant: Dictionary = {
     titlePart1: "看看它",
     titleHighlight: "如何運作",
     subtitle: "圍繞規則、時間表、地點區域、封鎖頁和監護人密碼設計,介面輕量,不打擾。",
-    labels: ["歡迎", "每日限額", "定時計劃", "場景區域", "封鎖頁面", "監護人密碼"],
+    newBadge: "1.3 新功能",
+    swipeHint: "左右滑動查看更多",
+    items: [
+      {
+        tag: "每週回顧",
+        line1: "少滑的時間",
+        line2: "都看得見",
+        subtitle: "每週回顧,看見找回時間的每一步",
+        detail: "七日圖表對照每日限額,還有表現最好的一天、守住限額的天數和與上週的比較,可以做成圖片分享。",
+        alt: "TimeBack 每週回顧頁面,七日圖表對照每日限額",
+      },
+      {
+        tag: "自動封鎖",
+        line1: "該專注時",
+        line2: "自動安靜",
+        subtitle: "工作、學習、睡眠,依排程封鎖干擾",
+        detail: "自選星期與時段,跨夜也沒問題,例如 22:30 到隔天 7:00 的睡眠時間。",
+        alt: "TimeBack 睡眠時間表,22:30 至隔天 7:00",
+      },
+      {
+        tag: "地點封鎖",
+        line1: "換個地點",
+        line2: "進入專注",
+        subtitle: "走進指定區域,讓干擾自動暫停",
+        detail: "在地圖上選好地點和半徑。進入區域後 App 暫停,離開後自動恢復。",
+        alt: "TimeBack 圍欄:地圖上的地點與封鎖半徑",
+      },
+      {
+        tag: "上限攔截",
+        line1: "時間到了就停",
+        line2: "留點時間給自己",
+        subtitle: "達到每日上限,自動攔截分心 App",
+        detail: "規則的每日限額用完後,相關 App 當天維持封鎖,午夜自動重設。",
+        alt: "TimeBack 中已達到每日限額的規則",
+      },
+      {
+        tag: "安心守護",
+        line1: "多一層守護",
+        line2: "少一次破例",
+        subtitle: "讓信任的人,一起守護你的使用規則",
+        detail: "App 鎖支援 Face ID、Touch ID 或 Optic ID。把守護者密碼交給信任的人,輸錯後冷卻時間逐次變長。",
+        alt: "TimeBack 密碼設定:Face ID、密碼與守護者密碼",
+      },
+      {
+        tag: "畫面自訂",
+        line1: "連提醒",
+        line2: "都很像你",
+        subtitle: "自選圖示與文字,打造專屬封鎖畫面",
+        detail: "自選封鎖畫面上的圖示、標題、文字和按鈕。",
+        alt: "TimeBack 封鎖畫面設定與封鎖畫面預覽",
+      },
+    ],
+  },
+  ipad: {
+    eyebrow: "1.3 新功能",
+    titleLine1: "現已支援 iPad",
+    titleLine2: "找回你的時間",
+    subtitle: "iPad 上改為左右兩欄:左邊是規則、時間表和地點,右邊是各自的詳情面板,設定也並排開啟。小尺寸 iPad 使用單欄。",
+    requirement: "需要 iOS 或 iPadOS 26.2 或以上版本。",
+    tabsLabel: "TimeBack iPad 版",
+    tabs: [
+      {
+        label: "規則",
+        title: "設定使用上限",
+        subtitle: "為每個 App 選擇使用時間",
+        alt: "iPad 上的 TimeBack:左側規則列表,右側所選規則的詳情面板",
+      },
+      {
+        label: "時間表",
+        title: "依排程自動封鎖",
+        subtitle: "把時間留給真正重要的事",
+        alt: "iPad 上的 TimeBack:左側時間表列表,右側時間表詳情面板",
+      },
+      {
+        label: "圍欄",
+        title: "依地點封鎖干擾",
+        subtitle: "進入指定區域,干擾就會暫停",
+        alt: "iPad 上的 TimeBack:左側圍欄列表,右側所選地點的地圖",
+      },
+    ],
   },
   howItWorks: {
     eyebrow: "運作原理",
@@ -104,7 +185,7 @@ const zhHant: Dictionary = {
     items: [
       {
         title: "僅儲存於裝置",
-        description: "規則、設定、封鎖頁文字和密碼雜湊都保存在你的 iPhone 上。",
+        description: "規則、設定和封鎖頁文字都保存在你的裝置上,密碼存放在裝置鑰匙圈中。",
       },
       {
         title: "無需帳號",
@@ -122,7 +203,7 @@ const zhHant: Dictionary = {
   },
   cta: {
     title: "立即下載 TimeBack",
-    subtitle: "TimeBack 已在 App Store 上架 — 完全免費。",
+    subtitle: "App Store 免費下載,支援 iPhone 和 iPad。",
     badge: "在 App Store 下載",
   },
   footer: {
@@ -131,6 +212,7 @@ const zhHant: Dictionary = {
     terms: "使用條款",
     faq: "常見問題",
     contact: "聯絡我們",
+    discord: "加入 Discord",
     rights: "保留所有權利。",
     language: "語言",
   },

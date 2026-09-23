@@ -2,53 +2,74 @@
 
 import { motion } from "framer-motion";
 import AppStorePill from "@/components/AppStorePill";
+import Guardian from "@/components/Guardian";
 import { APP_STORE_URL } from "@/lib/appStore";
 import type { Dictionary } from "@/lib/dictionaries/en";
 
-export default function CTA({ dict }: { dict: Dictionary["cta"] }) {
+export default function CTA({
+  dict,
+  mascotAlt,
+}: {
+  dict: Dictionary["cta"];
+  mascotAlt: string;
+}) {
   return (
-    <section id="cta" className="py-24 px-6">
+    <section id="cta" className="px-6 py-24">
       <motion.div
-        className="max-w-4xl mx-auto relative overflow-hidden rounded-[2.5rem] gradient-hero p-12 md:p-16"
+        className="relative isolate mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] scene-midnight px-8 py-14 shadow-[0_40px_80px_-40px_rgba(32,15,63,0.7)] md:px-14 md:py-16"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-10 -right-10 w-64 h-64 bg-white/10 rounded-full blur-2xl" />
-          <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
+        <img
+          src="/brand/midnight.webp"
+          alt=""
+          aria-hidden="true"
+          width={850}
+          height={1850}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-top"
+        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-violet/50 blur-3xl" />
+          <div className="absolute -bottom-20 -left-10 h-60 w-60 rounded-full bg-midnight-glow/50 blur-3xl" />
         </div>
 
-        <div className="relative z-10 text-center">
+        <div className="flex flex-col items-center gap-10 md:flex-row md:gap-12">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            className="w-40 shrink-0 sm:w-48 md:order-2 md:w-60"
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="w-20 h-20 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center"
           >
-            <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Guardian alt={mascotAlt} />
+            </motion.div>
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {dict.title}
-          </h2>
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-xl mx-auto">
-            {dict.subtitle}
-          </p>
-
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={dict.badge}
-            className="inline-flex hover:scale-105 transition-transform duration-300"
-          >
-            <AppStorePill tone="solid" className="ring-1 ring-white/50" />
-          </a>
+          <div className="flex-1 text-center md:order-1 md:text-left">
+            <h2 className="mb-4 text-3xl font-black tracking-tight text-balance text-white md:text-5xl">
+              {dict.title}
+            </h2>
+            <p className="mx-auto mb-10 max-w-xl text-lg text-white/80 md:mx-0 md:text-xl">
+              {dict.subtitle}
+            </p>
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={dict.badge}
+              className="inline-flex transition-transform duration-300 hover:scale-105"
+            >
+              <AppStorePill tone="solid" className="ring-1 ring-white/50" />
+            </a>
+          </div>
         </div>
       </motion.div>
     </section>

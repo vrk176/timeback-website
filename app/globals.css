@@ -1,19 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #7c6ef0;
-  --color-brand-light: #a78bfa;
-  --color-brand-dark: #5b4cc4;
-  --color-secondary: #5daee2;
-  --color-secondary-light: #7ec8f0;
+  /* Brand palette — sampled with PIL from public/brand/{violet,midnight,pearl}.webp
+     and the App Store campaign contact sheet (shots/iphone/en/appstore_6.9/preview.png). */
+  --color-violet: #593dcc;        /* violet.webp top / campaign violet panel bg */
+  --color-violet-bright: #7a60ec; /* violet.webp mid swirl */
+  --color-violet-soft: #ab96fa;   /* violet.webp light swirl */
+  --color-lavender: #dccafc;      /* violet.webp highlight */
+  --color-midnight: #200f3f;      /* midnight.webp top / campaign midnight panel bg */
+  --color-midnight-2: #281b5c;    /* midnight.webp centre */
+  --color-midnight-glow: #53429b; /* midnight.webp glow band */
+  --color-pearl: #fefcfc;         /* campaign pearl panel bg */
+  --color-pearl-2: #f6edf8;       /* pearl.webp dominant */
+  --color-pearl-3: #e8d9f4;       /* pearl.webp lower wash */
+  --color-lime: #daffc7;          /* campaign line-2 highlight on violet/midnight */
+  --color-amber: #ffc873;         /* campaign "Time is up" highlight */
+  --color-ink: #2d1c4c;           /* campaign headline ink on pearl */
+
+  /* Semantic tokens (used across the site, incl. legal/FAQ pages) */
+  --color-brand: #603cd0;         /* campaign line-2 violet on pearl */
+  --color-brand-light: #ab96fa;
+  --color-brand-dark: #4a2fb0;    /* derived: darker step of --color-brand */
   --color-success: #6bcb77;
   --color-warning: #ffb347;
   --color-danger: #ff6b6b;
-  --color-teal: #2dd4bf;
-  --color-page-bg: #f8f7fc;
+  --color-page-bg: #faf7fc;       /* derived: pearl lightened for long pages */
   --color-card-bg: #ffffff;
-  --color-text-primary: #1c1c1e;
-  --color-text-secondary: #6b7280;
+  --color-text-primary: #2d1c4c;  /* = ink */
+  --color-text-secondary: #675e7e;/* derived: ink at ~65% on pearl, 6.0:1 on white */
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
@@ -27,32 +41,43 @@ body {
   color: var(--color-text-primary);
 }
 
-.gradient-hero {
-  background: linear-gradient(135deg, #7c6ef0 0%, #5daee2 50%, #2dd4bf 100%);
+/* Brand scenes. Each has a CSS gradient fallback; components may layer the
+   matching /brand/*.webp art on top with object-cover. */
+.gradient-hero,
+.scene-violet {
+  background: linear-gradient(160deg, #583ccc 0%, #6a4de2 42%, #8d70ee 78%, #a989f8 100%);
 }
 
-.gradient-card-purple {
-  background: linear-gradient(135deg, #7c6ef0, #a78bfa);
+.scene-midnight {
+  background: linear-gradient(170deg, #200f40 0%, #281b5d 55%, #2e1d6a 80%, #563ea8 100%);
 }
 
-.gradient-card-blue {
-  background: linear-gradient(135deg, #5daee2, #7ec8f0);
+.scene-pearl {
+  background: linear-gradient(170deg, #fffdfe 0%, #f8f2fb 50%, #ede1f3 85%, #f0e8fa 100%);
 }
 
-.gradient-card-teal {
-  background: linear-gradient(135deg, #2dd4bf, #6ee7b7);
+.gradient-card-violet {
+  background: linear-gradient(135deg, #593dcc, #8d70ee);
 }
 
-.gradient-card-warning {
-  background: linear-gradient(135deg, #ffb347, #ffd700);
+.gradient-card-lavender {
+  background: linear-gradient(135deg, #7a60ec, #ab96fa);
 }
 
-.gradient-card-danger {
-  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+.gradient-card-midnight {
+  background: linear-gradient(135deg, #200f3f, #53429b);
 }
 
-.gradient-card-indigo {
-  background: linear-gradient(135deg, #6366f1, #818cf8);
+.gradient-card-amber {
+  background: linear-gradient(135deg, #e8952c, #ffc873);
+}
+
+/* Hide the scrollbar on the mobile screenshot carousel (still scrollable). */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes float {
@@ -71,6 +96,17 @@ body {
 
 .animate-float-slow {
   animation: float-slow 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float,
+  .animate-float-slow,
+  .animate-pulse {
+    animation: none;
+  }
 }
 
 /* Prose typography for legal pages */
@@ -142,4 +178,12 @@ body {
 }
 .prose strong {
   color: var(--color-text-primary);
+}
+
+/* Keep Japanese headings from breaking mid-word (e.g. "ゼ/ロ"). */
+:lang(ja) :is(h1, h2, h3) {
+  word-break: auto-phrase;
+}
+:is(h1, h2) {
+  text-wrap: balance;
 }

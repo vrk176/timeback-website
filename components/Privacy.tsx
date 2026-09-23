@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { Dictionary } from "@/lib/dictionaries/en";
+import { titleGap } from "@/lib/text";
 
 const icons = [
   <svg key="p0" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -22,8 +23,8 @@ export default function Privacy({ dict }: { dict: Dictionary["privacy"] }) {
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-violet-soft/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-lavender/40 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
@@ -37,11 +38,9 @@ export default function Privacy({ dict }: { dict: Dictionary["privacy"] }) {
           <span className="inline-block text-brand font-semibold text-sm uppercase tracking-wider mb-3">
             {dict.eyebrow}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-text-primary mb-4">
-            {dict.titlePart1}{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-danger">
-              {dict.titleHighlight}
-            </span>
+          <h2 className="text-4xl md:text-5xl font-black text-ink mb-4">
+            {dict.titlePart1}{titleGap(dict.titlePart1)}
+            <span className="text-brand">{dict.titleHighlight}</span>
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold text-text-secondary">
             {dict.ever}
@@ -52,17 +51,17 @@ export default function Privacy({ dict }: { dict: Dictionary["privacy"] }) {
           {dict.items.map((point, index) => (
             <motion.div
               key={point.title}
-              className="flex items-start gap-5 bg-card-bg rounded-2xl p-6 border border-gray-100 shadow-sm"
+              className="flex items-start gap-5 bg-card-bg rounded-2xl p-6 ring-1 ring-ink/[0.06] shadow-[0_1px_2px_rgba(45,28,76,0.04)]"
               initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center shrink-0 text-brand">
+              <div className="w-12 h-12 bg-pearl-2 ring-1 ring-violet/10 rounded-xl flex items-center justify-center shrink-0 text-brand">
                 {icons[index]}
               </div>
               <div>
-                <h4 className="text-lg font-bold text-text-primary mb-1">
+                <h4 className="text-lg font-bold text-ink mb-1">
                   {point.title}
                 </h4>
                 <p className="text-text-secondary leading-relaxed">
@@ -80,11 +79,11 @@ export default function Privacy({ dict }: { dict: Dictionary["privacy"] }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="inline-flex items-center gap-3 bg-card-bg rounded-full px-6 py-3 border border-gray-100 shadow-sm">
-            <svg className="w-5 h-5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <div className="inline-flex items-center gap-3 bg-midnight rounded-full px-6 py-3 shadow-lg shadow-midnight/20">
+            <svg className="w-5 h-5 shrink-0 text-lime" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
-            <span className="text-sm font-semibold text-text-primary">
+            <span className="text-sm font-semibold text-white">
               {dict.trustBadge}
             </span>
           </div>

@@ -7,11 +7,11 @@ const de: Dictionary = {
       "TimeBack ist eine datenschutzfreundliche iOS-App für Bildschirmzeit: Tageslimits, Pausenmodus, Zeitpläne, ortsbasierte Sperren, Guardian-Passcode und eigene Sperrbildschirme. Kostenlos, ohne Konto, ohne Werbung.",
   },
   hero: {
-    badge: "Jetzt im App Store verfügbar",
-    titleLine1: "Hol dir",
-    titleLine2: "deine Zeit zurück",
+    badge: "Jetzt für iPhone und iPad",
+    titleLine1: "Weniger Scrollen",
+    titleLine2: "Mehr vom Leben",
     subtitle:
-      "Setze Limits, Pausen, Zeitpläne und Fokusorte mit Apples Screen-Time-Technik. Ohne Konto, ohne Werbung — deine Daten verlassen das iPhone nicht.",
+      "Setze Limits, Pausen, Zeitpläne und Fokusorte mit Apples Screen-Time-Technik. Ohne Konto, ohne Werbung — deine Daten verlassen dein Gerät nicht.",
     exploreFeatures: "Funktionen entdecken",
     comingSoon: "Im App Store laden",
     trustNote: "Kostenlos • Privat • Kein Konto nötig",
@@ -19,6 +19,8 @@ const de: Dictionary = {
     badgePrivateSub: "Nur auf dem Gerät",
     badgeBreaksTitle: "Smarte Pausen",
     badgeBreaksSub: "Gut für die Augen",
+    screenshotAlt: "TimeBack-Regeln mit heutiger Nutzung, Tageslimit und Pausenmodus",
+    mascotAlt: "Der Sanduhr-Wächter von TimeBack mit Schild und Schlüssel auf einer Wolke",
   },
   features: {
     eyebrow: "Funktionen",
@@ -53,14 +55,14 @@ const de: Dictionary = {
           "Passe Titel, Nachricht, Symbol und Entsperr-Wartezeit für Limits, Pausen, Zeitpläne und Orte an.",
       },
       {
-        title: "Guardian-Passcode",
+        title: "App-Sperre & Wächter-Code",
         description:
-          "Eine Vertrauensperson verwahrt einen separaten Passcode, damit spontane Regeländerungen schwerer werden.",
+          "Sperre TimeBack mit Face ID, Touch ID oder Optic ID. Eine Vertrauensperson kann einen separaten Wächter-Code verwahren, und nach Fehleingaben wächst die Wartezeit.",
       },
       {
         title: "Wochenrückblick",
         description:
-          "Jeden Sonntag eine ruhige Bilanz der Zeit, die du dir diese Woche zurückgeholt hast — Fortschritt, den man sieht.",
+          "Jeden Sonntag: ein Sieben-Tage-Diagramm gegen dein Tageslimit, dein stärkster Tag, die Tage unter dem Limit und der Vergleich mit der Vorwoche — als Bild teilbar.",
       },
       {
         title: "App-Löschung verhindern",
@@ -73,15 +75,86 @@ const de: Dictionary = {
     eyebrow: "App-Vorschau",
     titlePart1: "Sieh es in",
     titleHighlight: "Aktion",
-    subtitle:
-      "Eine ruhige iPhone-Oberfläche für Regeln, Zeitpläne, Fokusorte, Sperrbildschirme und Guardian-Schutz.",
-    labels: [
-      "Willkommen",
-      "Tageslimits",
-      "Zeitpläne",
-      "Fokusorte",
-      "Sperrbildschirm",
-      "Guardian-Passcode",
+    subtitle: "Eine ruhige iPhone-Oberfläche für Regeln, Zeitpläne, Fokusorte, Sperrbildschirme und Guardian-Schutz.",
+    newBadge: "Neu in 1.3",
+    swipeHint: "Wischen für mehr",
+    items: [
+      {
+        tag: "Wochenrückblick",
+        line1: "Zeit gewonnen",
+        line2: "Fortschritt im Blick",
+        subtitle: "Sieh Woche für Woche, wie viel Zeit du zurückgewinnst.",
+        detail: "Jeder Tag im Vergleich zu deinem Tageslimit, dazu dein stärkster Tag, die Tage unter dem Limit und die Vorwoche — als Bild teilbar.",
+        alt: "TimeBack-Wochenrückblick mit Sieben-Tage-Diagramm gegen das Tageslimit",
+      },
+      {
+        tag: "Fokusmodus",
+        line1: "Fokuszeit",
+        line2: "Ganz automatisch",
+        subtitle: "Blockiere Ablenkungen nach deinem Zeitplan.",
+        detail: "Wähle Tage und Uhrzeiten, auch über Mitternacht — etwa 22:30 bis 7:00 Uhr zum Schlafen.",
+        alt: "TimeBack-Schlafzeitplan von 22:30 bis 7:00 Uhr",
+      },
+      {
+        tag: "Fokuszonen",
+        line1: "Neuer Ort",
+        line2: "Klarer Fokus",
+        subtitle: "Deine Fokuszone startet, sobald du ankommst.",
+        detail: "Setz einen Ort auf der Karte und wähle den Radius. Apps pausieren, solange du dort bist, und sind wieder da, wenn du gehst.",
+        alt: "TimeBack-Zone auf der Karte mit Sperrradius",
+      },
+      {
+        tag: "Limit erreicht",
+        line1: "Zeit ist um",
+        line2: "Zeit für Pause",
+        subtitle: "Apps stoppen, sobald du dein Tageslimit erreichst.",
+        detail: "Ist das Tageslimit einer Regel aufgebraucht, bleiben ihre Apps für den Rest des Tages gesperrt. Um Mitternacht beginnt es neu.",
+        alt: "TimeBack-Regel, deren Tageslimit erreicht ist",
+      },
+      {
+        tag: "Vertrauensperson",
+        line1: "Bessere Routinen",
+        line2: "Mit Rückhalt",
+        subtitle: "Eine Vertrauensperson hilft dir, deine Regeln zu schützen.",
+        detail: "Die App-Sperre nutzt Face ID, Touch ID oder Optic ID. Gib den Wächter-Code einer Vertrauensperson — nach Fehleingaben wächst die Wartezeit.",
+        alt: "TimeBack-Code-Einstellungen mit Face ID, Code und Wächter-Code",
+      },
+      {
+        tag: "Dein Stil",
+        line1: "Deine Erinnerung",
+        line2: "Dein Stil",
+        subtitle: "Gestalte deinen Sperrbildschirm ganz nach dir.",
+        detail: "Wähle Symbol, Titel, Nachricht und Tasten deines Sperrbildschirms.",
+        alt: "TimeBack-Sperrbildschirm-Einstellungen mit Vorschau",
+      },
+    ],
+  },
+  ipad: {
+    eyebrow: "Neu in 1.3",
+    titleLine1: "Jetzt auf dem iPad",
+    titleLine2: "Zeit zurückgewinnen",
+    subtitle: "Zwei Spalten auf dem iPad: Regeln, Zeitpläne und Orte links, die jeweilige Detailansicht rechts, Einstellungen nebeneinander. Kleinere iPads bleiben einspaltig.",
+    requirement: "Erfordert iOS oder iPadOS 26.2 oder neuer.",
+    tabsLabel: "TimeBack auf dem iPad",
+    tabs: [
+      {
+        label: "Regeln",
+        title: "Deine Limits setzen",
+        subtitle: "Lege für jede App ein Zeitlimit fest",
+        alt: "TimeBack auf dem iPad: Regelliste neben der Detailansicht der gewählten Regel",
+      },
+      {
+        label: "Zeitpläne",
+        title: "Nach Zeitplan sperren",
+        subtitle: "Schaffe Zeit für das, was dir wichtig ist",
+        alt: "TimeBack auf dem iPad: Zeitplanliste neben der Detailansicht",
+      },
+      {
+        label: "Zonen",
+        title: "Nach Ort sperren",
+        subtitle: "In dieser Zone pausieren Ablenkungen",
+        alt: "TimeBack auf dem iPad: Zonenliste neben der Karte des gewählten Orts",
+      },
     ],
   },
   howItWorks: {
@@ -116,7 +189,7 @@ const de: Dictionary = {
       {
         title: "Nur auf dem Gerät",
         description:
-          "Regeln, Einstellungen, Sperrbildschirmtexte und Passcode-Hashes bleiben auf deinem iPhone.",
+          "Regeln, Einstellungen und Sperrbildschirmtexte bleiben auf deinem Gerät, Codes liegen im Schlüsselbund.",
       },
       {
         title: "Kein Konto erforderlich",
@@ -138,7 +211,7 @@ const de: Dictionary = {
   cta: {
     title: "TimeBack jetzt herunterladen",
     subtitle:
-      "TimeBack ist jetzt im App Store verfügbar – komplett kostenlos.",
+      "Kostenlos im App Store — für iPhone und iPad.",
     badge: "Im App Store laden",
   },
   footer: {
@@ -147,6 +220,7 @@ const de: Dictionary = {
     terms: "Nutzungsbedingungen",
     faq: "Häufige Fragen",
     contact: "Kontakt",
+    discord: "Discord beitreten",
     rights: "Alle Rechte vorbehalten.",
     language: "Sprache",
   },

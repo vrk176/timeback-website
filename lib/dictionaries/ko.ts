@@ -7,11 +7,11 @@ const ko: Dictionary = {
       "TimeBack은 일일 제한, 휴식 모드, 일정, 위치 기반 차단, 보호자 암호, 맞춤 차단 화면을 지원하는 개인정보 보호 중심의 iOS 스크린 타임 앱입니다. 무료, 계정 없음, 광고 없음.",
   },
   hero: {
-    badge: "App Store에서 지금 이용 가능",
-    titleLine1: "내 시간,",
-    titleLine2: "다시 내 것으로.",
+    badge: "iPhone과 iPad에서 사용 가능",
+    titleLine1: "시간을",
+    titleLine2: "내 삶에 돌려요",
     subtitle:
-      "Apple Screen Time 기능으로 제한, 휴식, 일정, 집중 구역을 설정하세요. 계정도 광고도 없이, 데이터는 iPhone 안에만 머뭅니다.",
+      "Apple Screen Time 기능으로 제한, 휴식, 일정, 집중 구역을 설정하세요. 계정도 광고도 없이, 데이터는 기기 안에만 머뭅니다.",
     exploreFeatures: "기능 살펴보기",
     comingSoon: "App Store에서 다운로드",
     trustNote: "무료 • 개인정보 보호 • 계정 불필요",
@@ -19,6 +19,8 @@ const ko: Dictionary = {
     badgePrivateSub: "기기 안에만",
     badgeBreaksTitle: "스마트 휴식",
     badgeBreaksSub: "눈도 편안하게",
+    screenshotAlt: "오늘 사용량, 일일 제한, 휴식 모드가 보이는 TimeBack 규칙 화면",
+    mascotAlt: "방패와 열쇠를 들고 구름 위에 앉은 TimeBack 모래시계 수호자",
   },
   features: {
     eyebrow: "기능",
@@ -53,14 +55,14 @@ const ko: Dictionary = {
           "제한, 휴식, 일정, 위치별로 제목, 메시지, 아이콘, 잠금 해제 대기 시간을 조정할 수 있습니다.",
       },
       {
-        title: "보호자 암호",
+        title: "앱 잠금과 보호자 비밀번호",
         description:
-          "부모님이나 신뢰하는 사람이 별도 암호를 보관해 즉흥적으로 규칙을 바꾸기 어렵게 합니다.",
+          "Face ID, Touch ID, Optic ID로 TimeBack을 잠급니다. 부모님이나 신뢰하는 사람이 보호자 비밀번호를 따로 보관할 수 있고, 틀릴수록 대기 시간이 길어집니다.",
       },
       {
         title: "주간 리뷰",
         description:
-          "매주 일요일, 이번 주 되찾은 시간을 조용히 정리해 드립니다. 눈에 보이는 진전이 계속할 힘이 됩니다.",
+          "매주 일요일, 7일 차트가 하루하루를 일일 제한과 나란히 보여 줍니다. 가장 잘 해낸 날, 제한을 지킨 날수, 지난주와의 비교까지 확인하고 이미지로 공유할 수 있습니다.",
       },
       {
         title: "앱 삭제 방지",
@@ -73,15 +75,86 @@ const ko: Dictionary = {
     eyebrow: "앱 미리보기",
     titlePart1: "직접",
     titleHighlight: "살펴보기",
-    subtitle:
-      "규칙, 일정, 집중 구역, 차단 화면, 보호자 설정까지 — iPhone 답게 깔끔한 화면 하나에서 정리됩니다.",
-    labels: [
-      "환영합니다",
-      "일일 제한",
-      "일정",
-      "집중 구역",
-      "차단 화면",
-      "보호자 암호",
+    subtitle: "규칙, 일정, 집중 구역, 차단 화면, 보호자 설정까지 — iPhone 답게 깔끔한 화면 하나에서 정리됩니다.",
+    newBadge: "1.3 새 기능",
+    swipeHint: "옆으로 밀어 더 보기",
+    items: [
+      {
+        tag: "주간 리뷰",
+        line1: "되찾은 시간",
+        line2: "한눈에 보여요",
+        subtitle: "매주 돌아보며, 되찾은 시간의 변화를 확인해요",
+        detail: "하루하루를 일일 제한과 나란히 그린 7일 차트, 가장 잘 해낸 날, 제한을 지킨 날수, 지난주와의 비교까지 — 이미지로 공유할 수 있어요.",
+        alt: "일일 제한과 비교한 7일 차트가 있는 TimeBack 주간 리뷰",
+      },
+      {
+        tag: "예약 차단",
+        line1: "집중할 땐",
+        line2: "자동으로 조용히",
+        subtitle: "일과 공부, 수면 시간에 맞춰 방해를 자동으로 차단해요",
+        detail: "요일과 시간대만 고르면 돼요. 밤 10:30부터 아침 7:00까지처럼 자정을 넘는 수면 시간도 지원해요.",
+        alt: "밤 10:30부터 아침 7:00까지의 TimeBack 수면 스케줄",
+      },
+      {
+        tag: "위치 차단",
+        line1: "장소를 바꾸면",
+        line2: "집중이 시작돼요",
+        subtitle: "지정한 구역에 들어가면 방해 앱을 잠시 멈춰요",
+        detail: "지도에서 장소와 반경을 정하세요. 구역 안에서는 앱이 멈추고, 떠나면 다시 풀려요.",
+        alt: "지도 위 장소와 차단 반경이 표시된 TimeBack 구역",
+      },
+      {
+        tag: "한도 차단",
+        line1: "한도가 차면",
+        line2: "잠시 멈춰요",
+        subtitle: "하루 한도에 도달하면 방해 앱을 자동으로 막아요",
+        detail: "규칙의 일일 제한을 다 쓰면 그날은 앱이 계속 차단되고, 자정에 초기화돼요.",
+        alt: "일일 제한에 도달한 TimeBack 규칙",
+      },
+      {
+        tag: "안심 보호",
+        line1: "보호는 더하고",
+        line2: "예외는 줄여요",
+        subtitle: "믿을 수 있는 사람과 함께 규칙을 지켜요",
+        detail: "앱 잠금은 Face ID, Touch ID, Optic ID를 지원해요. 보호자 비밀번호는 믿을 수 있는 사람에게 맡기고, 틀릴수록 대기 시간이 길어져요.",
+        alt: "Face ID, 비밀번호, 보호자 비밀번호가 있는 TimeBack 비밀번호 설정",
+      },
+      {
+        tag: "화면 꾸미기",
+        line1: "알림도",
+        line2: "내 취향대로",
+        subtitle: "아이콘과 문구, 버튼까지 골라 나만의 차단 화면을 만들어요",
+        detail: "차단 화면의 아이콘, 제목, 메시지, 버튼을 직접 골라요.",
+        alt: "차단 화면 미리보기가 있는 TimeBack 차단 화면 설정",
+      },
+    ],
+  },
+  ipad: {
+    eyebrow: "1.3 새 기능",
+    titleLine1: "이제 iPad에서도",
+    titleLine2: "내 시간을 되찾아요",
+    subtitle: "iPad에서는 2단 구성이에요. 왼쪽에 규칙, 스케줄, 장소, 오른쪽에 각각의 상세 화면이 있고 설정도 나란히 열려요. 작은 iPad에서는 1단으로 보여요.",
+    requirement: "iOS 또는 iPadOS 26.2 이상이 필요해요.",
+    tabsLabel: "iPad용 TimeBack",
+    tabs: [
+      {
+        label: "규칙",
+        title: "한도를 정해요",
+        subtitle: "앱마다 사용할 시간을 선택하세요",
+        alt: "iPad의 TimeBack: 규칙 목록과 선택한 규칙의 상세 화면",
+      },
+      {
+        label: "스케줄",
+        title: "일정에 맞춰 차단해요",
+        subtitle: "중요한 일에 집중할 시간을 만들어요",
+        alt: "iPad의 TimeBack: 스케줄 목록과 스케줄 상세 화면",
+      },
+      {
+        label: "구역",
+        title: "장소별로 차단해요",
+        subtitle: "구역에 들어가면 방해 앱을 잠시 멈춰요",
+        alt: "iPad의 TimeBack: 구역 목록과 선택한 장소의 지도",
+      },
     ],
   },
   howItWorks: {
@@ -116,7 +189,7 @@ const ko: Dictionary = {
       {
         title: "기기에만 저장",
         description:
-          "규칙, 설정, 차단 화면 문구, 암호 해시는 iPhone 안에 저장됩니다.",
+          "규칙, 설정, 차단 화면 문구는 기기 안에 저장되고, 비밀번호는 기기 키체인에 보관됩니다.",
       },
       {
         title: "계정 불필요",
@@ -138,7 +211,7 @@ const ko: Dictionary = {
   cta: {
     title: "지금 TimeBack 다운로드",
     subtitle:
-      "TimeBack을 이제 App Store에서 완전히 무료로 이용할 수 있습니다.",
+      "App Store에서 무료로 받을 수 있습니다. iPhone과 iPad를 지원합니다.",
     badge: "App Store에서 다운로드",
   },
   footer: {
@@ -147,6 +220,7 @@ const ko: Dictionary = {
     terms: "이용약관",
     faq: "자주 묻는 질문",
     contact: "문의하기",
+    discord: "Discord 참여",
     rights: "모든 권리 보유.",
     language: "언어",
   },

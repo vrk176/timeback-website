@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { Dictionary } from "@/lib/dictionaries/en";
+import { titleGap } from "@/lib/text";
 
 const icons = [
   <svg key="i0" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -32,15 +33,18 @@ const icons = [
 ];
 
 const gradients = [
-  "gradient-card-purple",
-  "gradient-card-warning",
-  "gradient-card-indigo",
-  "gradient-card-teal",
-  "gradient-card-blue",
-  "gradient-card-danger",
-  "gradient-card-blue",
-  "gradient-card-purple",
+  "gradient-card-violet",   // Daily Limits
+  "gradient-card-amber",    // Break Mode
+  "gradient-card-midnight", // Schedules
+  "gradient-card-lavender", // Location Zones
+  "gradient-card-violet",   // Custom Block Screen
+  "gradient-card-midnight", // App Lock & Guardian
+  "gradient-card-lavender", // Weekly Review
+  "gradient-card-amber",    // Prevent App Deletion
 ];
+
+/** Cards that changed in v1.3 (App Lock rebuilt, Weekly Review redesigned). */
+const newInThisVersion = new Set([5, 6]);
 
 const containerVariants = {
   hidden: {},
@@ -60,9 +64,15 @@ const cardVariants = {
   },
 };
 
-export default function Features({ dict }: { dict: Dictionary["features"] }) {
+export default function Features({
+  dict,
+  newBadge,
+}: {
+  dict: Dictionary["features"];
+  newBadge: string;
+}) {
   return (
-    <section id="features" className="py-24 px-6 max-w-7xl mx-auto">
+    <section id="features" className="scroll-mt-6 py-24 px-6 max-w-7xl mx-auto">
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
@@ -73,11 +83,9 @@ export default function Features({ dict }: { dict: Dictionary["features"] }) {
         <span className="inline-block text-brand font-semibold text-sm uppercase tracking-wider mb-3">
           {dict.eyebrow}
         </span>
-        <h2 className="text-4xl md:text-5xl font-black text-text-primary mb-4">
-          {dict.titlePart1}{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-secondary">
-            {dict.titleHighlight}
-          </span>
+        <h2 className="text-4xl md:text-5xl font-black text-ink mb-4">
+          {dict.titlePart1}{titleGap(dict.titlePart1)}
+          <span className="text-brand">{dict.titleHighlight}</span>
         </h2>
         <p className="text-lg text-text-secondary max-w-2xl mx-auto">
           {dict.subtitle}
@@ -85,7 +93,7 @@ export default function Features({ dict }: { dict: Dictionary["features"] }) {
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -95,14 +103,19 @@ export default function Features({ dict }: { dict: Dictionary["features"] }) {
           <motion.div
             key={feature.title}
             variants={cardVariants}
-            className="group bg-card-bg rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+            className="group relative bg-card-bg rounded-3xl p-7 shadow-[0_1px_2px_rgba(45,28,76,0.04)] ring-1 ring-ink/[0.06] hover:shadow-[0_24px_48px_-24px_rgba(45,28,76,0.35)] transition-all duration-300 hover:-translate-y-1"
           >
+            {newInThisVersion.has(i) && (
+              <span className="absolute right-5 top-5 rounded-full bg-lime px-2.5 py-0.5 text-[11px] font-bold text-midnight">
+                {newBadge}
+              </span>
+            )}
             <div
-              className={`w-14 h-14 ${gradients[i]} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+              className={`w-14 h-14 ${gradients[i]} rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-violet/20 group-hover:scale-110 transition-transform duration-300`}
             >
               {icons[i]}
             </div>
-            <h3 className="text-xl font-bold text-text-primary mb-2">
+            <h3 className="text-xl font-bold text-ink mb-2">
               {feature.title}
             </h3>
             <p className="text-text-secondary leading-relaxed">

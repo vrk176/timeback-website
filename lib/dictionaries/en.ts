@@ -5,11 +5,11 @@ const en = {
       "TimeBack is a private iOS Screen Time companion for daily limits, break mode, schedules, location-based blocking, Guardian passcode, and custom shield screens. Free, no account, no ads.",
   },
   hero: {
-    badge: "Now Available on the App Store",
-    titleLine1: "Take Back",
-    titleLine2: "Your Time",
+    badge: "Now on iPhone and iPad",
+    titleLine1: "Less scrolling",
+    titleLine2: "More living",
     subtitle:
-      "Set limits, breaks, schedules, and focus zones with Apple's Screen Time tools. No account, no ads, and no data leaving your iPhone.",
+      "Set limits, breaks, schedules, and focus zones with Apple's Screen Time tools. No account, no ads, and no data leaving your iPhone or iPad.",
     exploreFeatures: "Explore Features",
     comingSoon: "Download on the App Store",
     trustNote: "Free • Private • No account needed",
@@ -17,6 +17,8 @@ const en = {
     badgePrivateSub: "On-device only",
     badgeBreaksTitle: "Smart Breaks",
     badgeBreaksSub: "Protect your eyes",
+    screenshotAlt: "TimeBack Rules screen showing today's usage, Daily Limit and Break Mode",
+    mascotAlt: "TimeBack's hourglass guardian, holding a shield and key on a cloud",
   },
   features: {
     eyebrow: "Features",
@@ -51,14 +53,14 @@ const en = {
           "Customize the shield for limits, breaks, schedules, and zones with your own title, message, icon, and unlock delay.",
       },
       {
-        title: "Guardian Mode",
+        title: "App Lock & Guardian",
         description:
-          "Let a parent, partner, or accountability buddy hold a separate passcode so rule changes are harder to bypass.",
+          "Lock TimeBack with Face ID, Touch ID or Optic ID. A parent, partner or accountability buddy can hold a separate Guardian Passcode, and wrong attempts trigger a growing cooldown.",
       },
       {
         title: "Weekly Review",
         description:
-          "Every Sunday, a quiet summary of how much time you took back this week — progress you can actually see.",
+          "Every Sunday, a seven-day chart of each day against your daily limit, your strongest day, days under your limit and a week-over-week comparison — shareable as an image.",
       },
       {
         title: "Prevent App Deletion",
@@ -71,15 +73,86 @@ const en = {
     eyebrow: "App Preview",
     titlePart1: "See it in",
     titleHighlight: "action",
-    subtitle:
-      "A calm iPhone-first interface for rules, schedules, zones, shield screens, and Guardian protection.",
-    labels: [
-      "Welcome",
-      "Daily Limits",
-      "Schedules",
-      "Location Zones",
-      "Block Screen",
-      "Guardian Mode",
+    subtitle: "A calm iPhone-first interface for rules, schedules, zones, shield screens, and Guardian protection.",
+    newBadge: "New in 1.3",
+    swipeHint: "Swipe to see more",
+    items: [
+      {
+        tag: "Weekly review",
+        line1: "Time reclaimed",
+        line2: "Progress you see",
+        subtitle: "See the time you win back, week after week.",
+        detail: "Each day charted against your daily limit, plus your strongest day, days under your limit and the week before — share it as an image.",
+        alt: "TimeBack Weekly Review with a seven-day chart against the daily limit",
+      },
+      {
+        tag: "Focus mode",
+        line1: "Focus time",
+        line2: "On autopilot",
+        subtitle: "Block distractions on your schedule.",
+        detail: "Choose the days and hours, overnight included — like 10:30 PM to 7:00 AM for sleep.",
+        alt: "TimeBack sleep schedule from 10:30 PM to 7:00 AM",
+      },
+      {
+        tag: "Focus zones",
+        line1: "New place",
+        line2: "Clearer focus",
+        subtitle: "Your focus zone starts when you arrive.",
+        detail: "Drop a place on the map and set a radius. Apps pause while you're inside and return when you leave.",
+        alt: "TimeBack zone on a map with its blocking radius",
+      },
+      {
+        tag: "Limit reached",
+        line1: "Time is up",
+        line2: "Time to pause",
+        subtitle: "Apps stop when you reach your daily limit.",
+        detail: "When a rule's daily limit runs out, its apps stay blocked for the rest of the day. It resets at midnight.",
+        alt: "TimeBack rule that has reached its daily limit",
+      },
+      {
+        tag: "Trusted support",
+        line1: "Stronger habits",
+        line2: "Shared support",
+        subtitle: "Let someone you trust help protect your rules.",
+        detail: "App Lock works with Face ID, Touch ID or Optic ID. Hand the Guardian Passcode to someone you trust — wrong attempts trigger a growing cooldown.",
+        alt: "TimeBack Passcode Settings with Face ID, Passcode and Guardian Passcode",
+      },
+      {
+        tag: "Make it yours",
+        line1: "Your reminder",
+        line2: "Your style",
+        subtitle: "Make your block screen feel like you.",
+        detail: "Pick the icon, title, message and buttons your block screen shows.",
+        alt: "TimeBack Block Screen Settings with a preview of the block screen",
+      },
+    ],
+  },
+  ipad: {
+    eyebrow: "New in 1.3",
+    titleLine1: "Now on iPad",
+    titleLine2: "Take back your time",
+    subtitle: "Two columns on iPad: rules, schedules and places on the left, a dashboard for each on the right, and Settings side by side. Smaller iPads use one column.",
+    requirement: "Requires iOS or iPadOS 26.2 or later.",
+    tabsLabel: "TimeBack on iPad",
+    tabs: [
+      {
+        label: "Rules",
+        title: "Set Your Limits",
+        subtitle: "Daily limits. Healthy breaks.",
+        alt: "TimeBack on iPad: the rules list beside the selected rule's dashboard",
+      },
+      {
+        label: "Schedules",
+        title: "Block on Schedule",
+        subtitle: "Make time for what matters.",
+        alt: "TimeBack on iPad: the schedules list beside the schedule's dashboard",
+      },
+      {
+        label: "Zones",
+        title: "Block by Location",
+        subtitle: "Enter a zone. Distractions pause.",
+        alt: "TimeBack on iPad: the zones list beside a map of the selected zone",
+      },
     ],
   },
   howItWorks: {
@@ -114,7 +187,7 @@ const en = {
       {
         title: "On-Device Only",
         description:
-          "Rules, settings, shield text, and passcode hashes stay on your iPhone.",
+          "Rules, settings and block screen text stay on your device, and passcodes are kept in its keychain.",
       },
       {
         title: "No Account Required",
@@ -136,7 +209,7 @@ const en = {
   cta: {
     title: "Download TimeBack Today",
     subtitle:
-      "TimeBack is now available on the App Store — completely free.",
+      "Free on the App Store for iPhone and iPad.",
     badge: "Download on the App Store",
   },
   footer: {
@@ -145,6 +218,7 @@ const en = {
     terms: "Terms of Use",
     faq: "FAQ",
     contact: "Contact",
+    discord: "Join Discord",
     rights: "All rights reserved.",
     language: "Language",
   },

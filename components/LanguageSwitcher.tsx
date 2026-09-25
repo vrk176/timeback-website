@@ -33,6 +33,10 @@ export default function LanguageSwitcher({
     try {
       localStorage.setItem("timeback-locale", locale);
     } catch {}
+    // Cookie is read server-side by the `/` redirect rules in vercel.json
+    try {
+      document.cookie = `timeback-locale=${locale}; path=/; max-age=31536000; SameSite=Lax`;
+    } catch {}
 
     // Replace the locale segment in the current pathname
     const segments = pathname.split("/").filter(Boolean);

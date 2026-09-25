@@ -1,0 +1,106 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "timeback-locale",
+          "value": "^(?<loc>en|zh-Hans|zh-Hant|ja|ko|de|fr|es)$"
+        }
+      ],
+      "destination": "/:loc",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[zZ][hH][-_](?:[^,;]*[-_])?(?:[hH][aA][nN][tT]|[tT][wW]|[hH][kK]|[mM][oO])\\b.*$"
+        }
+      ],
+      "destination": "/zh-Hant",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[zZ][hH]\\b.*$"
+        }
+      ],
+      "destination": "/zh-Hans",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[jJ][aA]\\b.*$"
+        }
+      ],
+      "destination": "/ja",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[kK][oO]\\b.*$"
+        }
+      ],
+      "destination": "/ko",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[dD][eE]\\b.*$"
+        }
+      ],
+      "destination": "/de",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[fF][rR]\\b.*$"
+        }
+      ],
+      "destination": "/fr",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[eE][sS]\\b.*$"
+        }
+      ],
+      "destination": "/es",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "/en",
+      "permanent": false
+    }
+  ]
+}

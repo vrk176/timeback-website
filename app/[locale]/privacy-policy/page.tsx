@@ -160,6 +160,16 @@ export default function PrivacyPolicy({
         </section>
 
         <section>
+          <h2>{s.website.heading}</h2>
+          <p>{s.website.body}</p>
+          <ul>
+            {s.website.items.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
           <h2>{s.rights.heading}</h2>
           <p>{s.rights.body}</p>
         </section>

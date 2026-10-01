@@ -218,7 +218,7 @@ const zhHans: Dictionary = {
   },
   legal: {
     backToHome: "返回首页",
-    lastUpdated: "最后更新:2026 年 8 月 24 日",
+    lastUpdated: "最后更新:2026 年 10 月 1 日",
   },
   privacyPolicyPage: {
     title: "隐私政策",
@@ -325,6 +325,15 @@ const zhHans: Dictionary = {
         items: [
           "应用内购买交易验证(StoreKit)",
           "地图与地理编码(MapKit,用于创建区域时)—— 包括瓦片加载、地址搜索、附近地点搜索、反向地理编码(由 Apple 处理,详见 Apple 隐私政策)",
+        ],
+      },
+      website: {
+        heading: "关于本网站",
+        body: "以上内容说明的是 TimeBack App。本网站(timeback.hominexis.com)与 App 相互独立,只处理少量数据:",
+        items: [
+          "访问统计:我们使用 Vercel Web Analytics 统计页面浏览量。它会记录访问的页面、来源网站、大致位置(国家、地区、城市)、浏览器、操作系统和设备类型,仅用于匿名的汇总统计。它不使用第三方 cookie;访问以请求生成的哈希值计数,24 小时后即被丢弃,数据不与你的 IP 地址关联,也不会用于在其他网站上追踪你。",
+          "语言偏好:当你用语言切换器选择语言时,网站会把你的选择保存在一个 cookie(timeback-locale)和浏览器本地存储中,下次打开时直接显示该语言。其中只有语言代码,绝不用于追踪。",
+          "本网站收集的任何信息都不会与 TimeBack App 或你设备上的数据关联。",
         ],
       },
       rights: {

@@ -226,7 +226,7 @@ const de: Dictionary = {
   },
   legal: {
     backToHome: "Zurück zur Startseite",
-    lastUpdated: "Zuletzt aktualisiert: 24. August 2026",
+    lastUpdated: "Zuletzt aktualisiert: 1. Oktober 2026",
   },
   privacyPolicyPage: {
     title: "Datenschutzerklärung",
@@ -352,6 +352,15 @@ const de: Dictionary = {
         items: [
           "In-App-Kauf-Transaktionsverifizierung (StoreKit)",
           "Karten und Geocoding (MapKit, beim Erstellen einer Zone) — Kachel-Laden, Adresssuche, Suche nach Orten in der Nähe und Reverse Geocoding (von Apple verarbeitet, siehe Apples Datenschutzrichtlinie)",
+        ],
+      },
+      website: {
+        heading: "Diese Website",
+        body: "Alles oben Stehende betrifft die TimeBack-App. Diese Website (timeback.hominexis.com) ist von der App getrennt und verarbeitet nur wenige Daten:",
+        items: [
+          "Besuchsstatistik: Wir nutzen Vercel Web Analytics, um Seitenaufrufe zu zählen. Erfasst werden die aufgerufene Seite, die verweisende Website, der ungefähre Standort (Land, Region, Stadt), Browser, Betriebssystem und Gerätetyp – ausschließlich für anonyme, zusammengefasste Statistiken. Es werden keine Drittanbieter-Cookies verwendet; Besuche werden über einen Hash der Anfrage gezählt, der nach 24 Stunden verworfen wird. Die Daten werden weder mit deiner IP-Adresse verknüpft noch genutzt, um dich über andere Websites hinweg zu verfolgen.",
+          "Spracheinstellung: Wenn du über die Sprachauswahl eine Sprache wählst, speichert die Website deine Wahl in einem Cookie (timeback-locale) und im lokalen Speicher deines Browsers, damit sie beim nächsten Mal in dieser Sprache öffnet. Darin steht nur der Sprachcode; er wird nie zum Tracking verwendet.",
+          "Nichts, was auf dieser Website erfasst wird, wird mit der TimeBack-App oder mit Daten auf deinem Gerät verknüpft.",
         ],
       },
       rights: {

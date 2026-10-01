@@ -224,7 +224,7 @@ const en = {
   },
   legal: {
     backToHome: "Back to Home",
-    lastUpdated: "Last updated: August 24, 2026",
+    lastUpdated: "Last updated: October 1, 2026",
   },
   privacyPolicyPage: {
     title: "Privacy Policy",
@@ -352,6 +352,15 @@ const en = {
         items: [
           "In-App Purchase transaction verification (StoreKit)",
           "Maps and geocoding (MapKit, when you create a zone) — tile loading, address search, nearby-place search, and reverse geocoding (handled by Apple, see Apple's privacy policy)",
+        ],
+      },
+      website: {
+        heading: "This Website",
+        body: "Everything above describes the TimeBack app. This website (timeback.hominexis.com) is separate from the App and handles a small amount of data:",
+        items: [
+          "Visit statistics: we use Vercel Web Analytics to count page views. It records the page visited, the referring site, approximate location (country, region, city), browser, operating system and device type, and is used only for anonymous, aggregated statistics. It does not use third-party cookies; visits are counted with a hash of the request that is discarded after 24 hours, and the data is not tied to your IP address or used to follow you across other websites.",
+          "Language preference: when you pick a language with the language switcher, the site saves your choice in a cookie (timeback-locale) and in your browser's local storage so it opens in that language next time. It contains only the language code and is never used for tracking.",
+          "Nothing collected on this website is connected to the TimeBack app or to any data on your device.",
         ],
       },
       rights: {

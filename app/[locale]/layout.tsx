@@ -8,6 +8,7 @@ import {
   createSeoMetadata,
   localeSeo,
 } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import "../globals.css";
 
@@ -60,6 +61,7 @@ export default function LocaleLayout({
           label={dict.footer.language}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );

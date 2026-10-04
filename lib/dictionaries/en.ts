@@ -1,8 +1,8 @@
 const en = {
   meta: {
-    title: "TimeBack — Take Back Control of Your Screen Time",
+    title: "TimeBack — App Limits, Breaks and Schedules for iPhone and iPad",
     description:
-      "TimeBack is a private iOS Screen Time companion for daily limits, break mode, schedules, location-based blocking, Guardian passcode, and custom shield screens. Free, no account, no ads.",
+      "Daily limits, Break Mode, schedules and location zones for iPhone and iPad, built on Apple's Screen Time. Guardian Passcode and custom block screens. Free, no account, no ads.",
   },
   hero: {
     badge: "Now on iPhone and iPad",
@@ -15,8 +15,8 @@ const en = {
     trustNote: "Free • Private • No account needed",
     badgePrivateTitle: "100% Private",
     badgePrivateSub: "On-device only",
-    badgeBreaksTitle: "Smart Breaks",
-    badgeBreaksSub: "Protect your eyes",
+    badgeBreaksTitle: "Break Mode",
+    badgeBreaksSub: "Rest after long use",
     screenshotAlt: "TimeBack Rules screen showing today's usage, Daily Limit and Break Mode",
     mascotAlt: "TimeBack's hourglass guardian, holding a shield and key on a cloud",
   },
@@ -25,17 +25,17 @@ const en = {
     titlePart1: "Built for real-life",
     titleHighlight: "screen habits",
     subtitle:
-      "Rules, schedules, zones, and custom shield screens help reduce distractions without handing over your data.",
+      "Rules, schedules, zones and your own block screen, to cut distractions without handing over your data.",
     items: [
       {
         title: "Daily Limits",
         description:
-          "Set a daily budget for apps, categories, or websites. Use weekday-specific limits when weekdays and weekends need different rules.",
+          "Give apps, categories or websites a daily time budget. You can set a different limit for each day of the week.",
       },
       {
         title: "Break Mode",
         description:
-          "After a stretch of continuous use, TimeBack can block selected apps for a short reset and resume automatically.",
+          "After a long stretch of continuous use, TimeBack blocks the selected apps for a short break. They can unlock on their own when it ends.",
       },
       {
         title: "Schedules",
@@ -45,27 +45,27 @@ const en = {
       {
         title: "Location Zones",
         description:
-          "Use zones for school, office, library, or home routines. Apps are blocked when you enter and released when you leave.",
+          "Set up zones for school, the office, the library or home. Apps are blocked while you're there and unblocked when you leave.",
       },
       {
         title: "Custom Block Screen",
         description:
-          "Customize the shield for limits, breaks, schedules, and zones with your own title, message, icon, and unlock delay.",
+          "Change the title, message, icon and unlock delay of the screen you see when a limit, break, schedule or zone blocks an app.",
       },
       {
         title: "App Lock & Guardian",
         description:
-          "Lock TimeBack with Face ID, Touch ID or Optic ID. A parent, partner or accountability buddy can hold a separate Guardian Passcode, and wrong attempts trigger a growing cooldown.",
+          "Lock TimeBack with Face ID, Touch ID or Optic ID. Give a separate Guardian Passcode to a parent, partner or friend. Each wrong attempt makes the wait longer.",
       },
       {
         title: "Weekly Review",
         description:
-          "Every Sunday, a seven-day chart of each day against your daily limit, your strongest day, days under your limit and a week-over-week comparison — shareable as an image.",
+          "Each Sunday you get the past seven days charted against your daily limit, your strongest day, days under the limit and a comparison with the week before. Share it as an image.",
       },
       {
         title: "Prevent App Deletion",
         description:
-          "Optional protection against impulsively deleting your blocker. While enabled, iOS blocks deletion of all apps on the device — stated clearly before you turn it on.",
+          "Stops you from deleting TimeBack on impulse. It's optional, and while it's on, iOS won't let you delete any app on the device. TimeBack tells you this before you turn it on.",
       },
     ],
   },
@@ -73,7 +73,7 @@ const en = {
     eyebrow: "App Preview",
     titlePart1: "See it in",
     titleHighlight: "action",
-    subtitle: "A calm iPhone-first interface for rules, schedules, zones, shield screens, and Guardian protection.",
+    subtitle: "Screens from the iPhone app: rules, schedules, zones, the block screen and the Guardian Passcode.",
     newBadge: "New in 1.3",
     swipeHint: "Swipe to see more",
     items: [
@@ -82,7 +82,7 @@ const en = {
         line1: "Time reclaimed",
         line2: "Progress you see",
         subtitle: "See the time you win back, week after week.",
-        detail: "Each day charted against your daily limit, plus your strongest day, days under your limit and the week before — share it as an image.",
+        detail: "Each day is charted against your daily limit, next to your strongest day and last week's numbers. You can share it as an image.",
         alt: "TimeBack Weekly Review with a seven-day chart against the daily limit",
       },
       {
@@ -90,7 +90,7 @@ const en = {
         line1: "Focus time",
         line2: "On autopilot",
         subtitle: "Block distractions on your schedule.",
-        detail: "Choose the days and hours, overnight included — like 10:30 PM to 7:00 AM for sleep.",
+        detail: "Pick the days and hours. Overnight works too, like 10:30 PM to 7:00 AM for sleep.",
         alt: "TimeBack sleep schedule from 10:30 PM to 7:00 AM",
       },
       {
@@ -114,7 +114,7 @@ const en = {
         line1: "Stronger habits",
         line2: "Shared support",
         subtitle: "Let someone you trust help protect your rules.",
-        detail: "App Lock works with Face ID, Touch ID or Optic ID. Hand the Guardian Passcode to someone you trust — wrong attempts trigger a growing cooldown.",
+        detail: "Give the Guardian Passcode to someone you trust. Every wrong guess adds to the wait, and TimeBack itself locks with Face ID, Touch ID or Optic ID.",
         alt: "TimeBack Passcode Settings with Face ID, Passcode and Guardian Passcode",
       },
       {
@@ -131,20 +131,20 @@ const en = {
     eyebrow: "New in 1.3",
     titleLine1: "Now on iPad",
     titleLine2: "Take back your time",
-    subtitle: "Two columns on iPad: rules, schedules and places on the left, a dashboard for each on the right, and Settings side by side. Smaller iPads use one column.",
+    subtitle: "On iPad, your rules, schedules and zones are listed on the left with the selected one's dashboard on the right. Settings uses two columns too. Smaller iPads use one column.",
     requirement: "Requires iOS or iPadOS 26.2 or later.",
     tabsLabel: "TimeBack on iPad",
     tabs: [
       {
         label: "Rules",
         title: "Set Your Limits",
-        subtitle: "Daily limits. Healthy breaks.",
+        subtitle: "Daily limits and breaks.",
         alt: "TimeBack on iPad: the rules list beside the selected rule's dashboard",
       },
       {
         label: "Schedules",
         title: "Block on Schedule",
-        subtitle: "Make time for what matters.",
+        subtitle: "Blocks start and end on time.",
         alt: "TimeBack on iPad: the schedules list beside the schedule's dashboard",
       },
       {
@@ -168,12 +168,12 @@ const en = {
       {
         title: "Let iOS Do the Blocking",
         description:
-          "TimeBack uses Apple's official Screen Time frameworks. When a rule applies, your custom shield appears at the right moment.",
+          "TimeBack is built on Apple's Screen Time frameworks. When a rule kicks in, iOS puts your block screen over the app.",
       },
       {
         title: "Keep the Habit",
         description:
-          "Use gentle friction, optional unlock windows, and Guardian protection to make better screen habits easier to keep.",
+          "An unlock delay makes you stop and think, and a Guardian Passcode keeps you from quietly undoing your rules. You can still get in when you need to.",
       },
     ],
   },
@@ -182,7 +182,7 @@ const en = {
     titlePart1: "100% Private.",
     titleHighlight: "Zero Data Uploaded.",
     ever: "Ever.",
-    trustBadge: "Free. No ads. No third-party SDKs. No compromises.",
+    trustBadge: "Free. No ads. No third-party SDKs.",
     items: [
       {
         title: "On-Device Only",
@@ -192,7 +192,7 @@ const en = {
       {
         title: "No Account Required",
         description:
-          "Start using TimeBack instantly. No sign-up, no email, no hassle.",
+          "Open the app and start. No sign-up, no email address.",
       },
       {
         title: "Zero Tracking",
@@ -200,7 +200,7 @@ const en = {
           "No analytics, no telemetry, no ads, and no third-party tracking SDKs.",
       },
       {
-        title: "Apple Official API",
+        title: "Apple's Screen Time API",
         description:
           "App selections use Apple's private Screen Time tokens. TimeBack cannot read app content or browsing history.",
       },

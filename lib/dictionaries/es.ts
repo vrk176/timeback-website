@@ -4,7 +4,7 @@ const es: Dictionary = {
   meta: {
     title: "TimeBack — Recupera el control de tu tiempo de pantalla",
     description:
-      "TimeBack es una app privada de iOS para el tiempo de pantalla: límites diarios, modo descanso, horarios, bloqueo por ubicación y código del guardián. Gratis, sin cuenta, sin anuncios.",
+      "TimeBack es una app de iOS para controlar tu tiempo de pantalla sin renunciar a tu privacidad: límites diarios, modo descanso, horarios, bloqueo por ubicación, código del guardián y pantallas de bloqueo personalizadas. Gratis, sin cuenta, sin anuncios.",
   },
   hero: {
     badge: "Ya en iPhone y iPad",
@@ -15,24 +15,24 @@ const es: Dictionary = {
     exploreFeatures: "Ver funciones",
     comingSoon: "Descárgalo en el App Store",
     trustNote: "Gratis • Privado • Sin cuenta",
-    badgePrivateTitle: "100 % Privado",
+    badgePrivateTitle: "100 % privado",
     badgePrivateSub: "Solo en tu dispositivo",
-    badgeBreaksTitle: "Descansos inteligentes",
-    badgeBreaksSub: "Cuida tus ojos",
+    badgeBreaksTitle: "Descansos automáticos",
+    badgeBreaksSub: "Un descanso tras mucho uso",
     screenshotAlt: "Pantalla de reglas de TimeBack con el uso de hoy, el límite diario y el modo descanso",
     mascotAlt: "El guardián de reloj de arena de TimeBack, con escudo y llave, sentado en una nube",
   },
   features: {
     eyebrow: "Funciones",
-    titlePart1: "Hecho para tus",
-    titleHighlight: "hábitos reales",
+    titlePart1: "Pensado para",
+    titleHighlight: "tu día a día",
     subtitle:
       "Reglas, horarios, zonas y pantallas de bloqueo personalizadas que reducen las distracciones sin pedirte tus datos.",
     items: [
       {
         title: "Límites diarios",
         description:
-          "Ponles un cupo diario a las apps, las categorías o los sitios web. Usa límites distintos por día cuando necesites reglas diferentes entre semana y el fin de semana.",
+          "Ponles un cupo diario a las apps, las categorías o los sitios web. Entre semana y el fin de semana pueden tener límites distintos.",
       },
       {
         title: "Modo descanso",
@@ -42,7 +42,7 @@ const es: Dictionary = {
       {
         title: "Horarios",
         description:
-          "Crea horas tranquilas para el trabajo, el estudio, dormir o la familia, incluidos los horarios que cruzan la medianoche, como de 22:00 a 08:00.",
+          "Bloquea franjas horarias para trabajar, estudiar, dormir o estar con la familia, también de noche, como de 22:00 a 08:00.",
       },
       {
         title: "Bloqueo por ubicación",
@@ -67,7 +67,7 @@ const es: Dictionary = {
       {
         title: "Impedir la eliminación de apps",
         description:
-          "Protección opcional contra el impulso de borrar tu bloqueador. Mientras está activada, iOS impide eliminar cualquier app del dispositivo — se te avisa con claridad antes de activarla.",
+          "Protección opcional contra el impulso de borrar tu bloqueador. Mientras está activada, iOS impide eliminar cualquier app del dispositivo. Te lo avisamos antes de activarla.",
       },
     ],
   },
@@ -75,7 +75,7 @@ const es: Dictionary = {
     eyebrow: "Vista previa de la app",
     titlePart1: "Míralo en",
     titleHighlight: "acción",
-    subtitle: "Una interfaz serena, pensada para el iPhone, para reglas, horarios, zonas, pantallas de bloqueo y protección con código del guardián.",
+    subtitle: "Reglas, horarios, zonas, pantalla de bloqueo y código del guardián, tal como se ven en el iPhone.",
     newBadge: "Novedad en 1.3",
     swipeHint: "Desliza para ver más",
     items: [
@@ -133,7 +133,7 @@ const es: Dictionary = {
     eyebrow: "Novedad en 1.3",
     titleLine1: "Ahora en el iPad",
     titleLine2: "Recupera tu tiempo",
-    subtitle: "Dos columnas en el iPad: reglas, horarios y lugares a la izquierda, el detalle de cada uno a la derecha y Configuración en paralelo. Los iPad pequeños usan una sola columna.",
+    subtitle: "En el iPad, TimeBack usa dos columnas: reglas, horarios y zonas a la izquierda y el detalle de cada uno a la derecha. Configuración también. Los iPad pequeños usan una sola columna.",
     requirement: "Requiere iOS o iPadOS 26.2 o posterior.",
     tabsLabel: "TimeBack en el iPad",
     tabs: [
@@ -170,21 +170,21 @@ const es: Dictionary = {
       {
         title: "Deja que iOS bloquee",
         description:
-          "TimeBack usa los frameworks oficiales de Tiempo de uso de Apple. Cuando una regla se aplica, tu pantalla de bloqueo aparece en el momento justo.",
+          "TimeBack usa las API oficiales de Tiempo de uso de Apple. Cuando se activa una regla, aparece tu pantalla de bloqueo.",
       },
       {
         title: "Mantén el hábito",
         description:
-          "Una fricción suave, desbloqueos temporales opcionales y el código del guardián hacen que los buenos hábitos duren.",
+          "Una pequeña espera antes de desbloquear, desbloqueos puntuales si los necesitas y el código del guardián te ayudan a mantenerlo.",
       },
     ],
   },
   privacy: {
-    eyebrow: "La privacidad primero",
-    titlePart1: "100 % Privado.",
+    eyebrow: "Privacidad",
+    titlePart1: "100 % privado.",
     titleHighlight: "Cero datos enviados.",
     ever: "Nunca.",
-    trustBadge: "Gratis. Sin anuncios. Sin SDK de terceros. Sin concesiones.",
+    trustBadge: "Gratis. Sin anuncios. Sin SDK de terceros.",
     items: [
       {
         title: "Solo en tu dispositivo",
@@ -194,7 +194,7 @@ const es: Dictionary = {
       {
         title: "Sin cuenta",
         description:
-          "Empieza a usar TimeBack al instante. Sin registro, sin correo, sin complicaciones.",
+          "Abre la app y empieza. Sin registro ni correo.",
       },
       {
         title: "Cero rastreo",
@@ -209,7 +209,7 @@ const es: Dictionary = {
     ],
   },
   cta: {
-    title: "Descarga TimeBack hoy",
+    title: "Descarga TimeBack",
     subtitle:
       "Gratis en el App Store, para iPhone y iPad.",
     badge: "Descárgalo en el App Store",
@@ -220,7 +220,7 @@ const es: Dictionary = {
     terms: "Términos de uso",
     faq: "Preguntas frecuentes",
     contact: "Contacto",
-    discord: "Unirse a Discord",
+    discord: "Únete a Discord",
     rights: "Todos los derechos reservados.",
     language: "Idioma",
   },

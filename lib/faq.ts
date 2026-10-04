@@ -20,7 +20,7 @@ const en: FaqContent = {
   entries: [
     {
       q: "Why does blocking sometimes take a few seconds?",
-      a: "When you turn a rule on, TimeBack registers the block with iOS right away. The shield you see on a blocked app, though, is drawn by iOS itself — and iOS can take a few seconds (occasionally longer) to refresh it, especially right after several quick changes. If the shield hasn't appeared yet, the block is still already in place. Give it a moment; toggling the rule repeatedly can actually make iOS take longer.",
+      a: "When you turn a rule on, TimeBack registers the block with iOS right away. The block screen you see on a blocked app, though, is drawn by iOS itself — and iOS can take a few seconds (occasionally longer) to refresh it, especially right after several quick changes. If the block screen hasn't appeared yet, the block is still already in place. Give it a moment; toggling the rule repeatedly can actually make iOS take longer.",
     },
     {
       q: "Why do I need to tap Continue after a break ends?",
@@ -40,11 +40,11 @@ const en: FaqContent = {
     },
     {
       q: "Why does TimeBack need Screen Time permission?",
-      a: "Screen Time permission (Apple's Family Controls) is the only mechanism iOS offers that lets one app limit another. Everything TimeBack does — shields, minute counting, schedules — is built on it. Without the permission nothing can be blocked, and if it is revoked later, all rules stop until it is granted again.",
+      a: "Screen Time permission (Apple's Family Controls) is the only mechanism iOS offers that lets one app limit another. Everything TimeBack does — block screens, minute counting, schedules — is built on it. Without the permission nothing can be blocked, and if it is revoked later, all rules stop until it is granted again.",
     },
     {
       q: "Why can't I delete any app after turning on Prevent App Deletion?",
-      a: "That is how the iOS switch works: Apple's Screen Time framework offers a single device-wide \"deleting apps\" restriction, not a per-app one. When you turn on Prevent App Deletion, iOS stops every app on the device from being deleted — TimeBack included, which is the point — and there is no way for TimeBack to protect only itself. The confirmation dialog says so before anything is applied, and you can turn the switch off at any time (if you have set a guardian PIN, turning it off asks for that PIN first).",
+      a: "That is how the iOS switch works: Apple's Screen Time framework offers a single device-wide \"deleting apps\" restriction, not a per-app one. When you turn on Prevent App Deletion, iOS stops every app on the device from being deleted — TimeBack included, which is the point — and there is no way for TimeBack to protect only itself. The confirmation dialog says so before anything is applied, and you can turn the switch off at any time (if you have set a Guardian Passcode, turning it off asks for that passcode first).",
     },
     {
       q: "Why does a Daily Limit sometimes lock a few minutes early?",
@@ -64,7 +64,7 @@ const en: FaqContent = {
     },
     {
       q: "I forgot my TimeBack passcode / I'm locked out. What now?",
-      a: "Which way out you have depends on what you turned on.\n\nIf the Face ID lock is on, you are not stuck: at the lock screen, use Face ID — and if it doesn't recognise you (or the camera is covered, or you have failed it a few times), the system offers your device passcode instead. That is iOS's own fallback, not ours, and it always works if you know how to unlock the phone itself. If you also set a TimeBack passcode, the lock screen has a Use TimeBack Passcode button as a second way in.\n\nIf you have entered a wrong passcode several times, TimeBack pauses the keypad for a while — one minute after the fifth wrong entry, then five, then fifteen, then an hour at most. Nothing is lost and nothing needs to be reset: the countdown on screen runs down on its own, and entering the right passcode clears the counter completely. There is no hidden penalty for waiting it out, and no way to make it go faster.\n\nIf you have forgotten the TimeBack passcode itself and the Face ID lock is off, there is no back door — by design. TimeBack has no account and no server, so there is nobody who could verify who you are and let you back in; anything that could reset your passcode from this device could be used by whoever is holding your phone, which would defeat the point of setting one. The remedy is the same one that applies to a forgotten guardian passcode — which gates Unlock Once, deleting or turning off a rule/schedule/zone, turning Prevent App Deletion off, and changing or removing the guardian passcode itself: delete TimeBack and install it again. That clears your passcodes along with your rules and history — a real cost, which is why it's the last resort rather than a button in Settings.",
+      a: "Which way out you have depends on what you turned on.\n\nIf the Face ID lock is on, you are not stuck: at the lock screen, use Face ID — and if it doesn't recognise you (or the camera is covered, or you have failed it a few times), the system offers your device passcode instead. That is iOS's own fallback, not ours, and it always works if you know how to unlock the phone itself. If you also set a TimeBack passcode, the lock screen has a Use TimeBack Passcode button as a second way in.\n\nIf you have entered a wrong passcode several times, TimeBack pauses the keypad for a while — one minute after the fifth wrong entry, then five, then fifteen, then an hour at most. Nothing is lost and nothing needs to be reset: the countdown on screen runs down on its own, and entering the right passcode clears the counter completely. There is no hidden penalty for waiting it out, and no way to make it go faster.\n\nIf you have forgotten the TimeBack passcode itself and the Face ID lock is off, there is no back door — by design. TimeBack has no account and no server, so there is nobody who could verify who you are and let you back in; anything that could reset your passcode from this device could be used by whoever is holding your phone, which would defeat the point of setting one. The remedy is the same one that applies to a forgotten Guardian Passcode — which gates Unlock Once, deleting or turning off a rule/schedule/zone, turning Prevent App Deletion off, and changing or removing the Guardian Passcode itself: delete TimeBack and install it again. That clears your passcodes along with your rules and history — a real cost, which is why it's the last resort rather than a button in Settings.",
     },
   ],
   contact: {
@@ -105,14 +105,14 @@ const zhHans: FaqContent = {
     },
     {
       q: "开启「防止删除 App」后，为什么所有 App 都不能删了？",
-      a: "这是 iOS 这个开关本身的工作方式：Apple 的屏幕使用时间框架只提供一个设备级的「删除 App」限制，没有针对单个 App 的版本。打开「防止删除 App」后，iOS 会禁止删除这台设备上的所有 App——当然也包括 TimeBack 自己，这正是这个功能的意义；TimeBack 没有办法只保护它自己。开启前的确认弹窗会先把这一点讲清楚，你也随时可以把开关关掉（如果设置了守护者 PIN，关闭前会先要求输入 PIN）。",
+      a: "这是 iOS 这个开关本身的工作方式：Apple 的屏幕使用时间框架只提供一个设备级的「删除 App」限制，没有针对单个 App 的版本。打开「防止删除 App」后，iOS 会禁止删除这台设备上的所有 App——当然也包括 TimeBack 自己，这正是这个功能的意义；TimeBack 没有办法只保护它自己。开启前的确认弹窗会先把这一点讲清楚，你也随时可以把开关关掉（如果设置了守护者密码，关闭前会先要求输入该密码）。",
     },
     {
       q: "每日限额为什么有时会提前几分钟锁定？",
       a: "TimeBack 向 iOS 登记的触发时长就是你设定的分钟数，一分不多一分不少。但 iOS 内部有两套独立的使用时长计数：一套负责触发限额事件，另一套支撑仪表盘上显示的用量数字（与系统「屏幕使用时间」一致）。实测中两者在同一天可能相差几分钟，且事件计数往往偏快——所以偶尔会出现仪表盘还剩几分钟、锁定却已出现的情况。这发生在 iOS 内部，苹果自家的屏幕使用时间限额也有同样现象；TimeBack 在执行时刻无法读到仪表盘那套数字来校正它。\n\n如果你觉得锁得早了，打开 TimeBack 在规则卡片上用「临时解锁」（或直接关闭该规则）——主动权在你。拦截页面本身不放行：页面上的「好的」按钮只会关闭该 App、不会解除锁定，避免顺手一点就把限额废掉。每天午夜一切重新计算。",
     },
     {
-      q: "定时的时段为什么不能短于 15 分钟？",
+      q: "时间表的时段为什么不能短于 15 分钟？",
       a: "这是 iOS 的限制，不是 TimeBack 的选择：系统不接受短于 15 分钟的拦截时段，会直接拒绝登记。以前 TimeBack 会让你存下来，它就躺在列表里显示成已启用，实际一次都不会屏蔽。现在时段不够长时「保存」按钮不会亮，并且会直接告诉你原因。\n\n有一点值得知道：跨过午夜的时段会被算成两段——午夜之前的一段和午夜之后的一段——每一段都要各自满 15 分钟。所以 23:50–08:00 存不下去（落在午夜之前的只剩十分钟不到），而 23:00–08:00 没问题。\n\n如果你要的本来就是一次短时间的屏蔽，用规则卡片上的「立即拦截」：它立刻锁上、一直锁到你自己解除，没有最短时长的要求。",
     },
     {
@@ -142,7 +142,7 @@ const zhHant: FaqContent = {
   entries: [
     {
       q: "為什麼封鎖有時會延遲幾秒？",
-      a: "你打開一條規則時，TimeBack 會馬上把封鎖登記到 iOS。但你在被封鎖的 App 上看到的那層攔截畫面是 iOS 自己畫的——它有時要幾秒（偶爾更久）才刷出來，尤其是連續快速調整之後。看不到攔截畫面，不代表封鎖沒有生效；稍等一下就好，反覆切換反而會讓 iOS 刷得更慢。",
+      a: "你打開一條規則時，TimeBack 會馬上把封鎖登記到 iOS。但你在被封鎖的 App 上看到的那層封鎖畫面是 iOS 自己畫的——它有時要幾秒（偶爾更久）才刷出來，尤其是連續快速調整之後。看不到封鎖畫面，不代表封鎖沒有生效；稍等一下就好，反覆切換反而會讓 iOS 刷得更慢。",
     },
     {
       q: "休息結束後，為什麼還要按一下「繼續使用」？",
@@ -162,18 +162,18 @@ const zhHant: FaqContent = {
     },
     {
       q: "為什麼 TimeBack 需要螢幕使用時間權限？",
-      a: "螢幕使用時間權限（Apple 的 Family Controls）是 iOS 上唯一允許一個 App 去限制另一個 App 的機制。TimeBack 的攔截畫面、計時、時間表都建立在它之上。沒這個權限就無法封鎖任何東西；如果之後被撤銷，所有規則也會停下來，直到重新授權。",
+      a: "螢幕使用時間權限（Apple 的 Family Controls）是 iOS 上唯一允許一個 App 去限制另一個 App 的機制。TimeBack 的封鎖畫面、計時、時間表都建立在它之上。沒這個權限就無法封鎖任何東西；如果之後被撤銷，所有規則也會停下來，直到重新授權。",
     },
     {
       q: "開啟「防止刪除 App」後，為什麼所有 App 都不能刪了？",
-      a: "這是 iOS 這個開關本身的運作方式：Apple 的螢幕使用時間框架只提供一個裝置層級的「刪除 App」限制，沒有針對單一 App 的版本。打開「防止刪除 App」後，iOS 會禁止刪除這台裝置上的所有 App——當然也包括 TimeBack 自己，這正是這個功能的意義；TimeBack 沒有辦法只保護它自己。開啟前的確認視窗會先把這一點講清楚，你也隨時可以把開關關掉（如果設定了守護者 PIN，關閉前會先要求輸入 PIN）。",
+      a: "這是 iOS 這個開關本身的運作方式：Apple 的螢幕使用時間框架只提供一個裝置層級的「刪除 App」限制，沒有針對單一 App 的版本。打開「防止刪除 App」後，iOS 會禁止刪除這台裝置上的所有 App——當然也包括 TimeBack 自己，這正是這個功能的意義；TimeBack 沒有辦法只保護它自己。開啟前的確認視窗會先把這一點講清楚，你也隨時可以把開關關掉（如果設定了守護者密碼，關閉前會先要求輸入該密碼）。",
     },
     {
       q: "每日限額為什麼有時會提前幾分鐘鎖定？",
-      a: "TimeBack 向 iOS 登記的觸發時長就是你設定的分鐘數，一分不多一分不少。但 iOS 內部有兩套獨立的使用時長計數：一套負責觸發限額事件，另一套支撐儀表板上顯示的用量數字（與系統「螢幕使用時間」一致）。實測中兩者在同一天可能相差幾分鐘，且事件計數往往偏快——所以偶爾會出現儀表板還剩幾分鐘、鎖定卻已出現的情況。這發生在 iOS 內部，Apple 自家的螢幕使用時間限額也有同樣現象；TimeBack 在執行時刻無法讀到儀表板那套數字來校正它。\n\n如果你覺得鎖得早了，打開 TimeBack 在規則卡片上用「臨時解鎖」（或直接關閉該規則）——主動權在你。攔截畫面本身不放行：畫面上的「好的」按鈕只會關閉該 App、不會解除鎖定，避免順手一按就把限額廢掉。每天午夜一切重新計算。",
+      a: "TimeBack 向 iOS 登記的觸發時長就是你設定的分鐘數，一分不多一分不少。但 iOS 內部有兩套獨立的使用時長計數：一套負責觸發限額事件，另一套支撐儀表板上顯示的用量數字（與系統「螢幕使用時間」一致）。實測中兩者在同一天可能相差幾分鐘，且事件計數往往偏快——所以偶爾會出現儀表板還剩幾分鐘、鎖定卻已出現的情況。這發生在 iOS 內部，Apple 自家的螢幕使用時間限額也有同樣現象；TimeBack 在執行時刻無法讀到儀表板那套數字來校正它。\n\n如果你覺得鎖得早了，打開 TimeBack 在規則卡片上用「臨時解鎖」（或直接關閉該規則）——主動權在你。封鎖畫面本身不放行：畫面上的「好的」按鈕只會關閉該 App、不會解除鎖定，避免順手一按就把限額廢掉。每天午夜一切重新計算。",
     },
     {
-      q: "定時的時段為什麼不能短於 15 分鐘？",
+      q: "時間表的時段為什麼不能短於 15 分鐘？",
       a: "這是 iOS 的限制，不是 TimeBack 的選擇：系統不接受短於 15 分鐘的封鎖時段，會直接拒絕登記。以前 TimeBack 會讓你存下來，它就躺在列表裡顯示成已啟用，實際一次都不會封鎖。現在時段不夠長時「儲存」按鈕不會亮，並且會直接告訴你原因。\n\n有一點值得知道：跨過午夜的時段會被算成兩段——午夜之前的一段和午夜之後的一段——每一段都要各自滿 15 分鐘。所以 23:50–08:00 存不下去（落在午夜之前的只剩不到十分鐘），而 23:00–08:00 沒問題。\n\n如果你要的本來就是一次短時間的封鎖，用規則卡片上的「立即封鎖」：它立刻鎖上、一直鎖到你自己解除，沒有最短時長的要求。",
     },
     {
@@ -227,7 +227,7 @@ const ja: FaqContent = {
     },
     {
       q: "「アプリの削除を防止」をオンにすると、なぜどのアプリも削除できなくなるの？",
-      a: "これは iOS のスイッチ自体の仕様です。Apple のスクリーンタイム枠組みが提供するのは、デバイス全体に効く「アプリの削除」制限ひとつだけで、特定のアプリだけを守る仕組みはありません。「アプリの削除を防止」をオンにすると、iOS はこのデバイス上のすべてのアプリの削除を禁止します — もちろん TimeBack 自身も含めて。それこそがこの機能の目的で、TimeBack が自分だけを守る方法は存在しません。オンにする前の確認ダイアログでこの点を先に説明しますし、スイッチはいつでもオフにできます（ガーディアンPINを設定している場合は、オフにする前にPINの入力を求められます）。",
+      a: "これは iOS のスイッチ自体の仕様です。Apple のスクリーンタイム枠組みが提供するのは、デバイス全体に効く「アプリの削除」制限ひとつだけで、特定のアプリだけを守る仕組みはありません。「アプリの削除を防止」をオンにすると、iOS はこのデバイス上のすべてのアプリの削除を禁止します — もちろん TimeBack 自身も含めて。それこそがこの機能の目的で、TimeBack が自分だけを守る方法は存在しません。オンにする前の確認ダイアログでこの点を先に説明しますし、スイッチはいつでもオフにできます（ガーディアンパスコードを設定している場合は、オフにする前にそのパスコードの入力を求められます）。",
     },
     {
       q: "1日の制限が、設定より数分早くロックされることがあるのはなぜ？",
@@ -276,19 +276,19 @@ const ko: FaqContent = {
     },
     {
       q: "규칙이 작동하지 않을 때 무엇을 확인하나요?",
-      a: "1) TimeBack을 한 번 열어 보세요 — 앱이 전면으로 올라올 때마다 규칙이 시스템과 다시 맞춰집니다. 2) Screen Time 권한이 그대로 켜져 있는지 확인하세요(iOS 설정 → 스크린 타임). 3) 해당 규칙을 열어 활성 상태이고 앱이 그대로 선택돼 있는지 확인합니다. 4) 스케줄 규칙이라면 시간 구간과 반복 요일도 다시 봐 주세요. 5) 그래도 해결되지 않으면 설정 → 지원에서 메일을 보내 주세요 — 버전 정보가 자동으로 채워져 있어 더 빠르게 도와 드릴 수 있습니다.",
+      a: "1) TimeBack을 한 번 열어 보세요 — 앱이 전면으로 올라올 때마다 규칙이 시스템과 다시 맞춰집니다. 2) 스크린 타임 권한이 그대로 켜져 있는지 확인하세요(iOS 설정 → 스크린 타임). 3) 해당 규칙을 열어 활성 상태이고 앱이 그대로 선택돼 있는지 확인합니다. 4) 스케줄 규칙이라면 시간 구간과 반복 요일도 다시 봐 주세요. 5) 그래도 해결되지 않으면 설정 → 지원에서 메일을 보내 주세요 — 버전 정보가 자동으로 채워져 있어 더 빠르게 도와 드릴 수 있습니다.",
     },
     {
       q: "TimeBack이 제 사용 데이터를 업로드하나요?",
-      a: "아니요. 사용 데이터는 기기 밖으로 나가지 않습니다. TimeBack에는 계정도, 분석 기능도 없습니다. 또한 Apple의 Screen Time 프레임워크 구조상 TimeBack 자체도 익명화된 앱 참조만 다룰 수 있어, 무엇을 썼는지 읽을 수 있는 목록은 가지고 있지 않습니다.",
+      a: "아니요. 사용 데이터는 기기 밖으로 나가지 않습니다. TimeBack에는 계정도, 분석 기능도 없습니다. 또한 Apple의 스크린 타임 프레임워크 구조상 TimeBack 자체도 익명화된 앱 참조만 다룰 수 있어, 무엇을 썼는지 읽을 수 있는 목록은 가지고 있지 않습니다.",
     },
     {
-      q: "Screen Time 권한이 왜 필요한가요?",
-      a: "Screen Time 권한(Apple의 Family Controls)은 iOS에서 한 앱이 다른 앱을 제한할 수 있는 유일한 통로입니다. TimeBack의 차단 화면, 시간 계산, 스케줄 — 모두 그 위에서 동작합니다. 권한이 없으면 어떤 것도 차단할 수 없고, 나중에 해제되면 다시 허용할 때까지 모든 규칙이 멈춥니다.",
+      q: "스크린 타임 권한이 왜 필요한가요?",
+      a: "스크린 타임 권한(Apple의 Family Controls)은 iOS에서 한 앱이 다른 앱을 제한할 수 있는 유일한 통로입니다. TimeBack의 차단 화면, 시간 계산, 스케줄 — 모두 그 위에서 동작합니다. 권한이 없으면 어떤 것도 차단할 수 없고, 나중에 해제되면 다시 허용할 때까지 모든 규칙이 멈춥니다.",
     },
     {
       q: "「앱 삭제 방지」를 켜면 왜 모든 앱을 삭제할 수 없나요?",
-      a: "iOS 스위치 자체가 그렇게 동작합니다. Apple의 스크린 타임 프레임워크는 기기 전체에 적용되는 「앱 삭제」 제한 하나만 제공하며, 특정 앱만 보호하는 방식은 없습니다. 「앱 삭제 방지」를 켜면 iOS는 이 기기의 모든 앱 삭제를 막습니다 — 물론 TimeBack 자신도 포함해서요. 그게 바로 이 기능의 목적이고, TimeBack이 자기만 보호할 방법은 없습니다. 켜기 전 확인 창에서 이 점을 먼저 알려 드리며, 스위치는 언제든 끌 수 있습니다(보호자 PIN을 설정했다면 끄기 전에 PIN 입력을 요구합니다).",
+      a: "iOS 스위치 자체가 그렇게 동작합니다. Apple의 스크린 타임 프레임워크는 기기 전체에 적용되는 「앱 삭제」 제한 하나만 제공하며, 특정 앱만 보호하는 방식은 없습니다. 「앱 삭제 방지」를 켜면 iOS는 이 기기의 모든 앱 삭제를 막습니다 — 물론 TimeBack 자신도 포함해서요. 그게 바로 이 기능의 목적이고, TimeBack이 자기만 보호할 방법은 없습니다. 켜기 전 확인 창에서 이 점을 먼저 알려 드리며, 스위치는 언제든 끌 수 있습니다(보호자 비밀번호를 설정했다면 끄기 전에 비밀번호 입력을 요구합니다).",
     },
     {
       q: "일일 제한이 가끔 몇 분 일찍 잠기는 이유는요?",
@@ -341,7 +341,7 @@ const de: FaqContent = {
     },
     {
       q: "Lädt TimeBack meine Nutzungsdaten hoch?",
-      a: "Nein. Deine Nutzungsdaten bleiben auf deinem Gerät. TimeBack hat keine Konten und kein Analytics. Auch Apples Screen-Time-Framework ist so gebaut, dass TimeBack selbst nur mit anonymen App-Referenzen arbeitet — und nie eine lesbare Liste deiner Nutzung sieht.",
+      a: "Nein. Deine Nutzungsdaten bleiben auf deinem Gerät. TimeBack hat keine Konten und kein Analytics. Auch Apples Bildschirmzeit-Framework ist so gebaut, dass TimeBack selbst nur mit anonymen App-Referenzen arbeitet — und nie eine lesbare Liste deiner Nutzung sieht.",
     },
     {
       q: "Warum braucht TimeBack die Bildschirmzeit-Berechtigung?",
@@ -349,7 +349,7 @@ const de: FaqContent = {
     },
     {
       q: "Warum kann ich nach dem Aktivieren von „App-Löschung verhindern“ gar keine App mehr löschen?",
-      a: "So funktioniert dieser iOS-Schalter: Apples Screen-Time-Framework bietet nur eine einzige, gerätweite Beschränkung für das Löschen von Apps — keine pro App. Wenn du „App-Löschung verhindern“ aktivierst, verhindert iOS das Löschen jeder App auf dem Gerät — TimeBack eingeschlossen, und genau das ist der Sinn der Funktion; TimeBack kann sich nicht nur selbst schützen. Der Bestätigungsdialog sagt dir das, bevor irgendetwas angewendet wird, und du kannst den Schalter jederzeit wieder ausschalten (hast du einen Wächter-Code eingerichtet, wird er vor dem Ausschalten abgefragt).",
+      a: "So funktioniert dieser iOS-Schalter: Apples Bildschirmzeit-Framework bietet nur eine einzige, gerätweite Beschränkung für das Löschen von Apps — keine pro App. Wenn du „App-Löschung verhindern“ aktivierst, verhindert iOS das Löschen jeder App auf dem Gerät — TimeBack eingeschlossen, und genau das ist der Sinn der Funktion; TimeBack kann sich nicht nur selbst schützen. Der Bestätigungsdialog sagt dir das, bevor irgendetwas angewendet wird, und du kannst den Schalter jederzeit wieder ausschalten (hast du einen Wächter-Code eingerichtet, wird er vor dem Ausschalten abgefragt).",
     },
     {
       q: "Warum sperrt ein Tageslimit manchmal ein paar Minuten zu früh?",
@@ -402,7 +402,7 @@ const fr: FaqContent = {
     },
     {
       q: "TimeBack envoie-t-il mes données d'usage ?",
-      a: "Non. Vos données d'usage restent sur votre appareil. TimeBack n'a ni compte ni outils d'analyse. Le framework Screen Time d'Apple est aussi conçu de telle sorte que TimeBack lui-même ne manipule que des références d'apps anonymisées — jamais une liste lisible de ce que vous utilisez.",
+      a: "Non. Vos données d'usage restent sur votre appareil. TimeBack n'a ni compte ni outils d'analyse. Le framework Temps d'écran d'Apple est aussi conçu de telle sorte que TimeBack lui-même ne manipule que des références d'apps anonymisées — jamais une liste lisible de ce que vous utilisez.",
     },
     {
       q: "Pourquoi TimeBack a-t-il besoin de l'autorisation Temps d'écran ?",

@@ -264,11 +264,11 @@ const en = {
             ],
             [
               "Shield configuration",
-              "Your customized blocking screen appearance",
+              "Your customized block screen appearance",
             ],
             [
               "Passcode hashes",
-              "SHA-256 hashes of your PIN and guardian PIN (original PINs are never stored)",
+              "SHA-256 hashes of your passcode and Guardian Passcode (original passcodes are never stored)",
             ],
             [
               "Notification preferences",
@@ -392,11 +392,11 @@ const en = {
           "TimeBack is a screen time management application for iOS that helps users manage their app usage through:",
         items: [
           "Daily usage time limits",
-          "Break mode intervals",
+          "Break Mode",
           "Time-based blocking schedules",
           "Location-based (geofence) blocking",
-          "Customizable blocking screens",
-          "Weekly usage review",
+          "Customizable block screens",
+          "Weekly Review",
           "Optional device-wide app-deletion protection",
         ],
         outro:
@@ -407,7 +407,7 @@ const en = {
         passcode: {
           heading: "3.1 Passcode Management",
           items: [
-            "You are responsible for remembering your PIN passcode and Guardian Passcode",
+            "You are responsible for remembering your passcode and Guardian Passcode",
             "Guardian Passcodes cannot be recovered if forgotten; the only remedy is to uninstall and reinstall the App, which deletes all rules and settings",
             "We strongly recommend that Guardian Passcodes be shared with a trusted person",
           ],
@@ -451,7 +451,7 @@ const en = {
         extension: {
           heading: "4.3 Extension Limitations",
           items: [
-            "Shield (blocking screen) customization is rendered by the iOS system and has limited customization options",
+            "Shield (block screen) customization is rendered by the iOS system and has limited customization options",
             "Custom input fields (such as passcode entry) cannot be displayed on the Shield screen due to Apple API restrictions",
           ],
         },

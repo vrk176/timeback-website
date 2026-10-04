@@ -1,7 +1,7 @@
 import type { Dictionary } from "@/lib/dictionaries/en";
 import type { Locale } from "@/lib/i18n";
 
-const DISCORD_URL = "https://discord.gg/HB5pU9sYU";
+const DISCORD_URL = "https://discord.gg/rDE9yDdGEw";
 
 export default function Footer({
   dict,

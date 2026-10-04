@@ -394,11 +394,11 @@ const es: Dictionary = {
           "TimeBack es una app de gestión del tiempo de pantalla para iOS que ayuda a controlar el uso de las apps mediante:",
         items: [
           "Límites diarios de uso",
-          "Descansos obligatorios",
+          "Modo descanso",
           "Horarios de bloqueo por franja horaria",
           "Bloqueo por ubicación (zonas)",
           "Pantallas de bloqueo personalizables",
-          "Resumen semanal de uso",
+          "Resumen semanal",
           "Protección opcional contra la eliminación de apps en todo el dispositivo",
         ],
         outro:

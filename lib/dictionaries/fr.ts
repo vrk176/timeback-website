@@ -261,7 +261,7 @@ const fr: Dictionary = {
             ],
             ["Règles d'horaires", "Vos horaires de blocage configurés"],
             [
-              "Règles de géofencing",
+              "Règles de zones",
               "Coordonnées de localisation et rayon pour le blocage par zone",
             ],
             [
@@ -269,8 +269,8 @@ const fr: Dictionary = {
               "L'apparence personnalisée de votre écran de blocage",
             ],
             [
-              "Hachages de codes d'accès",
-              "Hachages SHA-256 de votre PIN et PIN gardien (les PIN originaux ne sont jamais stockés)",
+              "Hachages des codes",
+              "Hachages SHA-256 de votre code et de votre code gardien (les codes originaux ne sont jamais stockés)",
             ],
             [
               "Préférences de notification",
@@ -282,7 +282,7 @@ const fr: Dictionary = {
             ],
             [
               "Comptage de distractions",
-              "Nombre de fois où « Continuer l'utilisation » a été tapoté par jour",
+              "Nombre de fois où « Continuer » a été tapoté par jour",
             ],
           ],
         },
@@ -291,7 +291,7 @@ const fr: Dictionary = {
         heading: "Frameworks et API Apple",
         screenTime: {
           heading:
-            "Screen Time API (FamilyControls / ManagedSettings / DeviceActivity)",
+            "API Temps d'écran (FamilyControls / ManagedSettings / DeviceActivity)",
           items: [
             "Utilisée pour surveiller le temps d'utilisation des apps et appliquer le blocage",
             "Toutes les données d'utilisation sont traitées localement par les extensions système d'Apple",
@@ -302,7 +302,7 @@ const fr: Dictionary = {
         location: {
           heading: "Services de localisation (CoreLocation)",
           items: [
-            "Utilisée uniquement pour la fonction de géofencing",
+            "Utilisée uniquement pour la fonction de zones",
             "L'emplacement actuel de votre appareil est traité localement pour déterminer si vous êtes à l'intérieur d'une zone configurée — TimeBack ne le télécharge pas (TimeBack n'a pas de serveurs)",
             "Les coordonnées de zone que vous configurez sont stockées uniquement dans vos configurations de règles sur l'appareil",
             "Vous pouvez désactiver l'accès à la localisation à tout moment dans les Réglages système",
@@ -347,7 +347,7 @@ const fr: Dictionary = {
       },
       children: {
         heading: "Confidentialité des enfants",
-        body: "TimeBack peut être utilisée comme outil de contrôle parental via la fonctionnalité de code d'accès gardien. L'App ne collecte pas sciemment d'informations personnelles auprès des enfants. Toutes les données restent locales à l'appareil.",
+        body: "TimeBack peut être utilisée comme outil de contrôle parental via la fonctionnalité de code gardien. L'App ne collecte pas sciemment d'informations personnelles auprès des enfants. Toutes les données restent locales à l'appareil.",
       },
       thirdParty: {
         heading: "Services tiers",
@@ -395,24 +395,24 @@ const fr: Dictionary = {
           "TimeBack est une application de gestion du temps d'écran pour iOS qui aide les utilisateurs à gérer leur utilisation d'apps grâce à :",
         items: [
           "Limites quotidiennes d'utilisation",
-          "Intervalles de pause forcée",
+          "Mode pause",
           "Horaires de blocage basés sur le temps",
-          "Blocage basé sur la localisation (géofencing)",
+          "Blocage basé sur la localisation (zones)",
           "Écrans de blocage personnalisables",
-          "Bilan hebdomadaire d'utilisation",
+          "Bilan hebdomadaire",
           "Protection facultative contre la suppression d'apps (à l'échelle de l'appareil)",
         ],
         outro:
-          "L'App utilise l'API Screen Time d'Apple (FamilyControls, ManagedSettings, DeviceActivity) pour fournir ces fonctionnalités.",
+          "L'App utilise l'API Temps d'écran d'Apple (FamilyControls, ManagedSettings, DeviceActivity) pour fournir ces fonctionnalités.",
       },
       responsibilities: {
         heading: "3. Responsabilités de l'utilisateur",
         passcode: {
-          heading: "3.1 Gestion du code d'accès",
+          heading: "3.1 Gestion du code",
           items: [
-            "Vous êtes responsable de vous souvenir de votre code PIN et code d'accès gardien",
-            "Les codes d'accès gardiens ne peuvent pas être récupérés s'ils sont oubliés ; le seul recours est de désinstaller et réinstaller l'App, ce qui supprime toutes les règles et paramètres",
-            "Nous recommandons fortement que les codes d'accès gardiens soient partagés avec une personne de confiance",
+            "Vous êtes responsable de vous souvenir de votre code et de votre code gardien",
+            "Les codes gardiens ne peuvent pas être récupérés s'ils sont oubliés ; le seul recours est de désinstaller et réinstaller l'App, ce qui supprime toutes les règles et paramètres",
+            "Nous recommandons fortement que les codes gardiens soient partagés avec une personne de confiance",
           ],
         },
         appropriate: {
@@ -427,8 +427,8 @@ const fr: Dictionary = {
           heading: "3.3 Exigences de l'appareil",
           items: [
             "L'App nécessite iOS 26.2 ou une version ultérieure",
-            "Les fonctionnalités de l'API Screen Time nécessitent que la permission « Temps d'écran » soit accordée",
-            "Les fonctionnalités de géofencing nécessitent la permission de localisation « Toujours autoriser »",
+            "Les fonctionnalités de l'API Temps d'écran nécessitent que la permission « Temps d'écran » soit accordée",
+            "Les fonctionnalités de zones nécessitent la permission de localisation « Toujours autoriser »",
             "Certaines fonctionnalités nécessitent du matériel biométrique (Face ID / Touch ID)",
           ],
         },
@@ -439,7 +439,7 @@ const fr: Dictionary = {
           heading: "4.1 Précision des données d'utilisation",
           items: [
             "Les données d'utilisation d'apps affichées dans le tableau de bord sont une approximation basée sur le framework DeviceActivity d'Apple",
-            "Les valeurs d'utilisation peuvent différer de Screen Time iOS en raison de méthodologies de mesure différentes",
+            "Les valeurs d'utilisation peuvent différer de Temps d'écran d'iOS en raison de méthodologies de mesure différentes",
             "Les points de contrôle de suivi d'utilisation ont une granularité d'environ 30 minutes",
           ],
         },
@@ -455,7 +455,7 @@ const fr: Dictionary = {
           heading: "4.3 Limitations d'extension",
           items: [
             "La personnalisation de l'écran de blocage (Shield) est rendue par le système iOS et a des options de personnalisation limitées",
-            "Les champs de saisie personnalisés (comme la saisie de code d'accès) ne peuvent pas être affichés sur l'écran Shield en raison des restrictions de l'API Apple",
+            "Les champs de saisie personnalisés (comme la saisie de code) ne peuvent pas être affichés sur l'écran de blocage en raison des restrictions de l'API Apple",
           ],
         },
       },

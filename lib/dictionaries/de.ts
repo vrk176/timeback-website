@@ -266,8 +266,8 @@ const de: Dictionary = {
             ],
             ["Sperrbildschirm-Konfiguration", "Dein angepasstes Sperrbildschirm-Aussehen"],
             [
-              "Passcode-Hashes",
-              "SHA-256-Hashes deiner PIN und Guardian-PIN (Original-PINs werden niemals gespeichert)",
+              "Code-Hashes",
+              "SHA-256-Hashes deines Codes und Wächter-Codes (Original-Codes werden niemals gespeichert)",
             ],
             [
               "Benachrichtigungseinstellungen",
@@ -344,7 +344,7 @@ const de: Dictionary = {
       },
       children: {
         heading: "Datenschutz für Kinder",
-        body: "TimeBack kann über die Guardian-Passcode-Funktion als Kindersicherungstool verwendet werden. Die App erfasst wissentlich keine personenbezogenen Daten von Kindern. Alle Daten bleiben lokal auf dem Gerät.",
+        body: "TimeBack kann über die Wächter-Code-Funktion als Kindersicherungstool verwendet werden. Die App erfasst wissentlich keine personenbezogenen Daten von Kindern. Alle Daten bleiben lokal auf dem Gerät.",
       },
       thirdParty: {
         heading: "Drittanbieter-Dienste",
@@ -392,11 +392,11 @@ const de: Dictionary = {
           "TimeBack ist eine Bildschirmzeit-Management-Anwendung für iOS, die Benutzern hilft, ihre App-Nutzung zu verwalten durch:",
         items: [
           "Tägliche Nutzungszeitlimits",
-          "Erzwungene Pausenintervalle",
+          "Pausenmodus",
           "Zeitbasierte Sperrzeitpläne",
           "Standortbasierte (Geofence) Sperren",
           "Anpassbare Sperrbildschirme",
-          "Wöchentlicher Nutzungsrückblick",
+          "Wochenrückblick",
           "Optionaler Schutz vor App-Löschung (gerätweit)",
         ],
         outro:
@@ -405,11 +405,11 @@ const de: Dictionary = {
       responsibilities: {
         heading: "3. Benutzerpflichten",
         passcode: {
-          heading: "3.1 Passcode-Verwaltung",
+          heading: "3.1 Code-Verwaltung",
           items: [
-            "Du bist verantwortlich dafür, dir deinen PIN-Passcode und Guardian-Passcode zu merken",
-            "Guardian-Passcodes können bei Vergessen nicht wiederhergestellt werden; das einzige Mittel ist die Deinstallation und Neuinstallation der App, wodurch alle Regeln und Einstellungen gelöscht werden",
-            "Wir empfehlen dringend, Guardian-Passcodes mit einer vertrauenswürdigen Person zu teilen",
+            "Du bist verantwortlich dafür, dir deinen Code und Wächter-Code zu merken",
+            "Wächter-Codes können bei Vergessen nicht wiederhergestellt werden; das einzige Mittel ist die Deinstallation und Neuinstallation der App, wodurch alle Regeln und Einstellungen gelöscht werden",
+            "Wir empfehlen dringend, Wächter-Codes mit einer vertrauenswürdigen Person zu teilen",
           ],
         },
         appropriate: {
@@ -436,7 +436,7 @@ const de: Dictionary = {
           heading: "4.1 Genauigkeit der Nutzungsdaten",
           items: [
             "Im Dashboard angezeigte App-Nutzungsdaten sind eine Annäherung basierend auf Apples DeviceActivity-Framework",
-            "Nutzungswerte können aufgrund unterschiedlicher Messmethoden von iOS Screen Time abweichen",
+            "Nutzungswerte können aufgrund unterschiedlicher Messmethoden von der iOS-Bildschirmzeit abweichen",
             "Nutzungs-Tracking-Checkpoints haben eine Granularität von etwa 30 Minuten",
           ],
         },
@@ -452,7 +452,7 @@ const de: Dictionary = {
           heading: "4.3 Erweiterungsbeschränkungen",
           items: [
             "Die Anpassung des Sperrbildschirms (Shield) wird vom iOS-System gerendert und hat begrenzte Anpassungsoptionen",
-            "Benutzerdefinierte Eingabefelder (wie Passcode-Eingabe) können aufgrund von Apple-API-Einschränkungen nicht auf dem Sperrbildschirm angezeigt werden",
+            "Benutzerdefinierte Eingabefelder (wie Code-Eingabe) können aufgrund von Apple-API-Einschränkungen nicht auf dem Sperrbildschirm angezeigt werden",
           ],
         },
       },

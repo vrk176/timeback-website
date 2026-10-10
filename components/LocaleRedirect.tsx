@@ -27,6 +27,15 @@ function detectLocale(): Locale {
       return "zh-Hans";
     }
 
+    // Any Portuguese variant (pt, pt-PT, pt-AO, ...) -> Brazilian Portuguese;
+    // "pt" alone is not a locale code. Cast mirrors the zh special case so this
+    // compiles whether or not "pt-BR" is already in the Locale union.
+    if (/^pt(?:[-_]|$)/i.test(lang)) {
+      const ptLocale = "pt-BR" as string as Locale;
+      if ((locales as readonly string[]).includes(ptLocale)) return ptLocale;
+      continue;
+    }
+
     const base = lang.split("-")[0];
     if ((locales as readonly string[]).includes(base)) {
       return base as Locale;

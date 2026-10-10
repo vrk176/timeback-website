@@ -14,7 +14,8 @@ Outputs:
   public/brand/{violet,midnight,pearl}.webp  (850px wide)
 
 Usage:
-  python3 scripts/build-shots.py
+  python3 scripts/build-shots.py                 # all locales + brand art
+  python3 scripts/build-shots.py tr pt-BR        # only the given locales (no brand art)
 """
 
 import sys
@@ -31,12 +32,43 @@ SITE_ROOT = Path(__file__).resolve().parent.parent
 SRC_ROOT = Path.home() / "Documents" / "TimeBack-screenshots" / "shots"
 IPHONE_SRC = SRC_ROOT / "iphone"
 IPAD_SRC = SRC_ROOT / "Ipad"
+IPHONE_V150_SRC = SRC_ROOT / "iphone_v150"
+IPAD_V150_SRC = SRC_ROOT / "ipad_v150"
 ASSETS_SRC = IPHONE_SRC / "design_source" / "assets"
 
 OUT_SHOTS = SITE_ROOT / "public" / "shots"
 OUT_BRAND = SITE_ROOT / "public" / "brand"
 
 LOCALES = ["en", "zh-Hans", "zh-Hant", "ja", "ko", "de", "fr", "es"]
+
+# All locales now use the v1.5.0 screenshot sets
+# (shots/iphone_v150/<loc>/ and shots/ipad_v150/<loc>/, kebab-case file names).
+# The older shots/iphone + shots/Ipad paths below are kept only as a fallback.
+V150_LOCALES = LOCALES + ["tr", "pt-BR"]
+ALL_LOCALES = V150_LOCALES
+
+# output name -> source file in iphone_v150/<loc>/. No "shield" source exists
+# and no component renders it, so it is intentionally omitted.
+IPHONE_V150_MAP = {
+    "onboarding": "onboarding-welcome.png",
+    "rule": "rule.png",
+    "schedule": "schedule.png",
+    "zone": "zone.png",
+    "weekly-review": "weekly-review.png",
+    "block-screen": "block-screen.png",
+    "passcode": "passcode.png",
+    "daily-limit": "daily-limit.png",
+    "rule-blocked": "rule-blocked.png",
+}
+
+# output name -> source file in ipad_v150/<loc>/
+IPAD_V150_MAP = {
+    "rules": "rule.png",
+    "schedules": "schedule.png",
+    "zones": "zone.png",
+    "weekly-review": "weekly-review.png",
+    "block-screen": "block-screen.png",
+}
 
 IPHONE_FILES = [
     "onboarding.png",
@@ -115,8 +147,17 @@ def load_source(path: Path) -> Optional[Image.Image]:
 # 1. iPhone raw UI screenshots
 # ---------------------------------------------------------------------------
 
-def build_iphone():
-    for locale in LOCALES:
+def build_iphone(locales):
+    for locale in locales:
+        if locale in V150_LOCALES:
+            for out_name, src_fname in IPHONE_V150_MAP.items():
+                im = load_source(IPHONE_V150_SRC / locale / src_fname)
+                if im is None:
+                    continue
+                dest = OUT_SHOTS / locale / "iphone" / f"{out_name}.webp"
+                save_webp_rgb(im, dest, IPHONE_WIDTH, JPEG_LIKE_QUALITY)
+                im.close()
+            continue
         src_dir = IPHONE_SRC / locale
         for fname in IPHONE_FILES:
             src_path = src_dir / fname
@@ -133,8 +174,17 @@ def build_iphone():
 # 2. iPad raw UI screenshots
 # ---------------------------------------------------------------------------
 
-def build_ipad():
-    for locale in LOCALES:
+def build_ipad(locales):
+    for locale in locales:
+        if locale in V150_LOCALES:
+            for out_name, src_fname in IPAD_V150_MAP.items():
+                im = load_source(IPAD_V150_SRC / locale / src_fname)
+                if im is None:
+                    continue
+                dest = OUT_SHOTS / locale / "ipad" / f"{out_name}.webp"
+                save_webp_rgb(im, dest, IPAD_WIDTH, JPEG_LIKE_QUALITY)
+                im.close()
+            continue
         if locale == "en":
             name_map = IPAD_EN_MAP
             src_dir = IPAD_SRC / "ref-en"
@@ -159,10 +209,11 @@ def build_ipad():
                 f"(Ipad/ref-en/ has no weekly-review/block-screen shot) — skipped."
             )
 
-    notes.append(
-        "zh-Hant Ipad source dir also contains 07-shield.PNG.PNG, which is not "
-        "part of the requested output set and was intentionally not used."
-    )
+    if "zh-Hant" in locales:
+        notes.append(
+            "zh-Hant Ipad source dir also contains 07-shield.PNG.PNG, which is not "
+            "part of the requested output set and was intentionally not used."
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -224,6 +275,9 @@ def report():
         for n in notes:
             print(f"  - {n}")
 
+    if len(sys.argv) > 1:
+        return  # locale-only run: brand art not rebuilt
+
     # Verify alpha preserved in guardian.webp
     guardian_webp = OUT_BRAND / "guardian.webp"
     if guardian_webp.exists():
@@ -235,9 +289,18 @@ def report():
 
 def main():
     print(f"PIL version: {Image.__version__ if hasattr(Image, '__version__') else 'unknown'}")
-    build_iphone()
-    build_ipad()
-    build_brand()
+    args = sys.argv[1:]
+    if args:
+        unknown = [a for a in args if a not in ALL_LOCALES]
+        if unknown:
+            sys.exit(f"Unknown locale(s): {unknown}. Valid: {ALL_LOCALES}")
+        locales = args
+    else:
+        locales = ALL_LOCALES
+    build_iphone(locales)
+    build_ipad(locales)
+    if not args:  # brand art only on a full run
+        build_brand()
     report()
 
     if missing_sources:

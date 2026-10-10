@@ -14,8 +14,8 @@ const panels: { shot: IPhoneShot; tone: Tone; highlight: "lime" | "amber" | "vio
   { shot: "schedule", tone: "midnight", highlight: "lime" },
   { shot: "zone", tone: "pearl", highlight: "violet" },
   { shot: "rule-blocked", tone: "midnight", highlight: "amber" },
-  { shot: "passcode", tone: "pearl", highlight: "violet", isNew: true },
-  { shot: "block-screen", tone: "violet", highlight: "lime" },
+  { shot: "passcode", tone: "pearl", highlight: "violet" },
+  { shot: "block-screen", tone: "violet", highlight: "lime", isNew: true },
 ];
 
 const toneStyles: Record<Tone, { scene: string; art: string; line1: string; sub: string; detail: string; tag: string }> = {

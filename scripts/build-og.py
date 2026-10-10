@@ -8,7 +8,8 @@ a localized iPhone screenshot in a rounded frame and the guardian mascot.
 Headlines are read from lib/dictionaries/<locale>.ts (hero.titleLine1/2), so
 re-run this script whenever those strings change:
 
-    python3 scripts/build-og.py
+    python3 scripts/build-og.py            # all locales
+    python3 scripts/build-og.py tr pt-BR   # only the given locales
 
 Fonts are macOS system fonts; the script aborts if a font is missing or a
 headline glyph would render as tofu (.notdef).
@@ -33,7 +34,7 @@ VIOLET_BRIGHT = (0x7A, 0x60, 0xEC)
 LIME = (0xDA, 0xFF, 0xC7)
 WHITE = (255, 255, 255)
 
-LOCALES = ["en", "zh-Hans", "zh-Hant", "ja", "ko", "de", "fr", "es"]
+LOCALES = ["en", "zh-Hans", "zh-Hant", "ja", "ko", "de", "fr", "es", "tr", "pt-BR"]
 
 SYS = Path("/System/Library/Fonts")
 
@@ -245,6 +246,9 @@ def build(locale: str) -> Path:
 
 
 def main(argv: list[str]) -> None:
+    unknown = [a for a in argv if a not in LOCALES]
+    if unknown:
+        raise SystemExit(f"Unknown locale(s): {unknown}. Valid: {LOCALES}")
     for locale in argv or LOCALES:
         build(locale)
 

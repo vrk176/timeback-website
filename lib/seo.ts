@@ -151,6 +151,30 @@ export const localeSeo: Record<
       "control parental",
     ],
   },
+  tr: {
+    htmlLang: "tr",
+    ogLocale: "tr_TR",
+    keywords: [
+      "ekran süresi",
+      "uygulama engelleme",
+      "dijital detoks",
+      "telefon bağımlılığı",
+      "odaklanma",
+      "uygulama sınırlama",
+    ],
+  },
+  "pt-BR": {
+    htmlLang: "pt-BR",
+    ogLocale: "pt_BR",
+    keywords: [
+      "tempo de tela",
+      "bloqueador de apps",
+      "detox digital",
+      "vício em celular",
+      "foco",
+      "limite de uso de apps",
+    ],
+  },
 };
 
 export function absoluteUrl(path = "/") {

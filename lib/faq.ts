@@ -501,6 +501,128 @@ const es: FaqContent = {
   },
 };
 
+const tr: FaqContent = {
+  title: "Sıkça Sorulan Sorular",
+  intro:
+    "En sık sorulan şeylerin kısa bir listesi: engellemenin gerçekte nasıl çalıştığı, bazı dokunuşların neden gerektiği ve verilerinin nasıl işlendiği.",
+  entries: [
+    {
+      q: "Engelleme neden bazen birkaç saniye sürüyor?",
+      a: "Bir kuralı açtığında TimeBack engeli hemen iOS'a kaydeder. Ama engellenen bir uygulamada gördüğün engel ekranını iOS'un kendisi çizer; iOS'un bu ekranı yenilemesi, özellikle art arda birkaç hızlı değişiklikten sonra, birkaç saniye (bazen daha uzun) sürebilir. Engel ekranı henüz görünmediyse bile engel zaten yerindedir. Biraz bekle; kuralı tekrar tekrar açıp kapatmak iOS'un daha da geç kalmasına yol açabilir.",
+    },
+    {
+      q: "Mola bittikten sonra neden Devam'a dokunmam gerekiyor?",
+      a: "Mola bittiğinde uygulama yeniden kilitlenir ve TimeBack, kilidi arka planda sessizce açmak yerine senin Devam'a dokunmanı bekler. Bunun bir kısmı platformun kuralıdır: kilidi gösteren ekranın kilidi kendi başına açmasına izin verilmez. Bir kısmı da bilinçli bir tercih: o küçük dokunuş, gerçekten geri dönmek isteyip istemediğine karar vermen için bir an.",
+    },
+    {
+      q: "Günlük Sınırlar ile Programlar arasındaki fark nedir?",
+      a: "Günlük Sınır bir süre bütçesidir: uygulama, bugün için ayırdığın dakikaları bitirene kadar kullanılabilir, sonra kilitlenir. Program ise bir zaman aralığıdır: kapsadığı uygulamalar, ne kadar az kullanmış olursan ol, belirlediğin saatlerde (örneğin 22:00–08:00) kilitli kalır. İkisi birbirinden bağımsız çalışır ve bir uygulama ikisinin kapsamına birden girebilir.",
+    },
+    {
+      q: "Bir kural çalışmıyorsa neleri kontrol etmeliyim?",
+      a: "1) TimeBack'i bir kez aç; uygulama her ön plana geldiğinde kurallar sistemle yeniden eşitlenir. 2) Ekran Süresi izninin hâlâ verili olduğundan emin ol (iOS Ayarlar → Ekran Süresi). 3) Kuralı aç; açık olduğunu ve hâlâ seçili uygulamaları olduğunu kontrol et. 4) Programlarda zaman aralığını ve tekrar günlerini bir kez daha gözden geçir. 5) Hâlâ olmuyor mu? Ayarlar → Destek'ten bize e-posta gönder; ileti, uygulama sürümün önceden doldurulmuş olarak gelir, böylece daha hızlı yardım edebiliriz.",
+    },
+    {
+      q: "TimeBack uygulama kullanımımı bir yere yüklüyor mu?",
+      a: "Hayır. Kullanım verilerin aygıtında kalır. TimeBack'te hesap da yok, analiz de. Apple'ın Ekran Süresi altyapısı da TimeBack'in yalnızca anonim uygulama referanslarıyla çalışacağı şekilde tasarlanmıştır; neleri kullandığının okunabilir bir listesini göremez.",
+    },
+    {
+      q: "TimeBack neden Ekran Süresi iznine ihtiyaç duyuyor?",
+      a: "Ekran Süresi izni (Apple'ın Family Controls'ü), iOS'un bir uygulamanın başka bir uygulamayı sınırlamasına izin verdiği tek mekanizmadır. TimeBack'in yaptığı her şey (engel ekranları, dakika sayımı, programlar) bunun üzerine kuruludur. İzin olmadan hiçbir şey engellenemez; izin sonradan geri alınırsa, yeniden verilene kadar tüm kurallar durur.",
+    },
+    {
+      q: "Silmeyi Engelle'yi açtıktan sonra neden hiçbir uygulamayı silemiyorum?",
+      a: "iOS'taki bu ayar böyle çalışır: Apple'ın Ekran Süresi altyapısı, uygulama başına değil, aygıtın tamamı için tek bir “uygulama silme” kısıtlaması sunar. Silmeyi Engelle'yi açtığında iOS, aygıttaki tüm uygulamaların silinmesini engeller (amaç da zaten bu olduğu için TimeBack dahil) ve TimeBack'in yalnızca kendini koruması mümkün değildir. Onay penceresi, hiçbir şey uygulanmadan önce bunu söyler; ayarı istediğin zaman kapatabilirsin (Koruyucu Parolası ayarladıysan, kapatmadan önce o parola sorulur).",
+    },
+    {
+      q: "Günlük Sınır neden bazen birkaç dakika erken kilitliyor?",
+      a: "TimeBack, iOS'tan sınırı tam olarak belirlediğin dakikada tetiklemesini ister. Ancak iOS, uygulama kullanımı için iki ayrı iç sayaç tutar: biri sınır olaylarını tetikler, diğeri panelde gördüğün kullanım rakamının arkasındadır (bu rakam sistemdeki Ekran Süresi ile aynıdır). Ölçümlerimizde bu ikisi aynı gün içinde birkaç dakika farklı olabiliyor ve olay sayacı önde gidiyor; bu yüzden panel hâlâ birkaç dakika kaldığını gösterirken kilit gelebilir. Bu, iOS'un içinde olur ve Apple'ın kendi Ekran Süresi sınırlarını da etkiler; TimeBack, engeli uyguladığı anda panel rakamını okuyup bunu düzeltemez.\n\nKilit erken geldi gibi hissediyorsan TimeBack'i aç ve kuralın kartındaki Bir Kez Aç'ı kullan (ya da kuralı kapat); kontrol sende kalır. Engel ekranının kendisi ise taviz vermez: Tamam düğmesi kilidi kaldırmadan uygulamayı kapatır, böylece refleksle yapılan bir dokunuş sınırını bozamaz. Her şey gece yarısı sıfırlanır.",
+    },
+    {
+      q: "Neden 15 dakikadan kısa bir engelleme aralığı ayarlayamıyorum?",
+      a: "Bu, TimeBack'in değil iOS'un koyduğu bir sınır: sistem 15 dakikadan kısa bir engelleme aralığını izlemeyi reddeder ve programı doğrudan geri çevirir. TimeBack eskiden yine de kaydetmene izin veriyordu; program listende açık görünür ama hiçbir şeyi engellemezdi. Artık aralık yeterince uzun olana kadar Kaydet düğmesi kapalı kalıyor ve nedenini söylüyor.\n\nBilmeye değer bir ayrıntı: gece yarısını geçen bir aralık iki ayrı dönem sayılır (gece yarısından önceki ve sonraki kısım) ve her birinin kendi 15 dakikası olmalıdır. Bu yüzden 23:50–08:00 kaydedilmez (gece yarısından önce ancak on dakika kalıyor), 23:00–08:00 ise sorunsuzdur.\n\nİstediğin kısa, tek seferlik bir engelse kuralın kartındaki Şimdi Engelle'yi kullan: hemen kilitler ve sen kaldırana kadar kilitli kalır, en kısa süre sınırı yoktur.",
+    },
+    {
+      q: "Web sitesi kuralında bazı siteler neden kullanım rakamı göstermiyor?",
+      a: "Bir kuralın kartındaki kullanım rakamı Apple'ın Ekran Süresi verilerinden gelir ve web siteleri de buna dahildir; aygıtlar arası paylaşım açıksa, aynı Apple Hesabı'yla oturum açılmış başka aygıtlardaki gezinme bile (örneğin Mac'indeki Safari) sayılır. Web sitelerinin büyük çoğunluğu beklendiği gibi görünür.\n\nAma testlerimizde birkaç web sitesi, sistem tarafından kalıcı olarak ilgili uygulamaya atfediliyor ve hiçbir aygıtta web sitesi düzeyinde veri üretmiyor. Doğrulanmış örnek youtube.com: buradaki gezinme süresi YouTube uygulamasının kullanımı olarak sayılıyor; Mac'teki YouTube web uygulamasını kaldırıp iPhone'daki YouTube uygulamasını sildikten sonra bile. Bu, Apple'ın veri atama katmanında olur ve TimeBack hiç görünmeyen bir veriyi okuyamaz.\n\nÖnemli olan şu: engelleme etkilenmez. Bu sitelerde geçen süre yine kuralın sınırına sayılır ve kilit yine zamanında gelir; yalnızca kartın kullanım rakamı bu payı gösteremez. Bir web sitesi kuralı çok küçük bir rakam gösterirken kilitleniyorsa nedeni genellikle budur (ya da kullanım başka bir aygıtta olmuştur).",
+    },
+    {
+      q: "Aygıtın tarihini ya da saatini değiştirirsem ne olur?",
+      a: "TimeBack'in üzerine kurulu olduğu iOS sistemi Ekran Süresi, hesabını aygıtın saatine göre tutar; TimeBack de öyle. Saati ileri ya da geri almak (bir şey denemek için ya da otomatik saat kapalıyken) bu hesabı günün geri kalanında karıştırır. Görebileceklerin:\n• Gerçek kullanım sırasında bile tetiklenmeyen bir Günlük Sınır ya da zorunlu mola; saat değişikliğinden sonra iOS'un kendi kullanım sayımı günün geri kalanında takılı kalabilir\n• “Yeni gün” sıfırlamasının yanlış anda gelmesi\n• Pazar günkü Haftalık Özet'in gelmemesi (boş görünen bir hafta bilerek atlanır)\n\nTimeBack burada kendini de korur: saat değişikliğinin hemen ardından iOS genellikle bir yığın eski kullanım olayını bir anda gönderir; TimeBack, gerçek saate göre imkânsız olan tetiklemeleri bilerek yok sayar ve birkaç dakika sonra kendini yeniden kurar. Bedeli en fazla bir gecikmiş döngüyle sınırlıdır; ama saatin tekrar tekrar değiştirildiği bir günde bu koruma temkinli davranmayı seçer.\n\nÇözüm düğmeler değil, sabır: otomatik tarih ve saati yeniden aç, aygıtın doğal bir gece yarısını geçirmesine izin ver; her şey kendiliğinden yeniden eşitlenir. Hiçbir veri kaybolmaz, kuralların yerinde kalır. Otomatik saat açıkken saat dilimleri arasında normal seyahat etmek sorun değildir; bu durum yalnızca elle yapılan atlamalarla ilgilidir.",
+    },
+    {
+      q: "TimeBack parolamı unuttum / uygulamaya giremiyorum. Ne yapmalıyım?",
+      a: "Hangi çıkış yolunun olduğu, neleri açtığına bağlı.\n\nFace ID kilidi açıksa takılıp kalmazsın: kilit ekranında Face ID'yi kullan; seni tanımazsa (ya da kamera kapalıysa veya birkaç kez başarısız olduysan) sistem bunun yerine aygıt parolanı sorar. Bu bizim değil, iOS'un kendi yedek yoludur ve telefonun kilidini nasıl açacağını bildiğin sürece her zaman çalışır. Ayrıca bir TimeBack parolası da ayarladıysan, kilit ekranında ikinci bir giriş yolu olarak TimeBack Parolasını Kullan düğmesi bulunur.\n\nBirkaç kez yanlış parola girdiysen TimeBack tuş takımını bir süre durdurur: beşinci yanlış girişten sonra bir dakika, sonra beş, sonra on beş, en fazla da bir saat. Hiçbir şey kaybolmaz, hiçbir şeyi sıfırlamak gerekmez: ekrandaki geri sayım kendiliğinden biter ve doğru parolayı girmek sayacı tamamen temizler. Beklemenin gizli bir cezası yoktur, süreyi hızlandırmanın da bir yolu yoktur.\n\nTimeBack parolasının kendisini unuttuysan ve Face ID kilidi kapalıysa, arka kapı yoktur; bu bilinçli bir tasarım. TimeBack'in hesabı da sunucusu da yok, yani kim olduğunu doğrulayıp seni içeri alabilecek kimse yok; bu aygıttan parolanı sıfırlayabilecek herhangi bir yol, telefonunu elinde tutan herkes tarafından da kullanılabilirdi ve parola koymanın anlamı kalmazdı. Çözüm, unutulan bir Koruyucu Parolası için geçerli olanla aynıdır (Koruyucu Parolası; Bir Kez Aç'ı, bir kuralı/programı/bölgeyi silmeyi ya da kapatmayı, Silmeyi Engelle'yi kapatmayı ve Koruyucu Parolasının kendisini değiştirmeyi ya da kaldırmayı korur): TimeBack'i sil ve yeniden yükle. Bu, parolalarını kurallarınla ve geçmişinle birlikte siler; gerçek bir bedeli var, bu yüzden Ayarlar'da bir düğme değil, son çaredir.",
+    },
+  ],
+  contact: {
+    heading: "Yanıtını bulamadın mı?",
+    body: "Bize e-posta gönder; her iletiyi okuyoruz.",
+    emailLabel: "E-posta:",
+  },
+};
+
+const ptBR: FaqContent = {
+  title: "Perguntas frequentes",
+  intro:
+    "As dúvidas que mais aparecem — como o bloqueio funciona na prática, por que alguns toques são necessários e o que acontece com os seus dados.",
+  entries: [
+    {
+      q: "Por que o bloqueio às vezes demora alguns segundos?",
+      a: "Quando você ativa uma regra, o TimeBack registra o bloqueio no iOS na hora. Mas a página de bloqueio que aparece sobre um app bloqueado é desenhada pelo próprio iOS — e o iOS pode levar alguns segundos (às vezes mais) para atualizá-la, principalmente logo depois de várias mudanças seguidas. Se a página de bloqueio ainda não apareceu, o bloqueio já está valendo. Espere um pouco; ativar e desativar a regra várias vezes pode fazer o iOS demorar ainda mais.",
+    },
+    {
+      q: "Por que preciso tocar em Continuar quando uma pausa termina?",
+      a: "Quando a pausa termina, o app volta a ficar bloqueado, e o TimeBack espera você tocar em Continuar em vez de desbloquear em silêncio, em segundo plano. Em parte, é uma regra da plataforma — a tela que mostra o bloqueio não pode concluir um desbloqueio sozinha. E em parte é de propósito: esse toque é um momento para decidir se você quer mesmo voltar.",
+    },
+    {
+      q: "Qual é a diferença entre Limites diários e Horários?",
+      a: "Um Limite diário é uma cota de tempo: o app continua disponível até você usar os minutos que liberou para hoje, e aí ele é bloqueado. Um Horário é uma faixa de tempo: os apps que ele cobre ficam bloqueados nas horas que você definir (por exemplo, 22:00–08:00), não importa quanto você os tenha usado. Os dois funcionam de forma independente, e um mesmo app pode estar nos dois.",
+    },
+    {
+      q: "O que verificar se uma regra não funcionar?",
+      a: "1) Abra o TimeBack uma vez — as regras são sincronizadas de novo com o sistema sempre que o app vem para o primeiro plano. 2) Confira se a permissão do Tempo de Uso continua concedida (Ajustes do iOS → Tempo de Uso). 3) Abra a regra e confirme que ela está ativada e ainda tem apps selecionados. 4) Nos Horários, confira a faixa de horário e os dias de repetição. 5) Ainda não resolveu? Mande um e-mail em Ajustes → Suporte — a mensagem já vem preenchida com a versão do app, o que ajuda a gente a responder mais rápido.",
+    },
+    {
+      q: "O TimeBack envia os meus dados de uso?",
+      a: "Não. Os seus dados de uso ficam no seu dispositivo. O TimeBack não tem contas nem análises. Além disso, o framework do Tempo de Uso da Apple foi feito para que o próprio TimeBack só lide com referências anônimas aos apps — nunca com uma lista legível do que você usa.",
+    },
+    {
+      q: "Por que o TimeBack precisa da permissão do Tempo de Uso?",
+      a: "A permissão do Tempo de Uso (Family Controls, da Apple) é o único mecanismo do iOS que permite que um app limite outro. Tudo o que o TimeBack faz — páginas de bloqueio, contagem de minutos, horários — depende dela. Sem a permissão, nada pode ser bloqueado; e se ela for revogada depois, todas as regras param até que ela seja concedida de novo.",
+    },
+    {
+      q: "Por que não consigo apagar nenhum app depois de ativar Impedir remoção?",
+      a: "É assim que esse ajuste do iOS funciona: o framework do Tempo de Uso da Apple oferece uma única restrição de “apagar apps” para o dispositivo inteiro, não uma por app. Quando você ativa Impedir remoção, o iOS impede que qualquer app do dispositivo seja apagado — inclusive o TimeBack, que é justamente o objetivo — e não existe forma de o TimeBack proteger só a si mesmo. A caixa de confirmação avisa isso antes de qualquer coisa ser aplicada, e você pode desativar o ajuste a qualquer momento (se tiver definido um código do guardião, ele será pedido antes).",
+    },
+    {
+      q: "Por que um Limite diário às vezes bloqueia alguns minutos antes?",
+      a: "O TimeBack pede ao iOS que acione o limite exatamente nos minutos que você definiu. Só que o iOS mantém dois contadores internos separados para o uso dos apps: o que dispara os eventos de limite e o que está por trás do número de uso que você vê no painel (o mesmo do app Tempo de Uso do sistema). Nas nossas medições, os dois podem diferir em vários minutos no mesmo dia, com o contador de eventos andando na frente — então o bloqueio pode aparecer enquanto o painel ainda mostra alguns minutos restantes. Isso acontece dentro do iOS e afeta também os limites do Tempo de Uso da própria Apple; o TimeBack não consegue ler o número do painel na hora de aplicar o bloqueio para corrigi-lo.\n\nSe um bloqueio parecer adiantado, abra o TimeBack e use Desbloquear uma vez no cartão da regra (ou desative a regra) — o controle continua com você. Já a página de bloqueio não cede: o botão OK dela fecha o app sem tirar o bloqueio, para que um toque no reflexo não desfaça o seu limite. Tudo é zerado à meia-noite.",
+    },
+    {
+      q: "Por que não consigo definir um período de bloqueio menor que 15 minutos?",
+      a: "Esse é um limite do iOS, não uma escolha do TimeBack: o sistema se recusa a monitorar uma faixa de bloqueio de menos de 15 minutos e rejeita o horário de cara. Antes, o TimeBack deixava você salvar mesmo assim — e o horário ficava na lista parecendo ativado, sem nunca bloquear nada. Agora o botão Salvar fica desativado até a faixa ter a duração mínima, e explica o motivo.\n\nUm detalhe que vale saber: uma faixa que passa da meia-noite conta como dois períodos separados — a parte antes da meia-noite e a parte depois — e cada um precisa ter seus próprios 15 minutos. Por isso 23:50–08:00 não pode ser salvo (só cabem dez minutos antes da meia-noite), enquanto 23:00–08:00 funciona.\n\nSe o que você quer é um bloqueio curto e pontual, use Bloquear agora no cartão da regra: ele bloqueia na hora e continua bloqueado até você liberar, sem duração mínima.",
+    },
+    {
+      q: "Por que alguns sites não mostram números de uso numa regra de sites?",
+      a: "O número de uso no cartão de uma regra vem dos dados do Tempo de Uso da Apple, e os sites estão incluídos — inclusive a navegação em outros dispositivos conectados à mesma Conta Apple com o compartilhamento entre dispositivos ativado (por exemplo, o Safari no seu Mac). A grande maioria dos sites aparece normalmente.\n\nNos nossos testes, porém, alguns sites são atribuídos pelo sistema, de forma persistente, a um app correspondente, e deixam de gerar dados de site em qualquer dispositivo. O exemplo confirmado é youtube.com: o tempo de navegação nele é contado como uso do app YouTube — mesmo depois de remover o app web do YouTube no Mac e desinstalar o app do YouTube no iPhone. Isso acontece dentro da camada de atribuição de dados da Apple, e o TimeBack não consegue ler dados que nunca aparecem.\n\nO que importa: o bloqueio não é afetado. O tempo gasto nesses sites continua contando para o limite da regra, e o bloqueio chega na hora certa — só o número do cartão não consegue mostrar essa parte. Se uma regra de sites bloquear mostrando um número bem pequeno, normalmente o motivo é esse (ou o uso aconteceu em outro dispositivo).",
+    },
+    {
+      q: "O que acontece se eu mudar a data ou a hora do dispositivo?",
+      a: "O Tempo de Uso — o sistema do iOS sobre o qual o TimeBack é feito — faz as contas pelo relógio do dispositivo, e o TimeBack também. Adiantar ou atrasar o relógio (para testar alguma coisa, ou com a hora automática desativada) bagunça essas contas pelo resto do dia. O que você pode ver:\n• Um Limite diário ou uma pausa obrigatória que não dispara mesmo com uso real — depois de uma mudança no relógio, a própria contagem de uso do iOS pode travar pelo resto do dia\n• A virada para o “novo dia” acontecendo na hora errada\n• O Resumo semanal de domingo não chegando (uma semana que parece vazia é pulada de propósito)\n\nO TimeBack também se protege aqui: logo depois de uma mudança no relógio, o iOS costuma entregar de uma vez uma rajada de eventos de uso atrasados, e o TimeBack ignora de propósito os disparos que são impossíveis pelo relógio real e se rearma alguns minutos depois. O custo fica limitado a, no máximo, um ciclo atrasado — mas num dia de várias mudanças no relógio, a proteção prefere errar pelo lado da cautela.\n\nA solução é paciência, não botões: ative de novo a data e hora automáticas, deixe o dispositivo passar por uma meia-noite normal, e tudo se sincroniza sozinho. Nenhum dado é perdido e as suas regras continuam no lugar. Viajar entre fusos horários com a hora automática ativada não tem problema — isto vale só para mudanças manuais.",
+    },
+    {
+      q: "Esqueci o código do TimeBack / fiquei sem acesso. E agora?",
+      a: "A saída que você tem depende do que você ativou.\n\nSe o bloqueio com Face ID estiver ativado, você não fica preso: na tela de desbloqueio do TimeBack, use o Face ID — e se ele não reconhecer você (ou a câmera estiver coberta, ou ele já tiver falhado algumas vezes), o sistema oferece o código do dispositivo no lugar. Esse é o recurso do próprio iOS, não nosso, e sempre funciona se você sabe desbloquear o celular. Se você também definiu um código do TimeBack, a tela de desbloqueio tem o botão Usar código do TimeBack como segunda forma de entrar.\n\nSe você digitou o código errado várias vezes, o TimeBack pausa o teclado por um tempo — um minuto depois da quinta tentativa errada, depois cinco, depois quinze e, no máximo, uma hora. Nada se perde e nada precisa ser redefinido: a contagem regressiva na tela acaba sozinha, e digitar o código certo zera o contador por completo. Esperar não tem nenhuma penalidade escondida, e não há como acelerar.\n\nSe você esqueceu o próprio código do TimeBack e o bloqueio com Face ID está desativado, não existe porta dos fundos — de propósito. O TimeBack não tem conta nem servidor, então não há ninguém que possa confirmar quem você é e liberar o acesso; qualquer coisa que pudesse redefinir o código a partir deste dispositivo poderia ser usada por quem estivesse com o seu celular na mão, e aí não faria sentido definir um código. A solução é a mesma de um código do guardião esquecido — que protege Desbloquear uma vez, apagar ou desativar uma regra/horário/zona, desativar Impedir remoção e alterar ou remover o próprio código do guardião: apague o TimeBack e instale de novo. Isso apaga os seus códigos junto com as suas regras e o seu histórico — um custo real, e é por isso que essa é a última opção, e não um botão nos Ajustes.",
+    },
+  ],
+  contact: {
+    heading: "Não encontrou a sua resposta?",
+    body: "Mande um e-mail — lemos todas as mensagens.",
+    emailLabel: "E-mail:",
+  },
+};
+
 const faqByLocale: Record<Locale, FaqContent> = {
   en,
   "zh-Hans": zhHans,
@@ -510,6 +632,8 @@ const faqByLocale: Record<Locale, FaqContent> = {
   de,
   fr,
   es,
+  tr,
+  "pt-BR": ptBR,
 };
 
 export function getFaq(locale: Locale): FaqContent {

@@ -52,7 +52,7 @@ const es: Dictionary = {
       {
         title: "Pantalla de bloqueo personalizada",
         description:
-          "Adapta el título, el mensaje, el icono y el retraso de desbloqueo para límites, descansos, horarios y zonas.",
+          "Límites, descansos, horarios y lugares tienen cada uno su propia mascota en la pantalla de bloqueo. Puedes cambiar el título, el mensaje, el icono y el retraso de desbloqueo, y los iconos de antes siguen en «Pantalla de bloqueo».",
       },
       {
         title: "Bloqueo de la app y código del guardián",
@@ -62,12 +62,32 @@ const es: Dictionary = {
       {
         title: "Resumen semanal",
         description:
-          "Cada domingo: un gráfico de siete días frente a tu límite diario, tu mejor día, los días por debajo del límite y la comparación con la semana anterior, para compartir como imagen.",
+          "Cada domingo: un gráfico de siete días frente a tu límite diario, tu mejor día, los días por debajo del límite y la comparación con la semana anterior. La imagen para compartir muestra tu semana como arena en un reloj de arena.",
       },
       {
         title: "Impedir la eliminación de apps",
         description:
           "Protección opcional contra el impulso de borrar tu bloqueador. Mientras está activada, iOS impide eliminar cualquier app del dispositivo. Te lo avisamos antes de activarla.",
+      },
+      {
+        title: "Widgets",
+        description:
+          "Mira qué está bloqueado ahora y qué viene después. Tamaño pequeño y mediano para la pantalla de inicio, y dos tamaños para la pantalla bloqueada.",
+      },
+      {
+        title: "Modo oscuro",
+        description:
+          "TimeBack sigue el ajuste del sistema: cuando tu dispositivo pasa a oscuro, TimeBack también.",
+      },
+      {
+        title: "Listo en un minuto",
+        description:
+          "La primera vez que abres TimeBack, eliges qué quieres frenar, permites Tiempo de uso y eliges las apps. Tu primera regla queda lista en un minuto más o menos.",
+      },
+      {
+        title: "Compartir TimeBack",
+        description:
+          "En Configuración, crea una tarjeta con código QR. Puedes añadir el tiempo que recuperaste esta semana y luego guardarla en Fotos o enviarla.",
       },
     ],
   },
@@ -76,7 +96,7 @@ const es: Dictionary = {
     titlePart1: "Míralo en",
     titleHighlight: "acción",
     subtitle: "Reglas, horarios, zonas, pantalla de bloqueo y código del guardián, tal como se ven en el iPhone.",
-    newBadge: "Novedad en 1.3",
+    newBadge: "Novedad",
     swipeHint: "Desliza para ver más",
     items: [
       {
@@ -84,7 +104,7 @@ const es: Dictionary = {
         line1: "Tiempo ganado",
         line2: "Progreso visible",
         subtitle: "Mira el tiempo que recuperas, semana a semana.",
-        detail: "Cada día frente a tu límite diario, tu mejor día, los días por debajo del límite y la semana anterior, para compartir como imagen.",
+        detail: "Cada día frente a tu límite diario, tu mejor día, los días por debajo del límite y la semana anterior. La imagen para compartir muestra tu semana como arena en un reloj de arena.",
         alt: "Resumen semanal de TimeBack con un gráfico de siete días frente al límite diario",
       },
       {
@@ -124,13 +144,13 @@ const es: Dictionary = {
         line1: "Tu recordatorio",
         line2: "A tu estilo",
         subtitle: "Haz que tu pantalla de bloqueo hable de ti.",
-        detail: "Elige el icono, el título, el mensaje y los botones de tu pantalla de bloqueo.",
+        detail: "Límites, descansos, horarios y lugares tienen cada uno su mascota. También puedes elegir el icono, el título, el mensaje y los botones de tu pantalla de bloqueo.",
         alt: "Pantalla de bloqueo de TimeBack en configuración, con vista previa",
       },
     ],
   },
   ipad: {
-    eyebrow: "Novedad en 1.3",
+    eyebrow: "iPad",
     titleLine1: "Ahora en el iPad",
     titleLine2: "Recupera tu tiempo",
     subtitle: "En el iPad, TimeBack usa dos columnas: reglas, horarios y zonas a la izquierda y el detalle de cada uno a la derecha. Configuración también. Los iPad pequeños usan una sola columna.",
@@ -165,7 +185,7 @@ const es: Dictionary = {
       {
         title: "Elige tus barreras",
         description:
-          "Selecciona apps, categorías o sitios web y añade los límites diarios, el modo descanso, los horarios o las zonas que encajen con tu rutina.",
+          "Selecciona apps, categorías o sitios web y añade los límites diarios, el modo descanso, los horarios o las zonas que encajen con tu rutina. La primera vez, la configuración deja lista tu primera regla en un minuto más o menos.",
       },
       {
         title: "Deja que iOS bloquee",

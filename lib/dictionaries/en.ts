@@ -50,7 +50,7 @@ const en = {
       {
         title: "Custom Block Screen",
         description:
-          "Change the title, message, icon and unlock delay of the screen you see when a limit, break, schedule or zone blocks an app.",
+          "Limits, breaks, schedules and places each get their own mascot on the block screen. You can change its title, message, icon and unlock delay, and the old icons are still in Block Screen Settings.",
       },
       {
         title: "App Lock & Guardian",
@@ -60,12 +60,32 @@ const en = {
       {
         title: "Weekly Review",
         description:
-          "Each Sunday you get the past seven days charted against your daily limit, your strongest day, days under the limit and a comparison with the week before. Share it as an image.",
+          "Each Sunday you get the past seven days charted against your daily limit, your strongest day, days under the limit and a comparison with the week before. The share image shows your week as sand in an hourglass.",
       },
       {
         title: "Prevent App Deletion",
         description:
           "Stops you from deleting TimeBack on impulse. It's optional, and while it's on, iOS won't let you delete any app on the device. TimeBack tells you this before you turn it on.",
+      },
+      {
+        title: "Widgets",
+        description:
+          "See what's blocked right now and what's next. Small and medium sizes for the Home Screen, plus two sizes for the Lock Screen.",
+      },
+      {
+        title: "Dark Mode",
+        description:
+          "TimeBack follows your system setting, so it goes dark when the rest of your device does.",
+      },
+      {
+        title: "One-Minute Setup",
+        description:
+          "The first time you open TimeBack, pick what you want to rein in, allow Screen Time and choose the apps. Your first rule is ready in about a minute.",
+      },
+      {
+        title: "Share TimeBack",
+        description:
+          "In Settings, make a card with a QR code. You can add the time you took back this week, then save it to Photos or send it.",
       },
     ],
   },
@@ -74,7 +94,7 @@ const en = {
     titlePart1: "See it in",
     titleHighlight: "action",
     subtitle: "Screens from the iPhone app: rules, schedules, zones, the block screen and the Guardian Passcode.",
-    newBadge: "New in 1.3",
+    newBadge: "New",
     swipeHint: "Swipe to see more",
     items: [
       {
@@ -82,7 +102,7 @@ const en = {
         line1: "Time reclaimed",
         line2: "Progress you see",
         subtitle: "See the time you win back, week after week.",
-        detail: "Each day is charted against your daily limit, next to your strongest day and last week's numbers. You can share it as an image.",
+        detail: "Each day is charted against your daily limit, next to your strongest day and last week's numbers. The share image shows your week as sand in an hourglass.",
         alt: "TimeBack Weekly Review with a seven-day chart against the daily limit",
       },
       {
@@ -122,13 +142,13 @@ const en = {
         line1: "Your reminder",
         line2: "Your style",
         subtitle: "Make your block screen feel like you.",
-        detail: "Pick the icon, title, message and buttons your block screen shows.",
+        detail: "Limits, breaks, schedules and places each have their own mascot. You can also pick the icon, title, message and buttons your block screen shows.",
         alt: "TimeBack Block Screen Settings with a preview of the block screen",
       },
     ],
   },
   ipad: {
-    eyebrow: "New in 1.3",
+    eyebrow: "iPad",
     titleLine1: "Now on iPad",
     titleLine2: "Take back your time",
     subtitle: "On iPad, your rules, schedules and zones are listed on the left with the selected one's dashboard on the right. Settings uses two columns too. Smaller iPads use one column.",
@@ -163,7 +183,7 @@ const en = {
       {
         title: "Choose Your Guardrails",
         description:
-          "Pick apps, categories, or websites, then choose the daily limits, break mode, schedules, or zones that fit your routine.",
+          "Pick apps, categories, or websites, then choose the daily limits, break mode, schedules, or zones that fit your routine. On first launch, setup gets your first rule ready in about a minute.",
       },
       {
         title: "Let iOS Do the Blocking",

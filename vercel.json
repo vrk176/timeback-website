@@ -7,7 +7,7 @@
         {
           "type": "cookie",
           "key": "timeback-locale",
-          "value": "^(?<loc>en|zh-Hans|zh-Hant|ja|ko|de|fr|es)$"
+          "value": "^(?<loc>en|zh-Hans|zh-Hant|ja|ko|de|fr|es|tr|pt-BR)$"
         }
       ],
       "destination": "/:loc",
@@ -95,6 +95,30 @@
         }
       ],
       "destination": "/es",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[tT][rR]\\b.*$"
+        }
+      ],
+      "destination": "/tr",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*[pP][tT]\\b.*$"
+        }
+      ],
+      "destination": "/pt-BR",
       "permanent": false
     },
     {

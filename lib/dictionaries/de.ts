@@ -52,7 +52,7 @@ const de: Dictionary = {
       {
         title: "Eigener Sperrbildschirm",
         description:
-          "Titel, Nachricht, Symbol und Entsperrverzögerung legst du für Limits, Pausen, Zeitpläne und Zonen selbst fest.",
+          "Limits, Pausen, Zeitpläne und Orte haben jeweils ein eigenes Maskottchen auf dem Sperrbildschirm. Titel, Nachricht, Symbol und Entsperrverzögerung legst du selbst fest, und die alten Symbole findest du weiter unter „Sperrbildschirm“.",
       },
       {
         title: "App-Sperre & Wächter-Code",
@@ -62,12 +62,32 @@ const de: Dictionary = {
       {
         title: "Wochenrückblick",
         description:
-          "Jeden Sonntag siehst du sieben Tage im Vergleich zu deinem Tageslimit, deinen stärksten Tag, die Tage unter dem Limit und den Unterschied zur Vorwoche. Als Bild teilbar.",
+          "Jeden Sonntag siehst du sieben Tage im Vergleich zu deinem Tageslimit, deinen stärksten Tag, die Tage unter dem Limit und den Unterschied zur Vorwoche. Das Teilen-Bild zeigt deine Woche als Sand in einer Sanduhr.",
       },
       {
         title: "App-Löschung verhindern",
         description:
           "Optional: Damit du den Blocker nicht aus einem Impuls heraus löschst. Solange es an ist, verhindert iOS das Löschen aller Apps auf dem Gerät. Darauf weist die App vorher hin.",
+      },
+      {
+        title: "Widgets",
+        description:
+          "Sieh, was gerade gesperrt ist und was als Nächstes kommt. Klein und mittel für den Home-Bildschirm, dazu zwei Größen für den Sperrbildschirm deines iPhone.",
+      },
+      {
+        title: "Dunkelmodus",
+        description:
+          "TimeBack richtet sich nach deiner Systemeinstellung: Ist dein Gerät dunkel, ist es TimeBack auch.",
+      },
+      {
+        title: "Einrichtung in 1 Minute",
+        description:
+          "Beim ersten Öffnen wählst du, was du eindämmen willst, erlaubst Bildschirmzeit und wählst die Apps. Nach etwa einer Minute steht deine erste Regel.",
+      },
+      {
+        title: "TimeBack teilen",
+        description:
+          "Erstelle in den Einstellungen eine Karte mit QR-Code. Auf Wunsch steht die Zeit drauf, die du dir diese Woche zurückgeholt hast. Dann sicherst du sie in Fotos oder verschickst sie.",
       },
     ],
   },
@@ -76,7 +96,7 @@ const de: Dictionary = {
     titlePart1: "Ein Blick in",
     titleHighlight: "die App",
     subtitle: "So sehen Regeln, Zeitpläne, Zonen, Sperrbildschirm und Wächter-Code auf dem iPhone aus.",
-    newBadge: "Neu in 1.3",
+    newBadge: "Neu",
     swipeHint: "Wischen für mehr",
     items: [
       {
@@ -84,7 +104,7 @@ const de: Dictionary = {
         line1: "Zeit gewonnen",
         line2: "Fortschritt im Blick",
         subtitle: "Sieh Woche für Woche, wie viel Zeit du zurückgewinnst.",
-        detail: "Jeder Tag im Vergleich zu deinem Tageslimit, dazu dein stärkster Tag, die Tage unter dem Limit und die Vorwoche. Als Bild teilbar.",
+        detail: "Jeder Tag im Vergleich zu deinem Tageslimit, dazu dein stärkster Tag, die Tage unter dem Limit und die Vorwoche. Das Teilen-Bild zeigt deine Woche als Sand in einer Sanduhr.",
         alt: "TimeBack-Wochenrückblick: sieben Tage im Vergleich zum Tageslimit",
       },
       {
@@ -124,13 +144,13 @@ const de: Dictionary = {
         line1: "Deine Erinnerung",
         line2: "Dein Stil",
         subtitle: "Gestalte deinen Sperrbildschirm ganz nach dir.",
-        detail: "Wähle Symbol, Titel, Nachricht und Tasten deines Sperrbildschirms.",
+        detail: "Limits, Pausen, Zeitpläne und Orte haben jeweils ein eigenes Maskottchen. Außerdem wählst du Symbol, Titel, Nachricht und Tasten deines Sperrbildschirms.",
         alt: "TimeBack-Sperrbildschirm-Einstellungen mit Vorschau",
       },
     ],
   },
   ipad: {
-    eyebrow: "Neu in 1.3",
+    eyebrow: "iPad",
     titleLine1: "Jetzt auf dem iPad",
     titleLine2: "Zeit zurückgewinnen",
     subtitle: "Auf dem iPad hat TimeBack zwei Spalten: links Regeln, Zeitpläne und Zonen, rechts die Details dazu. Auch die Einstellungen sind zweispaltig. Kleinere iPads zeigen eine Spalte.",
@@ -165,7 +185,7 @@ const de: Dictionary = {
       {
         title: "Grenzen wählen",
         description:
-          "Wähl Apps, Kategorien oder Websites aus und dazu Tageslimits, Pausen, Zeitpläne oder Zonen, je nachdem, was zu deinem Alltag passt.",
+          "Wähl Apps, Kategorien oder Websites aus und dazu Tageslimits, Pausen, Zeitpläne oder Zonen, je nachdem, was zu deinem Alltag passt. Beim ersten Start ist deine erste Regel in etwa einer Minute eingerichtet.",
       },
       {
         title: "iOS sperrt für dich",

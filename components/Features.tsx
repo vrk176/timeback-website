@@ -30,6 +30,18 @@ const icons = [
   <svg key="i7" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
   </svg>,
+  <svg key="i8" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+  </svg>,
+  <svg key="i9" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>,
+  <svg key="i10" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>,
+  <svg key="i11" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+  </svg>,
 ];
 
 const gradients = [
@@ -41,10 +53,17 @@ const gradients = [
   "gradient-card-midnight", // App Lock & Guardian
   "gradient-card-lavender", // Weekly Review
   "gradient-card-amber",    // Prevent App Deletion
+  "gradient-card-midnight", // Widgets
+  "gradient-card-violet",   // Dark Mode
+  "gradient-card-amber",    // One-Minute Setup
+  "gradient-card-lavender", // Share TimeBack
 ];
 
-/** Cards that changed in v1.3 (App Lock rebuilt, Weekly Review redesigned). */
-const newInThisVersion = new Set([5, 6]);
+/**
+ * Cards new or changed in v1.4–1.5: Custom Block Screen (mascots), Weekly Review
+ * (hourglass share image), Widgets, Dark Mode, One-Minute Setup, Share TimeBack.
+ */
+const newInThisVersion = new Set([4, 6, 8, 9, 10, 11]);
 
 const containerVariants = {
   hidden: {},

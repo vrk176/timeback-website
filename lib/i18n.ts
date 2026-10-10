@@ -7,6 +7,8 @@ export const locales = [
   "de",
   "fr",
   "es",
+  "tr",
+  "pt-BR",
 ] as const;
 
 export type Locale = (typeof locales)[number];
@@ -22,6 +24,8 @@ export const localeNames: Record<Locale, string> = {
   de: "Deutsch",
   fr: "Français",
   es: "Español",
+  tr: "Türkçe",
+  "pt-BR": "Português (Brasil)",
 };
 
 export function isValidLocale(value: string): value is Locale {

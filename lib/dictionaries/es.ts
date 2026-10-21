@@ -82,12 +82,17 @@ const es: Dictionary = {
       {
         title: "Listo en un minuto",
         description:
-          "La primera vez que abres TimeBack, eliges qué quieres frenar, permites Tiempo de uso y eliges las apps. Tu primera regla queda lista en un minuto más o menos.",
+          "La primera vez que abres TimeBack, eliges qué quieres frenar, desde un límite diario hasta apps que se bloquean al llegar a la biblioteca. Permites Tiempo de uso, eliges las apps y queda listo en un minuto más o menos.",
       },
       {
         title: "Compartir TimeBack",
         description:
           "En Configuración, crea una tarjeta con código QR. Puedes añadir el tiempo que recuperaste esta semana y luego guardarla en Fotos o enviarla.",
+      },
+      {
+        title: "Mis medallas",
+        description:
+          "Medallas en 3D para tus reglas, horarios y zonas que suben de esmalte a platino a medida que recuperas horas y los mantienes activos. También hay medallas para cada primera vez, Halloween y «Cada grano vuelve a casa» por reunirlas todas. Puedes guardar cualquiera como imagen o video.",
       },
     ],
   },
@@ -246,7 +251,7 @@ const es: Dictionary = {
   },
   legal: {
     backToHome: "Volver al inicio",
-    lastUpdated: "Última actualización: 1 de octubre de 2026",
+    lastUpdated: "Última actualización: 21 de octubre de 2026",
   },
   privacyPolicyPage: {
     title: "Política de privacidad",
@@ -271,7 +276,7 @@ const es: Dictionary = {
       localData: {
         heading: "Datos guardados localmente en tu dispositivo",
         intro:
-          "Los siguientes datos se guardan exclusivamente en tu dispositivo mediante el contenedor App Group de Apple y nunca se transmiten:",
+          "Los siguientes datos se guardan exclusivamente en tu dispositivo, en el almacenamiento propio de la App y en el contenedor App Group de Apple, y nunca se transmiten:",
         table: {
           headers: ["Dato", "Finalidad"],
           rows: [
@@ -303,6 +308,10 @@ const es: Dictionary = {
             [
               "Recuento de distracciones",
               "Cuántas veces se ha tocado “Continuar” cada día",
+            ],
+            [
+              "Medallas",
+              "Las medallas que has conseguido, el progreso hacia el siguiente nivel y el nombre grabado en ellas. Las imágenes y videos de las medallas se crean en tu dispositivo y solo salen de él cuando los compartes o guardas.",
             ],
           ],
         },

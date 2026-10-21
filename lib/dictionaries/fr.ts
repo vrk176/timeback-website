@@ -82,12 +82,17 @@ const fr: Dictionary = {
       {
         title: "Prêt en une minute",
         description:
-          "À la première ouverture, choisissez ce que vous voulez freiner, autorisez Temps d'écran et choisissez les apps. Votre première règle est prête en une minute environ.",
+          "À la première ouverture, choisissez ce que vous voulez freiner, d'une limite quotidienne aux apps qui se bloquent dès que vous arrivez à la bibliothèque. Autorisez Temps d'écran, choisissez les apps, et tout est prêt en une minute environ.",
       },
       {
         title: "Partager TimeBack",
         description:
           "Dans les Réglages, créez une carte avec un QR code. Vous pouvez y ajouter le temps repris cette semaine, puis l'enregistrer dans Photos ou l'envoyer.",
+      },
+      {
+        title: "Mes médailles",
+        description:
+          "Des médailles en 3D pour vos règles, horaires et zones, qui passent de l'émail au platine à mesure que vous reprenez des heures et que tout reste activé. S'y ajoutent les premières fois, Halloween et « Chaque grain rentre » pour la collection complète. Chacune s'enregistre en image ou en vidéo.",
       },
     ],
   },
@@ -246,7 +251,7 @@ const fr: Dictionary = {
   },
   legal: {
     backToHome: "Retour à l'accueil",
-    lastUpdated: "Dernière mise à jour : 1er octobre 2026",
+    lastUpdated: "Dernière mise à jour : 21 octobre 2026",
   },
   privacyPolicyPage: {
     title: "Politique de confidentialité",
@@ -271,7 +276,7 @@ const fr: Dictionary = {
       localData: {
         heading: "Données stockées localement sur votre appareil",
         intro:
-          "Les données suivantes sont stockées exclusivement sur votre appareil à l'aide du conteneur App Group d'Apple et ne sont jamais transmises :",
+          "Les données suivantes sont stockées exclusivement sur votre appareil, dans le stockage propre de l'App et le conteneur App Group d'Apple, et ne sont jamais transmises :",
         table: {
           headers: ["Données", "Finalité"],
           rows: [
@@ -303,6 +308,10 @@ const fr: Dictionary = {
             [
               "Comptage de distractions",
               "Nombre de fois où « Continuer » a été tapoté par jour",
+            ],
+            [
+              "Médailles",
+              "Les médailles obtenues, la progression vers le palier suivant et le nom gravé dessus. Les images et vidéos de médailles sont créées sur l'appareil et ne le quittent que si vous les partagez ou les enregistrez.",
             ],
           ],
         },

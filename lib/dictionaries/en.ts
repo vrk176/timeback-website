@@ -80,12 +80,17 @@ const en = {
       {
         title: "One-Minute Setup",
         description:
-          "The first time you open TimeBack, pick what you want to rein in, allow Screen Time and choose the apps. Your first rule is ready in about a minute.",
+          "The first time you open TimeBack, pick what you want to rein in, from a daily limit to apps that lock when you get to the library. Allow Screen Time, choose the apps, and you're set in about a minute.",
       },
       {
         title: "Share TimeBack",
         description:
           "In Settings, make a card with a QR code. You can add the time you took back this week, then save it to Photos or send it.",
+      },
+      {
+        title: "My Medals",
+        description:
+          "3D medals for your rules, schedules and zones that move up from enamel to platinum as you take back hours and keep schedules and zones on. There are medals for firsts, Halloween and Every Grain Home for collecting them all, and you can save any of them as an image or video.",
       },
     ],
   },
@@ -244,7 +249,7 @@ const en = {
   },
   legal: {
     backToHome: "Back to Home",
-    lastUpdated: "Last updated: October 1, 2026",
+    lastUpdated: "Last updated: October 21, 2026",
   },
   privacyPolicyPage: {
     title: "Privacy Policy",
@@ -269,7 +274,7 @@ const en = {
       localData: {
         heading: "Data Stored Locally on Your Device",
         intro:
-          "The following data is stored exclusively on your device using Apple's App Group container and is never transmitted:",
+          "The following data is stored exclusively on your device, in the App's own storage and Apple's App Group container, and is never transmitted:",
         table: {
           headers: ["Data", "Purpose"],
           rows: [
@@ -301,6 +306,10 @@ const en = {
             [
               "Distraction counts",
               'Number of times "Continue Using" was tapped per day',
+            ],
+            [
+              "Medals",
+              "Medals you've earned, progress toward the next tier and the name engraved on them. Medal images and videos are made on your device and leave it only when you share or save them.",
             ],
           ],
         },

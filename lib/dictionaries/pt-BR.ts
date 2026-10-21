@@ -82,12 +82,17 @@ const ptBR: Dictionary = {
       {
         title: "Configuração em um minuto",
         description:
-          "Na primeira vez que você abre o TimeBack, escolha o que quer controlar, permita o acesso ao Tempo de Uso e selecione os apps. Sua primeira regra fica pronta em cerca de um minuto.",
+          "Na primeira vez que você abre o TimeBack, escolha o que quer controlar, de um limite diário a apps que bloqueiam quando você chega à biblioteca. Permita o acesso ao Tempo de Uso, selecione os apps e pronto: em cerca de um minuto está tudo configurado.",
       },
       {
         title: "Compartilhar o TimeBack",
         description:
           "Nos Ajustes, crie um cartão com código QR. Dá para incluir o tempo que você recuperou nesta semana e depois salvar em Fotos ou enviar.",
+      },
+      {
+        title: "Minhas medalhas",
+        description:
+          "Medalhas em 3D para suas regras, horários e zonas, que sobem do esmalte à platina conforme você recupera horas e mantém tudo ativado. Tem também medalhas para cada primeira vez, Halloween e “Cada grão de volta” para quem reúne todas. Salve qualquer uma como imagem ou vídeo.",
       },
     ],
   },
@@ -246,7 +251,7 @@ const ptBR: Dictionary = {
   },
   legal: {
     backToHome: "Voltar ao início",
-    lastUpdated: "Última atualização: 1º de outubro de 2026",
+    lastUpdated: "Última atualização: 21 de outubro de 2026",
   },
   privacyPolicyPage: {
     title: "Política de Privacidade",
@@ -271,7 +276,7 @@ const ptBR: Dictionary = {
       localData: {
         heading: "Dados armazenados localmente no seu dispositivo",
         intro:
-          "Os dados a seguir são armazenados exclusivamente no seu dispositivo, no contêiner App Group da Apple, e nunca são transmitidos:",
+          "Os dados a seguir são armazenados exclusivamente no seu dispositivo, no armazenamento do próprio app e no contêiner App Group da Apple, e nunca são transmitidos:",
         table: {
           headers: ["Dado", "Finalidade"],
           rows: [
@@ -303,6 +308,10 @@ const ptBR: Dictionary = {
             [
               "Contagem de distrações",
               "Quantas vezes por dia o botão “Continuar” foi tocado",
+            ],
+            [
+              "Medalhas",
+              "As medalhas que você conquistou, o progresso até o próximo nível e o nome gravado nelas. As imagens e vídeos das medalhas são criados no seu dispositivo e só saem dele quando você os compartilha ou salva.",
             ],
           ],
         },

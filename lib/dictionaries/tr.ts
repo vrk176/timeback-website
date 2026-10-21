@@ -82,12 +82,17 @@ const tr: Dictionary = {
       {
         title: "Bir Dakikada Kurulum",
         description:
-          "TimeBack'i ilk açtığında neyi dizginlemek istediğini seç, Ekran Süresi'ne izin ver ve uygulamaları belirle. İlk kuralın yaklaşık bir dakikada hazır olur.",
+          "TimeBack'i ilk açtığında neyi dizginlemek istediğini seç: günlük sınırdan kütüphaneye vardığında kilitlenen uygulamalara kadar. Ekran Süresi'ne izin ver, uygulamaları belirle; yaklaşık bir dakikada hazırsın.",
       },
       {
         title: "TimeBack'i Paylaş",
         description:
           "Ayarlar'da QR kodlu bir kart oluştur. İstersen bu hafta geri aldığın süreyi ekle, sonra kartı Fotoğraflar'a kaydet ya da gönder.",
+      },
+      {
+        title: "Madalyalarım",
+        description:
+          "Kuralların, programların ve bölgelerin için 3D madalyalar; geri aldığın saatler arttıkça ve açık kaldıkça emayeden platine yükselirler. İlk adımlar, Cadılar Bayramı ve hepsini toplayınca gelen “Her Kum Tanesi Yuvada” madalyaları da var. Hepsini görsel ya da video olarak kaydedebilirsin.",
       },
     ],
   },
@@ -246,7 +251,7 @@ const tr: Dictionary = {
   },
   legal: {
     backToHome: "Ana Sayfaya Dön",
-    lastUpdated: "Son güncelleme: 1 Ekim 2026",
+    lastUpdated: "Son güncelleme: 21 Ekim 2026",
   },
   privacyPolicyPage: {
     title: "Gizlilik Politikası",
@@ -271,7 +276,7 @@ const tr: Dictionary = {
       localData: {
         heading: "Aygıtında Yerel Olarak Saklanan Veriler",
         intro:
-          "Aşağıdaki veriler Apple'ın App Group kapsayıcısı kullanılarak yalnızca aygıtında saklanır ve hiçbir zaman aktarılmaz:",
+          "Aşağıdaki veriler, uygulamanın kendi depolama alanı ve Apple'ın App Group kapsayıcısı kullanılarak yalnızca aygıtında saklanır ve hiçbir zaman aktarılmaz:",
         table: {
           headers: ["Veri", "Amaç"],
           rows: [
@@ -303,6 +308,10 @@ const tr: Dictionary = {
             [
               "Dikkat dağılması sayıları",
               "“Devam” düğmesine günde kaç kez dokunulduğu",
+            ],
+            [
+              "Madalyalar",
+              "Kazandığın madalyalar, bir sonraki seviyeye ilerlemen ve madalyalara kazınan ad. Madalya görselleri ve videoları aygıtında oluşturulur; yalnızca sen paylaştığında ya da kaydettiğinde aygıttan çıkar.",
             ],
           ],
         },

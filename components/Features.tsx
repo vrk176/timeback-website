@@ -42,6 +42,9 @@ const icons = [
   <svg key="i11" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
   </svg>,
+  <svg key="i12" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8 3l2.5 6.5M16 3l-2.5 6.5M18 15a6 6 0 11-12 0 6 6 0 0112 0zM12 12.5l.8 1.6 1.7.25-1.25 1.2.3 1.7L12 16.45l-1.55.8.3-1.7-1.25-1.2 1.7-.25z" />
+  </svg>,
 ];
 
 const gradients = [
@@ -57,13 +60,11 @@ const gradients = [
   "gradient-card-violet",   // Dark Mode
   "gradient-card-amber",    // One-Minute Setup
   "gradient-card-lavender", // Share TimeBack
+  "gradient-card-amber",    // My Medals
 ];
 
-/**
- * Cards new or changed in v1.4–1.5: Custom Block Screen (mascots), Weekly Review
- * (hourglass share image), Widgets, Dark Mode, One-Minute Setup, Share TimeBack.
- */
-const newInThisVersion = new Set([4, 6, 8, 9, 10, 11]);
+/** Cards new or changed in v1.6: One-Minute Setup (zone goal), My Medals. */
+const newInThisVersion = new Set([10, 12]);
 
 const containerVariants = {
   hidden: {},
@@ -112,7 +113,7 @@ export default function Features({
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        className="flex flex-wrap justify-center gap-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -122,7 +123,7 @@ export default function Features({
           <motion.div
             key={feature.title}
             variants={cardVariants}
-            className="group relative bg-card-bg rounded-3xl p-7 shadow-[0_1px_2px_rgba(45,28,76,0.04)] ring-1 ring-ink/[0.06] hover:shadow-[0_24px_48px_-24px_rgba(45,28,76,0.35)] transition-all duration-300 hover:-translate-y-1"
+            className="group relative w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] bg-card-bg rounded-3xl p-7 shadow-[0_1px_2px_rgba(45,28,76,0.04)] ring-1 ring-ink/[0.06] hover:shadow-[0_24px_48px_-24px_rgba(45,28,76,0.35)] transition-all duration-300 hover:-translate-y-1"
           >
             {newInThisVersion.has(i) && (
               <span className="absolute right-5 top-5 rounded-full bg-lime px-2.5 py-0.5 text-[11px] font-bold text-midnight">

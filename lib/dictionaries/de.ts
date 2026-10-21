@@ -82,12 +82,17 @@ const de: Dictionary = {
       {
         title: "Einrichtung in 1 Minute",
         description:
-          "Beim ersten Öffnen wählst du, was du eindämmen willst, erlaubst Bildschirmzeit und wählst die Apps. Nach etwa einer Minute steht deine erste Regel.",
+          "Beim ersten Öffnen wählst du, was du eindämmen willst, vom Tageslimit bis zu Apps, die sich in der Bibliothek sperren. Dann erlaubst du Bildschirmzeit, wählst die Apps und bist nach etwa einer Minute startklar.",
       },
       {
         title: "TimeBack teilen",
         description:
           "Erstelle in den Einstellungen eine Karte mit QR-Code. Auf Wunsch steht die Zeit drauf, die du dir diese Woche zurückgeholt hast. Dann sicherst du sie in Fotos oder verschickst sie.",
+      },
+      {
+        title: "Meine Medaillen",
+        description:
+          "3D-Medaillen für deine Regeln, Zeitpläne und Zonen, die von Emaille bis Platin aufsteigen, je mehr Stunden du dir zurückholst und je länger alles eingeschaltet bleibt. Dazu Medaillen für jedes erste Mal, für Halloween und „Jedes Korn kehrt heim“ für die komplette Sammlung. Jede lässt sich als Bild oder Video sichern.",
       },
     ],
   },
@@ -246,7 +251,7 @@ const de: Dictionary = {
   },
   legal: {
     backToHome: "Zurück zur Startseite",
-    lastUpdated: "Zuletzt aktualisiert: 1. Oktober 2026",
+    lastUpdated: "Zuletzt aktualisiert: 21. Oktober 2026",
   },
   privacyPolicyPage: {
     title: "Datenschutzerklärung",
@@ -271,7 +276,7 @@ const de: Dictionary = {
       localData: {
         heading: "Daten, die lokal auf deinem Gerät gespeichert werden",
         intro:
-          "Die folgenden Daten werden ausschließlich auf deinem Gerät mit Apples App Group Container gespeichert und niemals übertragen:",
+          "Die folgenden Daten werden ausschließlich auf deinem Gerät gespeichert, im eigenen Speicher der App und in Apples App Group Container, und niemals übertragen:",
         table: {
           headers: ["Daten", "Zweck"],
           rows: [
@@ -300,6 +305,10 @@ const de: Dictionary = {
             [
               "Ablenkungszähler",
               'Anzahl der Male, die "Weiter nutzen" pro Tag angetippt wurde',
+            ],
+            [
+              "Medaillen",
+              "Deine erhaltenen Medaillen, der Fortschritt bis zur nächsten Stufe und der Name, der darauf eingraviert wird. Medaillenbilder und -videos entstehen auf deinem Gerät und verlassen es nur, wenn du sie teilst oder sicherst.",
             ],
           ],
         },
